@@ -84,16 +84,31 @@ nav {
   margin-top: 25px;
 }
 
-/* home section */
-#home-section {
-  position: relative;
-}
-
 /* hero */
 #home-section {
   position: relative;
   height: 100vh;
   overflow: hidden;
+}
+
+.cupcake-img {
+  background: url(../images/cupcake.png) no-repeat center center/cover;
+  position: absolute;
+  height: 600px;
+  width: 600px;
+  transform: rotate(-25deg);
+  left: -190px;
+  top: 1%;
+}
+
+.red-circle {
+  width: 600px;
+  height: 600px;
+  background-color: rgb(214 20 67 / 50%);
+  position: absolute;
+  border-radius: 50%;
+  left: -12%;
+  z-index: -1;
 }
 
 .bg-shape {
@@ -115,34 +130,35 @@ nav {
 
 .round-cupcake-img {
   background: url(../images/round-cupcake.png) no-repeat center center/cover;
-  height: 300px;
-  width: 300px;
+  height: 200px;
+  width: 200px;
   position: absolute;
-  left: 390px;
-  bottom: -83px;
+  left: 420px;
+  bottom: 195px;
   z-index: -1;
 }
 
 .home-text {
-  position: relative;
-  width: 600px;
-  height: 300px;
-  top: 0;
-  right: 15%;
+  width: 560px;
+  height: 383px;
+  top: 3%;
+  right: 2%;
   color: var(--white-color);
 }
 
 .home-text h1 {
-  font-size: 75px;
+  font-size: 55px;
   line-height: 70px;
+  margin-left: 80px;
+  margin-top: 50px;
 }
 
 .home-text p {
   font-size: 25px;
   padding: 31px;
-  width: 351px;
   text-align: center;
   font-family: 'Coiny', cursive;
   line-height: 31px;
-  margin-left: 190px;
+  margin-left: 242px;
+  margin-top: 118px;
 }
