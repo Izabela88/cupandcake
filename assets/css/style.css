@@ -52,10 +52,20 @@ li {
   color: var(--white-color);
   outline: none;
   border: none;
-  font-size: 14px;
+  font-size: 13px;
   text-transform: uppercase;
   border-radius: 30px;
   letter-spacing: 1px;
+  cursor: pointer;
+  transition-duration: 0.2s;
+  font-weight: bold;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.red-btn:hover {
+  background-color: var(--white-color);
+  color: var(--red-color);
+  font-weight: bold;
 }
 
 /* navbar */
@@ -89,8 +99,10 @@ nav {
 }
 
 .nav-list i {
-  font-size: 25px;
+  font-size: 30px;
   margin: 0 20px;
+  color: var(--black-color);
+  font-weight: bold;
 }
 
 #logo {
@@ -110,19 +122,10 @@ nav {
   position: absolute;
   height: 600px;
   width: 600px;
-  transform: rotate(-25deg);
+  transform: rotate(-15deg);
   left: -190px;
   top: 1%;
-}
-
-.red-circle {
-  width: 600px;
-  height: 600px;
-  background-color: rgb(214 20 67 / 20%);
-  position: absolute;
-  border-radius: 50%;
-  left: -12%;
-  z-index: -1;
+  filter: drop-shadow(3px 1px 8px #d61443);
 }
 
 .bg-shape {
@@ -140,6 +143,7 @@ nav {
   position: absolute;
   right: 0;
   z-index: -2;
+  opacity: 0.7;
 }
 
 .round-cupcake-img {
@@ -154,18 +158,19 @@ nav {
 }
 
 .home-text {
-  width: 560px;
+  width: 642px;
   height: 383px;
   top: 3%;
   right: 2%;
-  color: var(--white-color);
+  color: var(--red-color);
 }
 
 .home-text h1 {
-  font-size: 55px;
+  font-size: 70px;
   line-height: 70px;
   margin-left: 80px;
   margin-top: 50px;
+  filter: drop-shadow(3px 1px 1px #000);
 }
 
 .home-text p {
@@ -182,4 +187,40 @@ nav {
   position: relative;
   margin-left: 78px;
   margin-top: 19px;
+}
+
+.yummy-txt {
+  position: absolute;
+  right: -210px;
+  font-size: 95px;
+  line-height: 68px;
+  transform: rotate(-22deg);
+  color: var(--white-color);
+  top: 51%;
+  filter: drop-shadow(3px 1px 8px #d61443);
+}
+
+.yummy-txt span {
+  font-size: 75px;
+}
+
+.red-circle-big {
+  width: 600px;
+  height: 600px;
+  background-color: rgb(214 20 67 / 20%);
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+  left: -12%;
+}
+
+.red-circle-small {
+  width: 300px;
+  height: 300px;
+  background-color: rgb(214 20 67 / 60%);
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+  right: -262px;
+  top: 50%;
 }
