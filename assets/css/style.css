@@ -288,6 +288,7 @@ nav {
   transform: scale(0.9) rotate(8deg);
   right: 32px;
   bottom: -15px;
+  filter: drop-shadow(2px 1px 8px #000000);
 }
 
 .chocolate-img {
@@ -298,6 +299,7 @@ nav {
   transform: scale(0.67) rotate(8deg);
   right: 32px;
   bottom: 44px;
+  filter: drop-shadow(2px 1px 8px #000000);
 }
 
 .fruity-img {
@@ -308,4 +310,5 @@ nav {
   transform: scale(0.5) rotate(8deg);
   right: 32px;
   bottom: 326px;
+  filter: drop-shadow(2px 1px 8px #000000);
 }
