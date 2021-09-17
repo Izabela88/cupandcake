@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Coiny&family=Montserrat&display=swap');
+:root {
+  --red-color: #d61443;
+  --blue-color: #83deef;
+  --light-pink-color: #ffb8ca;
+  --dark-pink-color: #fea5bb;
+  --white-color: #ffffff;
+  --black-color: #000000;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Coiny', cursive;
+}
+
+p {
+  font-family: 'Montserrat', sans-serif;
+}
+
+a {
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+  letter-spacing: 2px;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  max-width: 1200px;
+  height: 100%;
+  display: flex;
+  position: relative;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.red-btn {
+  width: 130px;
+  height: 45px;
+  background-color: var(--red-color);
+  color: var(--white-color);
+  outline: none;
+  border: none;
+  font-size: 13px;
+  text-transform: uppercase;
+  border-radius: 30px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition-duration: 0.2s;
+  font-weight: bold;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.red-btn:hover {
+  background-color: var(--white-color);
+  color: var(--red-color);
+  font-weight: bold;
+}
+
+/* navbar */
+#header {
+  width: 100%;
+  height: 130px;
+  position: fixed;
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  z-index: 1000;
+  width: 100%;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-weight: bold;
+}
+
+.nav-list a {
+  color: var(--red-color);
+  margin: 0 20px;
+  text-transform: uppercase;
+}
+
+.nav-list i {
+  font-size: 30px;
+  margin: 0 20px;
+  color: var(--red-color);
+  font-weight: bold;
+}
+
+#logo {
+  height: 100px;
+  margin-top: 25px;
+}
+
+/* hero */
+#home-section {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.cupcake-img {
+  background: url(../images/cupcake.png) no-repeat center center/cover;
+  position: absolute;
+  height: 600px;
+  width: 600px;
+  transform: rotate(-15deg);
+  left: -190px;
+  top: 1%;
+  filter: drop-shadow(3px 1px 8px #d61443);
+}
+
+.bg-shape {
+  background: url(../images/wave-haikei.svg) no-repeat center center/cover;
+  height: 100vh;
+  width: 102%;
+  position: absolute;
+  z-index: -1;
+}
+
+.girl-img {
+  background: url(../images/girl.jpg) no-repeat center center/cover;
+  height: 100vh;
+  width: 47vw;
+  position: absolute;
+  right: 0;
+  z-index: -2;
+  opacity: 0.7;
+}
+
+.round-cupcake-img {
+  background: url(../images/round-cupcake.png) no-repeat center center/cover;
+  height: 200px;
+  width: 200px;
+  position: absolute;
+  left: 420px;
+  bottom: 153px;
+  z-index: -1;
+  opacity: 0.6;
+}
+
+.home-text {
+  width: 642px;
+  height: 383px;
+  top: 3%;
+  right: 2%;
+  color: var(--red-color);
+}
+
+.home-text h1 {
+  font-size: 70px;
+  line-height: 70px;
+  margin-left: 80px;
+  margin-top: 50px;
+  filter: drop-shadow(0px 1px 1px #000);
+}
+
+.home-text p {
+  font-size: 25px;
+  padding: 31px;
+  text-align: center;
+  font-family: 'Coiny', cursive;
+  line-height: 31px;
+  margin-left: 242px;
+  margin-top: 118px;
+}
+
+.btns {
+  position: relative;
+  margin-left: 78px;
+  margin-top: 19px;
+}
+
+.yummy-txt {
+  position: absolute;
+  right: -210px;
+  font-size: 95px;
+  line-height: 68px;
+  transform: rotate(-22deg);
+  color: var(--white-color);
+  top: 51%;
+  filter: drop-shadow(3px 1px 8px #d61443);
+}
+
+.yummy-txt span {
+  font-size: 75px;
+}
+
+.red-circle-big {
+  width: 600px;
+  height: 600px;
+  background-color: rgb(214 20 67 / 20%);
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+  left: -12%;
+}
+
+.red-circle-small {
+  width: 300px;
+  height: 300px;
+  background-color: rgb(214 20 67 / 60%);
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+  right: -262px;
+  top: 50%;
+}
