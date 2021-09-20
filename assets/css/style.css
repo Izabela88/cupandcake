@@ -264,9 +264,8 @@ nav {
   align-items: center;
   height: 80px;
   width: 90%;
-  box-shadow: rgb(131 222 239 / 35%) 0px 5px 15px;
+  box-shadow: rgb(131 222 239 / 35%) 0px -20px 20px;
   margin: 50px auto;
-  border-radius: 30px;
   padding: 40px;
   text-align: center;
   cursor: pointer;
@@ -275,6 +274,15 @@ nav {
   background: transparent;
   font-size: 25px;
   font-family: 'Coiny', cursive;
+  transition-duration: 0.2s;
+}
+
+.product-tab.active {
+  box-shadow: rgb(254 165 187 / 35%) 0px -20px 20px;
+}
+
+.product-tab:hover {
+  box-shadow: rgb(254 165 187 / 35%) 0px -20px 20px;
 }
 
 .product-circle {
@@ -317,4 +325,61 @@ nav {
   right: 32px;
   bottom: 326px;
   filter: drop-shadow(2px 1px 8px #000000);
+}
+
+/* tab content */
+.tab-content {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  justify-self: center;
+  width: 100%;
+  height: 1000px;
+  position: relative;
+  margin: 0 auto;
+  margin-top: -208px;
+  margin-bottom: 86px;
+}
+
+.tab-card {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: rgb(131 222 239 / 35%) 0px 5px 15px;
+}
+
+.tab-card.active {
+  box-shadow: rgb(254 165 187 / 35%) 0px 5px 15px;
+}
+
+.tab-card h3 {
+  font-size: 25px;
+  letter-spacing: 2px;
+  text-transform: lowercase;
+}
+
+.tab-card h4 {
+  font-size: 30px;
+  letter-spacing: 2px;
+}
+
+.card-img {
+  height: 150px;
+  width: 150px;
+}
+
+.basket-icon {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition-duration: 0.2s;
+}
+
+.basket-icon:hover,
+.basket-icon:focus {
+  filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg)
+    brightness(104%) contrast(97%);
 }
