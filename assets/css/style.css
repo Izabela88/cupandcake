@@ -225,7 +225,7 @@ nav {
   top: 50%;
 }
 
-/* products */
+/* products section*/
 #products-section {
   position: relative;
 }
@@ -264,7 +264,7 @@ nav {
   align-items: center;
   height: 80px;
   width: 90%;
-  box-shadow: rgb(131 222 239 / 35%) 0px -20px 20px;
+  box-shadow: rgb(131 222 239 / 35%) 0px -10px 20px;
   margin: 50px auto;
   padding: 40px;
   text-align: center;
@@ -274,15 +274,15 @@ nav {
   background: transparent;
   font-size: 25px;
   font-family: 'Coiny', cursive;
-  transition-duration: 0.2s;
+  transition-duration: 0.3s;
 }
 
 .product-tab.active {
-  box-shadow: rgb(254 165 187 / 35%) 0px -20px 20px;
+  box-shadow: rgb(254 165 187 / 35%) 0px -10px 20px;
 }
 
 .product-tab:hover {
-  box-shadow: rgb(254 165 187 / 35%) 0px -20px 20px;
+  box-shadow: rgb(254 165 187 / 35%) 0px -10px 20px;
 }
 
 .product-circle {
@@ -292,6 +292,42 @@ nav {
   border-radius: 50%;
   position: relative;
   margin: 0 auto;
+  cursor: pointer;
+}
+
+.hide-txt {
+  position: absolute;
+  height: 250px;
+  width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  bottom: 0;
+  right: 0;
+  background-color: var(--blue-color);
+  color: var(--black-color);
+  opacity: 0;
+  -webkit-transition: visibility 0s, opacity 0.5s linear;
+  transition: visibility 0s, opacity 0.3s linear;
+  text-align: center;
+  padding: 20px;
+  box-shadow: rgb(254 165 187 / 90%) 0px 0px 35px;
+}
+
+.hide-txt p {
+  font-family: 'Coiny', cursive;
+  font-size: 22px;
+  line-height: 22px;
+}
+
+.product-circle:hover {
+  cursor: pointer;
+}
+
+.product-circle:hover .hide-txt {
+  visibility: visible;
+  opacity: 0.9;
 }
 
 .vegan-img {
