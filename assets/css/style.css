@@ -464,7 +464,7 @@ nav {
 .about-img {
   background: url(../images/girlorange.png) no-repeat center center/cover;
   height: 700px;
-  width: 950px;
+  width: 45vw;
   position: relative;
   filter: drop-shadow(3px 1px 65px #d61443);
 }
