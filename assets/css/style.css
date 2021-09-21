@@ -243,8 +243,9 @@ nav {
 
 .main-header p {
   font-size: 20px;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   margin-bottom: -200px;
+  font-weight: bold;
 }
 
 .products-container {
