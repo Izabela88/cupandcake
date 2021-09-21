@@ -275,14 +275,18 @@ nav {
   font-size: 25px;
   font-family: 'Coiny', cursive;
   transition-duration: 0.3s;
+  color: var(--blue-color);
+  letter-spacing: 2px;
 }
 
 .product-tab.active {
   box-shadow: rgb(254 165 187 / 35%) 0px -10px 20px;
+  color: var(--red-color);
 }
 
 .product-tab:hover {
   box-shadow: rgb(254 165 187 / 35%) 0px -10px 20px;
+  color: var(--red-color);
 }
 
 .product-circle {
