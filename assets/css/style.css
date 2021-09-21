@@ -409,6 +409,7 @@ nav {
 .card-img {
   height: 150px;
   width: 150px;
+  filter: drop-shadow(3px 1px 5px rgb(0 0 0 / 49%));
 }
 
 .basket-icon {
