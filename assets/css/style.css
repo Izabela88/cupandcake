@@ -6,6 +6,7 @@
   --dark-pink-color: #fea5bb;
   --white-color: #ffffff;
   --black-color: #000000;
+  --grey-color: rgba(255, 255, 255, 0.3);
 }
 
 * {
@@ -228,6 +229,7 @@ nav {
 /* products section*/
 #products-section {
   position: relative;
+  overflow: hidden;
 }
 
 .main-header {
@@ -243,8 +245,9 @@ nav {
 
 .main-header p {
   font-size: 20px;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   margin-bottom: -200px;
+  font-weight: bold;
 }
 
 .products-container {
@@ -409,6 +412,7 @@ nav {
 .card-img {
   height: 150px;
   width: 150px;
+  filter: drop-shadow(3px 1px 5px rgb(0 0 0 / 49%));
 }
 
 .basket-icon {
@@ -467,4 +471,129 @@ nav {
   width: 45vw;
   position: relative;
   filter: drop-shadow(3px 1px 65px #d61443);
+}
+
+/* contact section */
+#contact-section {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  background-color: var(--light-pink-color);
+}
+
+.contact-bg {
+  background: url(../images/contact-bg.png) no-repeat center center/cover;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.contact-container {
+  display: flex;
+  position: relative;
+  margin: 0 auto;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100vw;
+  height: 100%;
+}
+
+.contact-img {
+  background: url(../images/contact-img.jpg) no-repeat center center/cover;
+  height: 100vh;
+  width: 40vw;
+  position: relative;
+  left: 0;
+  top: 0;
+}
+
+.contact-txt {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  margin-left: 10%;
+  z-index: 100;
+}
+
+.contact-txt h1 {
+  font-size: 48px;
+  text-align: center;
+  line-height: 63px;
+  margin-top: 30px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  margin-left: 25px;
+  background: var(--grey-color);
+  padding: 48px;
+  border-radius: 20px;
+  border-left: 1px solid var(--grey-color);
+  border-top: 1px solid var(--grey-color);
+  backdrop-filter: blur(10px);
+  box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+}
+
+input,
+textarea {
+  background: transparent;
+  width: 100%;
+  padding: 16px;
+  margin-bottom: 20px;
+  border: none;
+  border-left: 1px solid var(--grey-color);
+  border-top: 1px solid var(--grey-color);
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+  box-shadow: 4px 4px 60px rgba(0, 0, 0, 0.2);
+  color: var(--red-color);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  outline: none;
+  resize: none;
+}
+
+input:hover,
+textarea:hover {
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 4px 4px 60px 8px rgba(0, 0, 0, 0.2);
+}
+
+input[type='text']:focus,
+input[type='email']:focus {
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 4px 4px 60px 8px rgba(0, 0, 0, 0.2);
+}
+
+input[type='submit'] {
+  margin-top: 0 auto;
+  width: 100%;
+  font-size: 17px;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+input[type='submit']:hover {
+  cursor: pointer;
+}
+
+::placeholder {
+  font-family: Montserrat, sans-serif;
+  font-weight: 300;
+  color: var(--red-color);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
