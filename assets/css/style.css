@@ -604,6 +604,13 @@ input[type='submit']:hover {
   position: relative;
 }
 
+#footer p {
+  color: var(--white-color);
+  text-align: center;
+  padding-bottom: 30px;
+  letter-spacing: 1px;
+}
+
 #footer-container {
   display: flex;
   justify-content: space-around;
