@@ -228,6 +228,7 @@ nav {
 /* products section*/
 #products-section {
   position: relative;
+  overflow: hidden;
 }
 
 .main-header {
