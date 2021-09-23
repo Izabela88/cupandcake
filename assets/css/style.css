@@ -118,6 +118,37 @@ nav {
   overflow: hidden;
 }
 
+.circles-red-hero {
+  background: url(../images/circle2.svg) no-repeat center center/cover;
+  position: absolute;
+  height: 800px;
+  width: 900px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: rotate(270deg);
+}
+
+.circles-blue-hero {
+  background: url(../images/circle1.svg) no-repeat center center/cover;
+  position: absolute;
+  height: 800px;
+  width: 900px;
+  position: absolute;
+  transform: rotate(177deg);
+  left: 0;
+}
+
+.circles-white-hero {
+  background: url(../images/circle3.svg) no-repeat center center/cover;
+  position: absolute;
+  height: 800px;
+  width: 900px;
+  position: absolute;
+  transform: rotate(3deg);
+  left: -32%;
+}
+
 .cupcake-img {
   background: url(../images/cupcake.png) no-repeat center center/cover;
   position: absolute;
@@ -164,6 +195,7 @@ nav {
   top: 3%;
   right: 2%;
   color: var(--red-color);
+  z-index: 100;
 }
 
 .home-text h1 {
@@ -435,9 +467,42 @@ nav {
   background-color: var(--light-pink-color);
 }
 
+.circles-red-about {
+  background: url(../images/circle2.svg) no-repeat center center/cover;
+  position: absolute;
+  height: 800px;
+  width: 900px;
+  position: absolute;
+  left: 0;
+  transform: rotate(274deg);
+}
+
+.circles-blue-about {
+  background: url(../images/circle1.svg) no-repeat center center/cover;
+  position: absolute;
+  height: 800px;
+  width: 900px;
+  position: absolute;
+  transform: rotate(116deg);
+  left: 0;
+  bottom: 0;
+}
+
+.circles-white-about {
+  background: url(../images/circle3.svg) no-repeat center center/cover;
+  position: absolute;
+  height: 800px;
+  width: 900px;
+  position: absolute;
+  transform: rotate(250deg);
+  right: 0;
+  z-index: 101;
+}
+
 .about-txt {
   width: 35vw;
   color: var(--white-color);
+  z-index: 100;
 }
 
 .about-txt h1 {
