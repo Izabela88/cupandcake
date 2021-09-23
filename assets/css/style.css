@@ -50,8 +50,6 @@ li {
   width: 130px;
   height: 45px;
   background-color: var(--red-color);
-  color: var(--white-color);
-  outline: none;
   border: none;
   font-size: 13px;
   text-transform: uppercase;
@@ -60,12 +58,29 @@ li {
   cursor: pointer;
   transition-duration: 0.2s;
   font-weight: bold;
-  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  box-shadow: rgb(0 0 0 / 15%) 1.95px 1.95px 2.6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 30px;
+}
+
+.red-btn a {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  color: var(--white-color);
+  outline: none;
+  padding-top: 14px;
+}
+
+.red-btn a:hover {
+  color: var(--red-color);
 }
 
 .red-btn:hover {
   background-color: var(--white-color);
-  color: var(--red-color);
+
   font-weight: bold;
 }
 
@@ -75,7 +90,7 @@ li {
   height: 120px;
   position: fixed;
   z-index: 1000;
-  transition: background ease-in-out 0.5s, top ease-out 0.5s;
+  transition: background ease-in-out 0.5s, top ease 0.6s;
 }
 
 .bg-color {
@@ -223,8 +238,9 @@ nav {
 
 .btns {
   position: relative;
-  margin-left: 78px;
+  margin-left: 48px;
   margin-top: 19px;
+  display: flex;
 }
 
 .yummy-txt {
