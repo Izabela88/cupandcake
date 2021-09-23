@@ -72,9 +72,15 @@ li {
 /* navbar */
 #header {
   width: 100%;
-  height: 130px;
+  height: 120px;
   position: fixed;
   z-index: 1000;
+  transition: background ease-in-out 0.5s, top ease-out 0.5s;
+}
+
+.bg-color {
+  background-color: #fea5bb;
+  box-shadow: rgba(0, 0, 0, 0.5) 2px 2px 15px;
 }
 
 nav {
@@ -108,7 +114,6 @@ nav {
 
 #logo {
   height: 100px;
-  margin-top: 25px;
 }
 
 /* hero */
@@ -266,7 +271,7 @@ nav {
 
 .main-header {
   position: relative;
-  margin: 175px auto;
+  margin: 135px auto;
   width: 700px;
   text-align: center;
 }
@@ -751,4 +756,5 @@ input[type='submit']:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 15px;
 }
