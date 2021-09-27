@@ -92,42 +92,49 @@ li {
   transition: background ease-in-out 0.5s, top ease 0.6s;
 }
 
+#hamburger-icon {
+  display: none;
+}
+
+.closebtn {
+  display: none;
+}
+
 .bg-color {
   background-color: #fea5bb;
   box-shadow: rgba(0, 0, 0, 0.5) 2px 2px 15px;
 }
 
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 100px;
-  z-index: 1000;
-  width: 100%;
+.basket-icon {
+  margin-left: 50px;
 }
 
 .nav-list {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   font-weight: bold;
 }
 
 .nav-list a {
   color: var(--red-color);
-  margin: 0 20px;
   text-transform: uppercase;
+  margin-left: 20px;
+  margin-right: 30px;
+  margin-top: 10px;
+  transition-duration: 0.3s;
 }
 
 .nav-list a.active {
   color: var(--white-color);
 }
 
-.nav-list i {
-  font-size: 30px;
-  margin: 0 20px;
-  color: var(--red-color);
-  font-weight: bold;
+.nav-list a:hover {
+  color: var(--white-color);
+}
+
+.social-icon-fb {
+  margin-left: 100px;
 }
 
 #logo {
