@@ -778,7 +778,7 @@ input[type='submit']:hover {
 }
 
 /* media queries */
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1500px) {
   .container {
     width: 1000px;
   }
@@ -791,7 +791,9 @@ input[type='submit']:hover {
   }
 
   .red-circle-big {
-    left: -18%;
+    left: -12%;
+    height: 500px;
+    width: 500px;
   }
 
   .home-text h1 {
@@ -815,7 +817,7 @@ input[type='submit']:hover {
   }
 
   .circles-white-hero {
-    left: -23%;
+    left: -14%;
   }
 
   .circles-red-hero {
@@ -845,6 +847,7 @@ input[type='submit']:hover {
     height: 500px;
     bottom: unset;
     top: 0;
+    left: unset;
   }
 
   #footer-container {
@@ -857,5 +860,97 @@ input[type='submit']:hover {
 
   .contact-txt h1 {
     font-size: 43px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .yummy-txt {
+    right: 5px;
+    font-size: 60px;
+    line-height: 43px;
+  }
+
+  .yummy-txt span {
+    font-size: 50px;
+  }
+
+  .red-circle-small {
+    height: 200px;
+    width: 200px;
+    right: -35px;
+  }
+
+  .red-circle-big {
+    left: 0;
+    height: 400px;
+    width: 400px;
+  }
+
+  .cupcake-img {
+    height: 400px;
+    width: 400px;
+    left: -19px;
+    top: 30%;
+  }
+
+  .about-img {
+    height: 470px;
+    width: 40vw;
+  }
+
+  .circles-white-hero {
+    width: 600px;
+    height: 600px;
+    left: 0;
+  }
+
+  .circles-red-hero {
+    width: 600px;
+    height: 600px;
+    top: 80px;
+    transform: rotate(234deg);
+  }
+
+  .circles-blue-hero {
+    width: 600px;
+    height: 600px;
+  }
+
+  .circles-blue-about {
+    width: 600px;
+    height: 600px;
+    transform: rotate(197deg);
+    right: 75px;
+  }
+
+  .circles-red-about {
+    width: 600px;
+    height: 600px;
+    transform: rotate(71deg);
+    bottom: 0;
+  }
+
+  .circles-white-about {
+    width: 600px;
+    height: 600px;
+    right: 125px;
+  }
+
+  .cupcakes-img {
+    right: 35px;
+  }
+
+  .contact-txt {
+    width: 45%;
+    margin-left: 5%;
+  }
+
+  #footer-container {
+    width: 1000px;
+  }
+
+  .footer-box {
+    margin-left: 15px;
+    margin-right: 15px;
   }
 }
