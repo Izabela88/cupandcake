@@ -105,10 +105,6 @@ li {
   box-shadow: rgba(0, 0, 0, 0.5) 2px 2px 15px;
 }
 
-.basket-icon {
-  margin-left: 50px;
-}
-
 .nav-list {
   display: flex;
   justify-content: center;
@@ -146,6 +142,22 @@ li {
   position: relative;
   height: 100vh;
   overflow: hidden;
+}
+
+.basket {
+  position: fixed;
+  left: 93%;
+  top: 3%;
+  font-size: 25px;
+  background-color: var(--white-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  z-index: 10000;
+  cursor: pointer;
 }
 
 .circles-red-hero {
@@ -1116,5 +1128,68 @@ input[type='submit']:hover {
 
   .footer-box h3 {
     font-size: 25px;
+  }
+
+  #hamburger-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 45px;
+    margin-left: 10%;
+    padding: 10px;
+    color: var(--black-color);
+    cursor: pointer;
+    width: 70px;
+    height: 70px;
+    margin-top: 3%;
+    background-color: var(--light-pink-color);
+  }
+
+  .sidebar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: var(--light-pink-color);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+
+  .nav-list {
+    display: block;
+    margin-top: 150px;
+  }
+
+  .nav-list li {
+    font-size: 20px;
+    margin-bottom: 40px;
+  }
+  #logo {
+    display: none;
+  }
+
+  .social-icon-fb {
+    margin: auto;
+  }
+
+  .social-icon {
+    display: none;
+  }
+
+  .closebtn {
+    display: block;
+    position: absolute;
+    top: 10%;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    color: var(--black-color);
+    cursor: pointer;
   }
 }

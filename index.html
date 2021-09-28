@@ -17,8 +17,10 @@
     </div>
     <nav id="nav">
       <div id="mySidebar" class="sidebar">
+        <div class="closebtn" onclick="closeNav()">
+          <i class="fas fa-times"></i>
+        </div>
         <ul class="nav-list">
-
           <li><a class="scroll active" href="#home-section">Home</a></li>
           <li><a class="scroll" href="#products-section">Products</a></li>
           <li><a class="scroll" href="#about-section">About</a></li>
@@ -27,20 +29,21 @@
             <img src="assets/images/logo.png" id="logo" alt="Logo">
           </a>
           <li><a href="https://www.facebook.com/" target="_blank" rel="noopener"
-              aria-label="Visit our Facebook page"><img class="social-icon-fb" src="assets/images/facebook.png"
-                alt="Facebook icon"></a></li>
+              aria-label="Visit our Facebook page"><img class="social-icon-fb social-icon"
+                src="assets/images/facebook.png" alt="Facebook icon"></a></li>
           <li><a href="https://www.twitter.com/" target="_blank" rel="noopener" aria-label="Visit our Twitter page"><img
-                src="assets/images/twitter.png" alt="Twitter icon"></a></li>
+                class="social-icon" src="assets/images/twitter.png" alt="Twitter icon"></a></li>
           <li><a href="https://www.instagram.com/" target="_blank" rel="noopener"
-              aria-label="Visit our Instagram page"><img src="assets/images/instagram.png" alt="Instagram icon"></a>
+              aria-label="Visit our Instagram page"><img class="social-icon" src="assets/images/instagram.png"
+                alt="Instagram icon"></a>
           </li>
-          <img class="basket-icon" src="assets/images/basket.svg" alt="Basket icon">
         </ul>
       </div>
     </nav>
   </header>
   <!-- hero section -->
   <section id="home-section">
+    <div class="basket"><i class="fas fa-shopping-basket"></i></div>
     <div class="bg-shape"></div>
     <div class="girl-img"></div>
     <div class="container">
