@@ -44,3 +44,14 @@ window.addEventListener('scroll', () => {
   }
   previousPosition = currentPosition;
 });
+
+// Open and close sidebar for small devices
+function openNav() {
+  let sidebar = document.querySelector('#my-sidebar');
+  sidebar.style.width = '100%';
+}
+
+function closeNav() {
+  let sidebar = document.querySelector('#my-sidebar');
+  sidebar.style.width = '0';
+}
