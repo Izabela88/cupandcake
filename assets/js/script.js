@@ -36,7 +36,6 @@ window.addEventListener('scroll', () => {
     window.pageYOffset || document.documentElement.currentPosition;
   //  check weather the page is scrolled up or down
   if (currentPosition > previousPosition && window.innerWidth > 1050) {
-    console.log('go down');
     header.style.top = '-200px';
   } else {
     console.log('go up');
@@ -46,12 +45,19 @@ window.addEventListener('scroll', () => {
 });
 
 // Open and close sidebar for small devices
-function openNav() {
-  let sidebar = document.querySelector('#my-sidebar');
-  sidebar.style.width = '100%';
-}
+const hamburgerIcon = document.querySelector('#hamburger-icon');
+const closeButtons = document.querySelectorAll('.close-sidebar');
+let openSidebar;
 
-function closeNav() {
-  let sidebar = document.querySelector('#my-sidebar');
-  sidebar.style.width = '0';
+hamburgerIcon.addEventListener('click', function (e) {
+  console.log(closeButtons);
+  openSidebar = true;
+  document.getElementById('my-sidebar').style.width = '50%';
+});
+
+for (button of closeButtons) {
+  button.addEventListener('click', function (e) {
+    openSidebar = false;
+    document.getElementById('my-sidebar').style.width = null;
+  });
 }

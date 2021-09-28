@@ -96,7 +96,7 @@ li {
   display: none;
 }
 
-.closebtn {
+.close-btn {
   display: none;
 }
 
@@ -1184,7 +1184,7 @@ input[type='submit']:hover {
     display: none;
   }
 
-  .closebtn {
+  .close-btn {
     display: block;
     position: absolute;
     top: 10%;
