@@ -110,6 +110,7 @@ li {
   justify-content: center;
   align-items: center;
   font-weight: bold;
+  flex-direction: row;
 }
 
 .nav-list a {
@@ -1162,7 +1163,7 @@ input[type='submit']:hover {
   }
 
   .nav-list {
-    display: block;
+    flex-direction: column;
     margin-top: 150px;
   }
 
@@ -1170,6 +1171,7 @@ input[type='submit']:hover {
     font-size: 20px;
     margin-bottom: 40px;
   }
+
   #logo {
     display: none;
   }
@@ -1180,5 +1182,16 @@ input[type='submit']:hover {
 
   .social-icon {
     display: none;
+  }
+
+  .closebtn {
+    display: block;
+    position: absolute;
+    top: 10%;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    color: var(--black-color);
+    cursor: pointer;
   }
 }
