@@ -829,11 +829,11 @@ input[type='submit']:hover {
 
   .circles-blue-hero {
     bottom: 0;
-    transform: rotate(189deg);
+    transform: rotate(25deg);
   }
 
   .circles-white-hero {
-    left: -14%;
+    left: -22%;
   }
 
   .circles-red-hero {
@@ -858,14 +858,6 @@ input[type='submit']:hover {
     font-size: 17px;
   }
 
-  .circles-blue-about {
-    width: 500px;
-    height: 500px;
-    bottom: unset;
-    top: 0;
-    left: unset;
-  }
-
   #footer-container {
     width: 1105px;
   }
@@ -880,6 +872,11 @@ input[type='submit']:hover {
 }
 
 @media screen and (max-width: 1300px) {
+  .nav-list a {
+    margin-left: 10px;
+    margin-right: 20px;
+  }
+
   .yummy-txt {
     right: 5px;
     font-size: 60px;
@@ -910,14 +907,15 @@ input[type='submit']:hover {
   }
 
   .about-img {
-    height: 470px;
-    width: 40vw;
+    height: 430px;
+    width: 35vw;
   }
 
   .circles-white-hero {
     width: 600px;
     height: 600px;
     left: 0;
+    transform: rotate(84deg);
   }
 
   .circles-red-hero {
@@ -930,26 +928,29 @@ input[type='submit']:hover {
   .circles-blue-hero {
     width: 600px;
     height: 600px;
+    transform: rotate(125deg);
   }
 
   .circles-blue-about {
-    width: 600px;
-    height: 600px;
-    transform: rotate(197deg);
-    right: 75px;
+    width: 500px;
+    height: 500px;
+    left: unset;
+    transform: rotate(120deg);
   }
 
   .circles-red-about {
     width: 600px;
     height: 600px;
-    transform: rotate(71deg);
-    bottom: 0;
+    transform: rotate(245deg);
+    bottom: 213px;
+    left: 45px;
   }
 
   .circles-white-about {
     width: 600px;
     height: 600px;
     right: 125px;
+    transform: rotate(267deg);
   }
 
   .cupcakes-img {
@@ -1006,12 +1007,13 @@ input[type='submit']:hover {
 
   .products-container {
     grid-template-columns: repeat(1, 1fr);
+    width: 50%;
   }
 
   .tab-content {
     grid-template-columns: repeat(1, 1fr);
     height: 100%;
-    width: 80%;
+    width: 40%;
   }
 
   .product-tab {
