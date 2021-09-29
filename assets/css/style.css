@@ -1355,7 +1355,7 @@ input[type='submit']:hover {
   }
 
   .main-header h1 {
-    font-size: 40px;
+    font-size: 32px;
     line-height: 40px;
   }
 
@@ -1368,7 +1368,7 @@ input[type='submit']:hover {
   }
 
   .about-txt h1 {
-    font-size: 36px;
+    font-size: 32px;
   }
 
   .about-txt p {
@@ -1387,8 +1387,98 @@ input[type='submit']:hover {
     bottom: 30%;
   }
 
+  .contact-txt {
+    margin: 35px auto;
+  }
+
   .contact-txt h1 {
     font-size: 36px;
     line-height: 50px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .products-container {
+    width: 65%;
+  }
+
+  .contact-form {
+    padding: 15px;
+  }
+
+  .tab-content {
+    width: 300px;
+  }
+
+  .home-text {
+    width: 300px;
+    height: 300px;
+  }
+
+  .home-text h1 {
+    font-size: 34px;
+    line-height: 40px;
+  }
+  .home-text p {
+    font-size: 20px;
+    padding: 10px;
+  }
+
+  .btns {
+    top: 75%;
+  }
+
+  .about-txt {
+    width: 300px;
+  }
+
+  .about-txt p {
+    font-size: 12px;
+    line-height: 25px;
+  }
+
+  .contact-txt {
+    width: 85%;
+  }
+
+  .contact-txt h1 {
+    line-height: 40px;
+    margin-bottom: 20px;
+  }
+
+  .cupcakes-img {
+    display: none;
+  }
+
+  #hamburger-icon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 6%;
+    margin-top: 8%;
+  }
+  #hamburger-icon i {
+    font-size: 30px;
+  }
+
+  .products-container {
+    width: 90%;
+  }
+
+  .about-txt h1 {
+    line-height: 40px;
+    margin-top: 30px;
+  }
+
+  .about-img {
+    height: 44vw;
+    width: 44vw;
+    margin-bottom: 35px;
+  }
+
+  #about-section {
+    height: fit-content;
   }
 }
