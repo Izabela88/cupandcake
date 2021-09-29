@@ -990,6 +990,27 @@ input[type='submit']:hover {
 }
 
 @media screen and (max-width: 1050px) {
+  .logo-home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    background-color: var(--white-color);
+    border-radius: 50%;
+    top: 2%;
+  }
+
+  .logo-home img {
+    width: 90%;
+    height: 90%;
+  }
   .container {
     width: auto;
   }
@@ -1164,6 +1185,7 @@ input[type='submit']:hover {
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
+    box-shadow: rgb(0 0 0 / 35%) 0px -10px 20px;
   }
 
   .nav-list {
@@ -1201,28 +1223,6 @@ input[type='submit']:hover {
 }
 
 @media screen and (max-width: 900px) {
-  .logo-home {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    margin-left: auto;
-    margin-right: auto;
-    left: 0;
-    right: 0;
-    text-align: center;
-    background-color: var(--white-color);
-    border-radius: 50%;
-    top: 2%;
-  }
-
-  .logo-home img {
-    width: 90%;
-    height: 90%;
-  }
-
   .yummy-txt {
     display: none;
   }
@@ -1313,7 +1313,7 @@ input[type='submit']:hover {
   }
 
   .basket {
-    left: 90%;
+    left: 85%;
   }
 
   .tab-content {
@@ -1322,5 +1322,73 @@ input[type='submit']:hover {
 
   .product-tab {
     width: 300px;
+  }
+
+  .contact-form {
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .home-text {
+    width: 400px;
+    height: 400px;
+  }
+  .home-text h1 {
+    font-size: 40px;
+    line-height: 50px;
+  }
+
+  .home-text p {
+    font-size: 25px;
+  }
+
+  .red-btn {
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 10px;
+    width: 100px;
+  }
+
+  .main-header {
+    width: 350px;
+  }
+
+  .main-header h1 {
+    font-size: 40px;
+    line-height: 40px;
+  }
+
+  .main-header p {
+    font-size: 15px;
+  }
+
+  .about-txt {
+    width: 400px;
+  }
+
+  .about-txt h1 {
+    font-size: 36px;
+  }
+
+  .about-txt p {
+    font-size: 15px;
+    line-height: 30px;
+  }
+
+  .about-img {
+    width: 300px;
+    height: 300px;
+  }
+
+  .cupcakes-img {
+    width: 200px;
+    height: 200px;
+    bottom: 30%;
+  }
+
+  .contact-txt h1 {
+    font-size: 36px;
+    line-height: 50px;
   }
 }
