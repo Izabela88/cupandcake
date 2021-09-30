@@ -12,32 +12,39 @@
 <body>
   <!-- header -->
   <header id="header">
-    <div class="container">
-      <nav id="nav">
-        <img src="assets/images/basket.svg" alt="Basket icon">
+    <div id="hamburger-icon">
+      <i class="fas fa-bars"></i>
+    </div>
+    <nav id="nav">
+      <div id="my-sidebar" class="sidebar">
+        <div class="close-sidebar close-btn">
+          <i class="fas fa-times"></i>
+        </div>
         <ul class="nav-list">
-          <li><a class="scroll" href="#home-section">Home</a></li>
-          <li><a class="scroll" href="#products-section">Products</a></li>
-          <li><a class="scroll" href="#about-section">About</a></li>
-          <li><a class="scroll" href="#contact-section">Contact</a></li>
-        </ul>
-        <a class="scroll" href="#home-section">
-          <img src="assets/images/logo.png" id="logo" alt="Logo">
-        </a>
-        <ul class="nav-list">
+          <li><a class="scroll close-sidebar" href="#home-section">Home</a></li>
+          <li><a class="scroll close-sidebar" href="#products-section">Products</a></li>
+          <li><a class="scroll close-sidebar" href="#about-section">About</a></li>
+          <li><a class="scroll close-sidebar" href="#contact-section">Contact</a></li>
+          <a class="scroll" href="#home-section">
+            <img src="assets/images/logo.png" id="logo" alt="Logo">
+          </a>
           <li><a href="https://www.facebook.com/" target="_blank" rel="noopener"
-              aria-label="Visit our Facebook page"><img src="assets/images/facebook.png" alt="Facebook icon"></a></li>
+              aria-label="Visit our Facebook page"><img class="social-icon-fb social-icon"
+                src="assets/images/facebook.png" alt="Facebook icon"></a></li>
           <li><a href="https://www.twitter.com/" target="_blank" rel="noopener" aria-label="Visit our Twitter page"><img
-                src="assets/images/twitter.png" alt="Twitter icon"></a></li>
+                class="social-icon" src="assets/images/twitter.png" alt="Twitter icon"></a></li>
           <li><a href="https://www.instagram.com/" target="_blank" rel="noopener"
-              aria-label="Visit our Instagram page"><img src="assets/images/instagram.png" alt="Instagram icon"></a>
+              aria-label="Visit our Instagram page"><img class="social-icon" src="assets/images/instagram.png"
+                alt="Instagram icon"></a>
           </li>
         </ul>
-      </nav>
-    </div>
+      </div>
+    </nav>
   </header>
   <!-- hero section -->
   <section id="home-section">
+    <div class="logo-home"> <img src="assets/images/logo.png" alt="Logo"></div>
+    <div class="basket"><i class="fas fa-shopping-basket"></i></div>
     <div class="bg-shape"></div>
     <div class="girl-img"></div>
     <div class="container">
@@ -49,8 +56,8 @@
       <div class="home-text">
         <h1>cupcakes made with love!</h1>
         <div class="btns">
-          <button class="red-btn">Products</button>
-          <button class="red-btn">About Us</button>
+          <div class="red-btn"><a class="scroll" href="#products-section">Products</a> </div>
+          <div class="red-btn"><a class="scroll" href="#about-section"> About Us</a></div>
         </div>
         <p>for the preparation we use only organic products!</p>
         <div class="round-cupcake-img"></div>
@@ -147,7 +154,7 @@
   </section>
   <!-- about section -->
   <section id="about-section">
-    <div class="container">
+    <div class="container-about">
       <div class="circles-red-about"></div>
       <div class="circles-blue-about"></div>
       <div class="circles-white-about"></div>

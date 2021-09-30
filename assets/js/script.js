@@ -19,7 +19,7 @@ document.querySelectorAll('.scroll').forEach((cliked) => {
 window.addEventListener('scroll', () => {
   let header = document.querySelector('header');
   // pageYOffset or scrollY
-  if (window.pageYOffset > 100) {
+  if (window.pageYOffset > 100 && window.innerWidth > 1050) {
     header.classList.add('bg-color');
   } else {
     header.classList.remove('bg-color');
@@ -35,8 +35,7 @@ window.addEventListener('scroll', () => {
   let currentPosition =
     window.pageYOffset || document.documentElement.currentPosition;
   //  check weather the page is scrolled up or down
-  if (currentPosition > previousPosition) {
-    console.log('go down');
+  if (currentPosition > previousPosition && window.innerWidth > 1050) {
     header.style.top = '-200px';
   } else {
     console.log('go up');
@@ -44,3 +43,21 @@ window.addEventListener('scroll', () => {
   }
   previousPosition = currentPosition;
 });
+
+// Open and close sidebar for small devices
+const hamburgerIcon = document.querySelector('#hamburger-icon');
+const closeButtons = document.querySelectorAll('.close-sidebar');
+let openSidebar;
+
+hamburgerIcon.addEventListener('click', function (e) {
+  console.log(closeButtons);
+  openSidebar = true;
+  document.getElementById('my-sidebar').style.width = '50%';
+});
+
+for (button of closeButtons) {
+  button.addEventListener('click', function (e) {
+    openSidebar = false;
+    document.getElementById('my-sidebar').style.width = null;
+  });
+}
