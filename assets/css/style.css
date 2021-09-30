@@ -938,7 +938,7 @@ input[type='submit']:hover {
   .circles-red-hero {
     width: 600px;
     height: 600px;
-    top: 80px;
+    top: 45px;
     transform: rotate(234deg);
   }
 
@@ -951,16 +951,15 @@ input[type='submit']:hover {
   .circles-blue-about {
     width: 500px;
     height: 500px;
-    left: unset;
+    left: 285px;
     transform: rotate(120deg);
   }
 
   .circles-red-about {
     width: 600px;
     height: 600px;
-    transform: rotate(245deg);
-    bottom: 213px;
-    left: 45px;
+    transform: rotate(108deg);
+    left: -40px;
   }
 
   .circles-white-about {
@@ -1464,7 +1463,7 @@ input[type='submit']:hover {
   }
 
   .products-container {
-    width: 90%;
+    width: 95%;
   }
 
   .about-txt h1 {
@@ -1480,5 +1479,43 @@ input[type='submit']:hover {
 
   #about-section {
     height: fit-content;
+  }
+
+  .nav-list li {
+    font-size: 15px;
+  }
+
+  .main-header {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  #hamburger-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .basket {
+    width: 40px;
+    height: 40px;
+  }
+
+  .product-tab {
+    width: 250px;
+    font-size: 20px;
+  }
+
+  .card-img {
+    height: 100px;
+    width: 100px;
+  }
+
+  .tab-content {
+    width: 250px;
+  }
+
+  .contact-txt h1 {
+    font-size: 32px;
   }
 }
