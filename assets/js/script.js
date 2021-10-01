@@ -18,7 +18,7 @@ document.querySelectorAll('.scroll').forEach((cliked) => {
 // Change navbar background color on scrolling
 window.addEventListener('scroll', () => {
   let header = document.querySelector('header');
-  // pageYOffset or scrollY
+
   if (window.pageYOffset > 100 && window.innerWidth > 1050) {
     header.classList.add('bg-color');
   } else {
@@ -38,7 +38,6 @@ window.addEventListener('scroll', () => {
   if (currentPosition > previousPosition && window.innerWidth > 1050) {
     header.style.top = '-200px';
   } else {
-    console.log('go up');
     header.style.top = '0';
   }
   previousPosition = currentPosition;
@@ -61,3 +60,17 @@ for (button of closeButtons) {
     document.getElementById('my-sidebar').style.width = null;
   });
 }
+
+// Change active menu item (link) on page scroll
+window.addEventListener('scroll', () => {
+  let sections = document.querySelectorAll('.section');
+  let navLinks = document.querySelectorAll('.nav-link');
+  for (let [i, section] of sections.entries()) {
+    let box = section.getBoundingClientRect();
+    if (box.top <= 150 && box.bottom >= 150) {
+      navLinks[i].classList.add('active');
+    } else {
+      navLinks[i].classList.remove('active');
+    }
+  }
+});
