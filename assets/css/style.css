@@ -811,8 +811,41 @@ input[type='submit']:hover {
   padding-top: 15px;
 }
 
+.go-up-btn {
+  transition: all 0.25s ease-in-out;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  margin: 50px 20px;
+  border-radius: 50%;
+  padding: 0.25em;
+  width: 50px;
+  height: 50px;
+  background-color: var(--white-color);
+  z-index: 1000;
+  visibility: hidden;
+}
+
+.go-up-btn i {
+  font-size: 40px;
+  color: var(--dark-pink-color);
+}
+.show-btn {
+  visibility: visible;
+  opacity: 1;
+}
+
+.hide-btn {
+  visibility: hidden;
+  opacity: 0;
+}
+
 /* media queries */
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 1600px) {
   .container {
     width: 1000px;
   }

@@ -62,7 +62,7 @@ for (button of closeButtons) {
 }
 
 // Change active menu item (link) on page scroll
-window.addEventListener('scroll', () => {
+window.addEventListener('scroll', (e) => {
   let sections = document.querySelectorAll('.section');
   let navLinks = document.querySelectorAll('.nav-link');
   for (let [i, section] of sections.entries()) {
@@ -74,3 +74,38 @@ window.addEventListener('scroll', () => {
     }
   }
 });
+
+// Scroll to top after click back to top button
+const backToTopButton = document.querySelector('#back-to-top-button');
+
+window.addEventListener('scroll', (e) => {
+  // Get the current scroll value
+  let currentPosition = window.scrollY;
+
+  // If the scroll value is greater than the window height, add a class to the go-up-btn to show it
+  if (currentPosition > 300) {
+    backToTopButton.className = 'go-up-btn show-btn';
+  } else {
+    backToTopButton.className = 'go-up-btn hide-btn';
+  }
+});
+
+const backToTop = () => {
+  // Set a variable for the number of pixels we are from the top of the document
+  const pxNumber =
+    document.documentElement.scrollTop || document.body.scrollTop;
+  // If that number is greater than 0, we'll scroll back to 0, or the top of the document
+  // Animate that scroll with requestAnimationFrame:
+  if (pxNumber > 0) {
+    window.requestAnimationFrame(backToTop);
+    // ScrollTo takes an x and a y coordinate.
+    // Increase the '20' value to get a animate scroll
+    window.scrollTo(0, pxNumber - pxNumber / 20);
+  }
+};
+
+// When the button is clicked, run backtoTop function
+backToTopButton.onclick = function (e) {
+  e.preventDefault();
+  backToTop();
+};
