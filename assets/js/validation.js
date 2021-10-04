@@ -8,3 +8,10 @@ form.addEventListener('submit', function (e) {
   // prevent the form from submitting
   e.preventDefault();
 });
+
+// this function check if imput field is empty
+const required = (value) => (value === '' ? false : true);
+
+// this function check if the length argument is between max and min argument
+const between = (length, min, max) =>
+  length < min || length > max ? false : true;
