@@ -720,19 +720,18 @@ input[type='submit']:hover {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 
-input.error,
-textarea.error {
-  border-color: red;
-}
-
-input.success,
-textarea.success {
-  border-color: green;
-}
-
-#contact-form span {
+.error-msg {
+  position: relative;
+  height: 50px;
   color: red;
-  font-size: 10px;
+  font-size: 13px;
+  height: 19px;
+  width: 100%;
+  margin-top: -34px;
+  margin-bottom: 18px;
+  text-align: left;
+  margin-left: 3px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 /* footer */
