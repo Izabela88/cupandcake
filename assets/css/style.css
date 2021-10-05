@@ -733,6 +733,7 @@ input[type='submit']:hover {
   text-align: left;
   margin-left: 3px;
   font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
 }
 
 .send-btn:disabled {

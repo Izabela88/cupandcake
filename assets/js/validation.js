@@ -12,6 +12,12 @@ const required = (value) => (value === '' ? false : true);
 const between = (length, min, max) =>
   length < min || length > max ? false : true;
 
+// This function checks if the user only uses letters
+const onlyLettersRegex = (usernameValue) => {
+  const letters = /^[a-zA-Z]+$/;
+  return letters.test(usernameValue);
+};
+
 // Check if username field is complete correct function
 const checkUsernameField = () => {
   let isValid = false;
@@ -25,8 +31,10 @@ const checkUsernameField = () => {
   } else if (!between(usernameValue.length, min, max)) {
     showErrorMessage(
       username,
-      `your full name must contain between ${min} and ${max} letters`
+      `your name must contain between ${min} and ${max} letters`
     );
+  } else if (!onlyLettersRegex(usernameValue)) {
+    showErrorMessage(username, 'you can only use letters');
   } else {
     removeErrorMessage(username);
     isValid = true;
@@ -60,8 +68,6 @@ form.addEventListener('submit', function (e) {
   let isFormValid = isUsernameValid;
   if (isFormValid) {
     alert('Your message has been sent');
-  } else {
-    alert('Please fill in all fields correctly');
   }
   form.reset();
 });
