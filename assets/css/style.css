@@ -734,6 +734,11 @@ input[type='submit']:hover {
   font-family: 'Montserrat', sans-serif;
 }
 
+.send-btn:disabled {
+  color: #808080;
+  background-color: rgb(128 128 128 / 20%);
+}
+
 /* footer */
 #footer {
   background-color: var(--dark-pink-color);

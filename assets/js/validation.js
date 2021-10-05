@@ -2,6 +2,8 @@ const form = document.querySelector('#contact-form');
 const username = document.querySelector('#fullname');
 const email = document.querySelector('#email');
 const message = document.querySelector('#message');
+const button = document.querySelector('.send-btn');
+const inputs = document.querySelectorAll('.text-input');
 
 // This function check if imput field is empty
 const required = (value) => (value === '' ? false : true);
@@ -63,3 +65,17 @@ form.addEventListener('submit', function (e) {
   }
   form.reset();
 });
+
+// Disabled button becomes active when the user starts filling the form
+button.disabled = true;
+
+for (const field of inputs) {
+  field.addEventListener('input', (e) => {
+    e.preventDefault();
+    if (field.value === '') {
+      button.disabled = true;
+    } else {
+      button.disabled = false;
+    }
+  });
+}
