@@ -709,6 +709,7 @@ input[type='submit'] {
   font-weight: bold;
   letter-spacing: 2px;
 }
+
 input[type='submit']:hover {
   cursor: pointer;
 }
@@ -737,6 +738,12 @@ input[type='submit']:hover {
 .send-btn:disabled {
   color: #808080;
   background-color: rgb(128 128 128 / 20%);
+  box-shadow: none;
+  border: none;
+}
+
+.send-btn[disabled]:hover {
+  pointer-events: none;
 }
 
 /* footer */
