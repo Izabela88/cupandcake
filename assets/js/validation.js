@@ -18,7 +18,13 @@ const onlyLettersRegex = (usernameValue) => {
   return letters.test(usernameValue);
 };
 
-// Check if username field is complete correct function
+const isEmailValid = (emailAddress) => {
+  const userEmail =
+    /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return userEmail.test(emailAddress);
+};
+
+// Function check if full name field is complete correct
 const checkUsernameField = () => {
   let isValid = false;
   const min = 3,
@@ -37,6 +43,28 @@ const checkUsernameField = () => {
     showErrorMessage(username, 'you can only use letters');
   } else {
     removeErrorMessage(username);
+    isValid = true;
+  }
+  return isValid;
+};
+
+// Function check if email field is complete correct
+const checkUserEmail = () => {
+  const min = 2,
+    max = 150;
+  let isValid = false;
+  const userEmail = email.value.trim();
+  if (!required(userEmail)) {
+    showErrorMessage(email, 'this field can not be empty!');
+  } else if (!isEmailValid(userEmail)) {
+    showErrorMessage(email, 'email address is not valid');
+  } else if (!between(userEmail.length, min, max)) {
+    showErrorMessage(
+      email,
+      `your email must contain between ${min} and ${max} characters`
+    );
+  } else {
+    removeErrorMessage(email);
     isValid = true;
   }
   return isValid;
@@ -65,7 +93,9 @@ form.addEventListener('submit', function (e) {
   // prevent the form from submitting
   e.preventDefault();
   let isUsernameValid = checkUsernameField();
-  let isFormValid = isUsernameValid;
+  let isUserEmailValid = checkUserEmail();
+  let isFormValid = isUsernameValid && isUserEmailValid;
+
   if (isFormValid) {
     alert('Your message has been sent');
   }
