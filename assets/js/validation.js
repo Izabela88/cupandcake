@@ -1,7 +1,7 @@
 const form = document.querySelector('#contact-form');
 const username = document.querySelector('#fullname');
 const email = document.querySelector('#email');
-const message = document.querySelector('#message');
+const textarea = document.querySelector('#textarea');
 const button = document.querySelector('.send-btn');
 const inputs = document.querySelectorAll('.text-input');
 
@@ -18,6 +18,7 @@ const onlyLettersRegex = (usernameValue) => {
   return letters.test(usernameValue);
 };
 
+// This function check if the email has correct form
 const isEmailValid = (emailAddress) => {
   const userEmail =
     /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -70,6 +71,27 @@ const checkUserEmail = () => {
   return isValid;
 };
 
+// Function check if textarea field is complete correct
+const checkUserMessage = () => {
+  const min = 2,
+    max = 500;
+  let isValid = false;
+  const userMessage = textarea.value.trim();
+  if (!required(userMessage)) {
+    showErrorMessage(textarea, 'this field can not be empty!');
+    console.log('working');
+  } else if (!between(userMessage.length, min, max)) {
+    showErrorMessage(
+      textarea,
+      `your message must contain between ${min} and ${max} characters`
+    );
+  } else {
+    removeErrorMessage(textarea);
+    isValid = true;
+  }
+  return isValid;
+};
+
 // Show the error message function
 const showErrorMessage = (input, message) => {
   // get the parent element where the error message will appear
@@ -94,10 +116,11 @@ form.addEventListener('submit', function (e) {
   e.preventDefault();
   let isUsernameValid = checkUsernameField();
   let isUserEmailValid = checkUserEmail();
-  let isFormValid = isUsernameValid && isUserEmailValid;
+  let isMessageValid = checkUserMessage();
+  let isFormValid = isUsernameValid && isUserEmailValid && isMessageValid;
 
   if (isFormValid) {
-    alert('Your message has been sent');
+    alert('Your message has been sent') && form.submit();
   }
   form.reset();
 });
