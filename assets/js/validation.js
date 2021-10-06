@@ -4,6 +4,8 @@ const email = document.querySelector('#email');
 const textarea = document.querySelector('#textarea');
 const button = document.querySelector('.send-btn');
 const inputs = document.querySelectorAll('.text-input');
+const modal = document.querySelector('#modal');
+const closeButton = document.querySelector('.close-modal-btn');
 
 // This function check if imput field is empty
 const required = (value) => (value === '' ? false : true);
@@ -118,11 +120,13 @@ form.addEventListener('submit', function (e) {
   let isUserEmailValid = checkUserEmail();
   let isMessageValid = checkUserMessage();
   let isFormValid = isUsernameValid && isUserEmailValid && isMessageValid;
-
   if (isFormValid) {
-    alert('Your message has been sent') && form.submit();
+    openModal;
+    form.reset();
+    button.disabled = true;
+  } else {
+    !openModal();
   }
-  form.reset();
 });
 
 // Disabled button becomes active when the user starts filling the form
@@ -153,3 +157,11 @@ form.addEventListener('input', function (e) {
       break;
   }
 });
+
+// Function which open the modal
+function openModal() {
+  modal.classList.toggle('show-modal');
+}
+
+button.addEventListener('click', openModal);
+closeButton.addEventListener('click', openModal);
