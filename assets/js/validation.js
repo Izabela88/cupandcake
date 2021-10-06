@@ -35,13 +35,13 @@ const checkUsernameField = () => {
 
   if (!required(usernameValue)) {
     showErrorMessage(username, 'this field can not be empty!');
+  } else if (!onlyLettersRegex(usernameValue)) {
+    showErrorMessage(username, 'you can only use letters');
   } else if (!between(usernameValue.length, min, max)) {
     showErrorMessage(
       username,
       `your name must contain between ${min} and ${max} letters`
     );
-  } else if (!onlyLettersRegex(usernameValue)) {
-    showErrorMessage(username, 'you can only use letters');
   } else {
     removeErrorMessage(username);
     isValid = true;
@@ -138,3 +138,18 @@ for (const field of inputs) {
     }
   });
 }
+
+// Add input event listener for validate each field during complete the form
+form.addEventListener('input', function (e) {
+  switch (e.target.id) {
+    case 'fullname':
+      checkUsernameField();
+      break;
+    case 'email':
+      checkUserEmail();
+      break;
+    case 'textarea':
+      checkUserMessage();
+      break;
+  }
+});
