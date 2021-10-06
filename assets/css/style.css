@@ -452,7 +452,7 @@ li {
 /* tab content */
 .tab-content {
   display: grid;
-  gap: 20px;
+  gap: 40px;
   grid-template-columns: repeat(3, 1fr);
   justify-self: center;
   width: 100%;
@@ -470,11 +470,17 @@ li {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  box-shadow: rgb(131 222 239 / 35%) 0px 5px 15px;
+  box-shadow: rgb(131 222 239 / 35%) 0px 0px 15px;
+  transition-duration: 0.3s;
+}
+
+.tab-card:hover {
+  transform: scale(1.1);
+  background-color: var(--white-color);
 }
 
 .tab-card.active {
-  box-shadow: rgb(254 165 187 / 35%) 0px 5px 15px;
+  box-shadow: rgb(254 165 187 / 35%) 0px 0px 15px;
 }
 
 .tab-card h3 {
