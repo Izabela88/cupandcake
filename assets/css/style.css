@@ -489,6 +489,11 @@ li {
   text-transform: lowercase;
 }
 
+.tab-card p {
+  text-align: center;
+  padding: 25px;
+}
+
 .tab-card h4 {
   font-size: 30px;
   letter-spacing: 2px;
