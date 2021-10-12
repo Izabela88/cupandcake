@@ -500,6 +500,7 @@ li {
   align-items: center;
   box-shadow: rgb(254 165 187 / 35%) 0px 5px 15px;
   transition-duration: 0.3s;
+  text-align: center;
 }
 
 .tab-card:hover {

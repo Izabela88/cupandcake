@@ -1,20 +1,20 @@
 const imgBasePath = 'assets/images/cupcakes/';
 const currency = '£';
 
+//Load cupcakes data from products.txt file
 let cupcakes = JSON.parse(cupcakesData);
-console.log(cupcakes);
 
 // Dynamically create tab cards
 cupcakes.forEach(function (cupcake) {
-  // create div tab card
+  // create div with tab card class name
   let tabCard = document.createElement('div');
   tabCard.classList = 'tab-card';
-  // create image
+  // create cupcake image
   let image = document.createElement('img');
   image.classList = 'card-img';
   image.src = imgBasePath.concat(cupcake.image);
   tabCard.appendChild(image);
-  // create heading
+  // create name heading
   let h3 = document.createElement('h3');
   let h3TextNode = document.createTextNode(`${cupcake.name}`);
   tabCard.appendChild(h3);
@@ -37,29 +37,37 @@ cupcakes.forEach(function (cupcake) {
 
   const tabContent = document.querySelector(`#${cupcake.type}`);
   tabContent.appendChild(tabCard);
-
-  console.log(tabContent);
 });
 
 // Open tab content depending on the type of products
-function openTab(evt, type) {
-  var i, tabContent, tabLinks;
-  tabContent = document.getElementsByClassName('content');
-  for (i = 0; i < tabContent.length; i++) {
-    tabContent[i].style.display = 'none';
+function openTabContent(evt, type) {
+  let tabsContent = document.querySelectorAll('.content');
+  for (const tabContent of tabsContent) {
+    tabContent.style.display = 'none';
   }
-  tabLinks = document.getElementsByClassName('product-tab');
-  for (i = 0; i < tabLinks.length; i++) {
-    tabLinks[i].className = tabLinks[i].className.replace(' active', '');
+  let productTabs = document.querySelectorAll('.product-tab');
+  for (const productTab of productTabs) {
+    productTab.className = productTab.className.replace(' active', '');
   }
-
   document.getElementById(type).style.display = 'grid';
   evt.currentTarget.className += ' active';
 }
 
+// Add onclick event for each tab
+document.getElementById('vegan-tab').onclick = function (event) {
+  openTabContent(event, 'vegan');
+};
+
+document.getElementById('chocolate-tab').onclick = function (event) {
+  openTabContent(event, 'chocolate');
+};
+
+document.getElementById('fruity-tab').onclick = function (event) {
+  openTabContent(event, 'fruity');
+};
+
 // Default open vegan products
 function defaultOpenTab() {
-  document.getElementById('defaultOpen').click();
+  document.getElementById('vegan-tab').click();
 }
-
 defaultOpenTab();
