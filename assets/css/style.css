@@ -191,7 +191,7 @@ li {
   height: 800px;
   width: 900px;
   position: absolute;
-  transform: rotate(3deg);
+  transform: rotate(347deg);
   left: -20%;
 }
 
@@ -301,7 +301,7 @@ li {
   position: absolute;
   border-radius: 50%;
   z-index: -1;
-  right: -85px;
+  right: -45px;
   top: 50%;
 }
 
