@@ -4,7 +4,7 @@ const email = document.querySelector('#email');
 const textarea = document.querySelector('#textarea');
 const button = document.querySelector('.send-btn');
 const inputs = document.querySelectorAll('.text-input');
-const modal = document.querySelector('#modal');
+const modal = document.querySelector('#contact-modal');
 const closeButton = document.querySelector('.close-modal-btn');
 
 // This function check if imput field is empty
