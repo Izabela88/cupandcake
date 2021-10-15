@@ -16,12 +16,12 @@ cupcakes.forEach(function (cupcake) {
   tabCard.appendChild(image);
   // create name heading
   let h3 = document.createElement('h3');
-  let h3TextNode = document.createTextNode(`${cupcake.name}`);
+  let h3TextNode = document.createTextNode(cupcake.name);
   tabCard.appendChild(h3);
   h3.appendChild(h3TextNode);
   // create product description
   let p = document.createElement('p');
-  let pTextNode = document.createTextNode(`${cupcake.description}`);
+  let pTextNode = document.createTextNode(cupcake.description);
   tabCard.appendChild(p);
   p.appendChild(pTextNode);
   // create price heading
@@ -34,6 +34,10 @@ cupcakes.forEach(function (cupcake) {
   basketIcon.classList = 'basket-icon';
   basketIcon.src = 'assets/images/addbasket.svg';
   tabCard.appendChild(basketIcon);
+  // add onclick event to basket icons
+  basketIcon.onclick = function (e) {
+    appendToBasket(cupcake);
+  };
 
   const tabContent = document.querySelector(`#${cupcake.type}`);
   tabContent.appendChild(tabCard);
@@ -71,3 +75,31 @@ function defaultOpenTab() {
   document.getElementById('vegan-tab').click();
 }
 defaultOpenTab();
+
+// Append item to local storage memory
+function appendToBasket(cupcake) {
+  let basket = localStorage.Basket;
+  let basketItem = {
+    id: cupcake.id,
+    qty: 1,
+    name: cupcake.name,
+    price: cupcake.price,
+  };
+  if (!basket) {
+    localStorage.Basket = JSON.stringify([basketItem]);
+  } else {
+    let isInBasket = false;
+    basket = JSON.parse(basket);
+    for (let item of basket) {
+      if (item.id === cupcake.id) {
+        item.qty++;
+        isInBasket = true;
+        break;
+      }
+    }
+    if (!isInBasket) {
+      basket.push(basketItem);
+    }
+    localStorage.Basket = JSON.stringify(basket);
+  }
+}
