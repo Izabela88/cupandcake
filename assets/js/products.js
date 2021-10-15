@@ -30,12 +30,12 @@ cupcakes.forEach(function (cupcake) {
   tabCard.appendChild(h4);
   h4.appendChild(h4TextNode);
   // create basket icon
-  let basketIcon = document.createElement('img');
-  basketIcon.classList = 'basket-icon';
-  basketIcon.src = 'assets/images/addbasket.svg';
-  tabCard.appendChild(basketIcon);
+  let productsBasketIcon = document.createElement('img');
+  productsBasketIcon.classList = 'basket-icon';
+  productsBasketIcon.src = 'assets/images/addbasket.svg';
+  tabCard.appendChild(productsBasketIcon);
   // add onclick event to basket icons
-  basketIcon.onclick = function (e) {
+  productsBasketIcon.onclick = function (e) {
     appendToBasket(cupcake);
   };
 
@@ -84,6 +84,7 @@ function appendToBasket(cupcake) {
     qty: 1,
     name: cupcake.name,
     price: cupcake.price,
+    image: cupcake.image,
   };
   if (!basket) {
     localStorage.Basket = JSON.stringify([basketItem]);
