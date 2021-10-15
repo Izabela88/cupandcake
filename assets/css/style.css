@@ -103,6 +103,17 @@ li {
   align-items: center;
 }
 
+.show-shopping-cart {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+  transition: visibility 0s linear 0s, opacity 0.5s 0s, transform 0.5s;
+}
+
+.close-shopping-cart {
+  cursor: pointer;
+}
+
 .shopping-cart-box {
   width: 750px;
   height: auto;
