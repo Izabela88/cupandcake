@@ -360,6 +360,23 @@ button[class*='btn'] {
   cursor: pointer;
 }
 
+.counter-icon {
+  position: absolute;
+  background: var(--light-pink-color);
+  margin-left: 50px;
+  margin-bottom: 35px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  z-index: 10000;
+}
+
 .circles-red-hero {
   background: url(../images/circle2.svg) no-repeat center center/cover;
   position: absolute;
