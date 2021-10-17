@@ -92,6 +92,7 @@ function openBasket(e) {
       productQty.setAttribute('value', item.qty);
     }
   });
+  updateTotalPrice();
 }
 
 // Add products inside the basket
@@ -111,6 +112,7 @@ function incrementProduct(item, sumProductPrice) {
       }
     }
     localStorage.Basket = JSON.stringify(basketCupcakes);
+    updateTotalPrice();
   } else {
     alert('Max 60 cupcakes!');
   }
@@ -133,6 +135,7 @@ function decrementProduct(item, sumProductPrice) {
       }
     }
     localStorage.Basket = JSON.stringify(basketCupcakes);
+    updateTotalPrice();
   } else {
     alert('Min 1 cupcake!');
   }
@@ -147,17 +150,43 @@ function deleteProduct(item) {
     1
   );
   localStorage.Basket = JSON.stringify(basketCupcakes);
+  updateTotalPrice();
   productBox.remove();
 }
 
 // Sum of total product price in product box
 function totalProductPrice(item) {
-  console.log(item);
   let totalProductCost = new Intl.NumberFormat('en-CA', {
     style: 'currency',
     currency: 'GBP',
   }).format(item.qty * item.price);
   return totalProductCost;
+}
+
+// Sum price of all products in the basket
+function totalBasketPrice() {
+  let basketCupcakes = JSON.parse(localStorage.Basket);
+  let total = 0;
+  basketCupcakes.forEach((basketCupcake) => {
+    let totalProductPrice = basketCupcake.qty * basketCupcake.price;
+    total = total + totalProductPrice;
+  });
+  let totalFormattedPrice = new Intl.NumberFormat('en-CA', {
+    style: 'currency',
+    currency: 'GBP',
+  }).format(total);
+  return totalFormattedPrice;
+}
+
+// Update total displayed price in the basket
+function updateTotalPrice() {
+  let totalPrice = document.querySelector('#total-price');
+  if (totalPrice.hasChildNodes()) {
+    totalPrice.childNodes[0].nodeValue = totalBasketPrice();
+  } else {
+    let price = document.createTextNode(totalBasketPrice());
+    totalPrice.appendChild(price);
+  }
 }
 
 basketIcon.addEventListener('click', openBasket);
