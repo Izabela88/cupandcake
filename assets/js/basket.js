@@ -50,6 +50,7 @@ function buildBasketItem(item) {
   quantityInput.setAttribute('id', `input-id-${item.id}`);
   quantityInput.setAttribute('type', 'text');
   quantityInput.setAttribute('value', item.qty);
+  quantityInput.setAttribute('readonly', true);
   quantity.appendChild(quantityInput);
 
   let plusBtn = document.createElement('button');
