@@ -37,12 +37,18 @@ function buildBasketItem(item) {
   quantity.className = 'product-quantity';
   productBox.appendChild(quantity);
 
+  let sumProductPrice = document.createElement('div');
+  sumProductPrice.className = 'total-product-price';
+  let totalCost = totalProductPrice(item);
+  sumProductPrice.textContent = totalCost;
+  productBox.appendChild(sumProductPrice);
+
   let minusBtn = document.createElement('button');
   minusBtn.className = 'minus-btn';
   minusBtn.textContent = '-';
   quantity.appendChild(minusBtn);
   minusBtn.onclick = function (e) {
-    decrementProduct(item);
+    decrementProduct(item, sumProductPrice);
   };
 
   let quantityInput = document.createElement('input');
@@ -58,17 +64,8 @@ function buildBasketItem(item) {
   plusBtn.textContent = '+';
   quantity.appendChild(plusBtn);
   plusBtn.onclick = function (e) {
-    incrementProduct(item);
+    incrementProduct(item, sumProductPrice);
   };
-
-  let price = document.createElement('div');
-  price.className = 'total-product-price';
-  let totalCost = new Intl.NumberFormat('en-CA', {
-    style: 'currency',
-    currency: 'GBP',
-  }).format(item.qty * item.price);
-  price.textContent = totalCost;
-  productBox.appendChild(price);
 
   let deleteIcon = document.createElement('div');
   deleteIcon.className = 'delete-icon';
@@ -98,7 +95,7 @@ function openBasket(e) {
 }
 
 // Add products inside the basket
-function incrementProduct(item) {
+function incrementProduct(item, sumProductPrice) {
   const maxQty = 60;
   if (item.qty < maxQty) {
     let basketCupcakes = JSON.parse(localStorage.Basket);
@@ -110,6 +107,7 @@ function incrementProduct(item) {
         basketItem.qty++;
         productQty.setAttribute('value', basketItem.qty);
         item.qty = basketItem.qty;
+        sumProductPrice.textContent = totalProductPrice(item);
       }
     }
     localStorage.Basket = JSON.stringify(basketCupcakes);
@@ -119,7 +117,7 @@ function incrementProduct(item) {
 }
 
 // Subtract products inside the basket
-function decrementProduct(item) {
+function decrementProduct(item, sumProductPrice) {
   const minQty = 1;
   if (item.qty > minQty) {
     let basketCupcakes = JSON.parse(localStorage.Basket);
@@ -131,6 +129,7 @@ function decrementProduct(item) {
         basketItem.qty--;
         productQty.setAttribute('value', basketItem.qty);
         item.qty = basketItem.qty;
+        sumProductPrice.textContent = totalProductPrice(item);
       }
     }
     localStorage.Basket = JSON.stringify(basketCupcakes);
@@ -149,6 +148,16 @@ function deleteProduct(item) {
   );
   localStorage.Basket = JSON.stringify(basketCupcakes);
   productBox.remove();
+}
+
+// Sum of total product price in product box
+function totalProductPrice(item) {
+  console.log(item);
+  let totalProductCost = new Intl.NumberFormat('en-CA', {
+    style: 'currency',
+    currency: 'GBP',
+  }).format(item.qty * item.price);
+  return totalProductCost;
 }
 
 basketIcon.addEventListener('click', openBasket);
