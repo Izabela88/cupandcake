@@ -93,6 +93,7 @@ function openBasket(e) {
     }
   });
   updateTotalPrice();
+  updateTotalProductsQty();
 }
 
 // Add products inside the basket
@@ -113,6 +114,7 @@ function incrementProduct(item, sumProductPrice) {
     }
     localStorage.Basket = JSON.stringify(basketCupcakes);
     updateTotalPrice();
+    updateTotalProductsQty();
   } else {
     alert('Max 60 cupcakes!');
   }
@@ -136,12 +138,13 @@ function decrementProduct(item, sumProductPrice) {
     }
     localStorage.Basket = JSON.stringify(basketCupcakes);
     updateTotalPrice();
+    updateTotalProductsQty();
   } else {
     alert('Min 1 cupcake!');
   }
 }
 
-// Remove product from basket
+// Remove product from the basket
 function deleteProduct(item) {
   let basketCupcakes = JSON.parse(localStorage.Basket);
   let productBox = document.querySelector(`#basket-id-${item.id}`);
@@ -151,6 +154,7 @@ function deleteProduct(item) {
   );
   localStorage.Basket = JSON.stringify(basketCupcakes);
   updateTotalPrice();
+  updateTotalProductsQty();
   productBox.remove();
 }
 
@@ -189,5 +193,41 @@ function updateTotalPrice() {
   }
 }
 
+//Calculate total products quantity
+function totalProductsQty() {
+  let basketCupcakes = JSON.parse(localStorage.Basket);
+  let total = 0;
+  basketCupcakes.forEach((basketCupcake) => {
+    total += basketCupcake.qty;
+  });
+
+  return total;
+}
+
+// Update displayed products quantity
+function updateTotalProductsQty() {
+  let itemsCounter = document.querySelector('#items-counter');
+  let summaryItems = document.querySelector('.summary-items');
+  let qty = totalProductsQty();
+  let summaryItemsSuffix = 'cupcakes';
+  if (qty === 1) {
+    summaryItemsSuffix = 'cupcake';
+  }
+  let summaryItemsText = `${qty} ${summaryItemsSuffix}`;
+  if (itemsCounter.hasChildNodes()) {
+    itemsCounter.childNodes[0].nodeValue = qty;
+  } else {
+    let qty = document.createTextNode(qty);
+    itemsCounter.appendChild(qty);
+  }
+
+  if (summaryItems.hasChildNodes()) {
+    summaryItems.childNodes[0].nodeValue = summaryItemsText;
+  } else {
+    summaryItems.appendChild(document.createTextNode(summaryItemsText));
+  }
+}
+
 basketIcon.addEventListener('click', openBasket);
 closeBasket.addEventListener('click', openBasket);
+updateTotalProductsQty();

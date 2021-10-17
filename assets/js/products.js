@@ -37,6 +37,7 @@ cupcakes.forEach(function (cupcake) {
   // add onclick event to basket icons
   productsBasketIcon.onclick = function (e) {
     appendToBasket(cupcake);
+    updateQtyCounter();
   };
 
   const tabContent = document.querySelector(`#${cupcake.type}`);
@@ -102,5 +103,28 @@ function appendToBasket(cupcake) {
       basket.push(basketItem);
     }
     localStorage.Basket = JSON.stringify(basket);
+  }
+}
+
+// Calculate counter quantity
+function qtyCounter() {
+  let basketCupcakes = JSON.parse(localStorage.Basket);
+  let total = 0;
+  basketCupcakes.forEach((basketCupcake) => {
+    total += basketCupcake.qty;
+  });
+  return total;
+}
+
+// Update displayed counter quantity
+function updateQtyCounter() {
+  let itemsCounter = document.querySelector('#items-counter');
+  let qty = qtyCounter();
+
+  if (itemsCounter.hasChildNodes()) {
+    itemsCounter.childNodes[0].nodeValue = qty;
+  } else {
+    let qty = document.createTextNode(qty);
+    itemsCounter.appendChild(qty);
   }
 }
