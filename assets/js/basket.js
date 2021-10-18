@@ -95,6 +95,7 @@ function openBasket(e) {
       productQty.setAttribute('value', item.qty);
     }
   });
+
   updateTotalPrice();
   updateTotalProductsQty();
 }
@@ -226,8 +227,24 @@ function updateTotalProductsQty() {
 
   if (summaryItems.hasChildNodes()) {
     summaryItems.childNodes[0].nodeValue = summaryItemsText;
+    showMsg();
   } else {
     summaryItems.appendChild(document.createTextNode(summaryItemsText));
+  }
+}
+
+// Show message that basket is empty
+function showMsg() {
+  let containerProducts = document.querySelector('.product-box');
+  let emptyCart = document.querySelector('#empty-basket');
+  let basketCupcakes = JSON.parse(localStorage.Basket);
+
+  if (basketCupcakes.length > 0) {
+    containerProducts.style.display = 'flex';
+    emptyCart.style.display = 'none';
+  } else {
+    containerProducts.style.display = 'none';
+    emptyCart.style.display = 'block';
   }
 }
 
