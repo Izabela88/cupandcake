@@ -28,9 +28,12 @@ function buildBasketItem(item) {
   description.appendChild(productName);
 
   let productPrice = document.createElement('p');
-  let productPriceTextNode = document.createTextNode(item.price);
   productPrice.className = 'cupcake-price';
-  productPrice.appendChild(productPriceTextNode);
+  let cupcakePrice = new Intl.NumberFormat('en-CA', {
+    style: 'currency',
+    currency: 'GBP',
+  }).format(item.price);
+  productPrice.textContent = cupcakePrice;
   description.appendChild(productPrice);
 
   let quantity = document.createElement('div');
@@ -98,7 +101,7 @@ function openBasket(e) {
 
 // Add products inside the basket
 function incrementProduct(item, sumProductPrice) {
-  const maxQty = 60;
+  const maxQty = 30;
   if (item.qty < maxQty) {
     let basketCupcakes = JSON.parse(localStorage.Basket);
     basketCupcakes.filter(addQty);
@@ -116,7 +119,7 @@ function incrementProduct(item, sumProductPrice) {
     updateTotalPrice();
     updateTotalProductsQty();
   } else {
-    alert('Max 60 cupcakes!');
+    alert('Max 30 cupcakes!');
   }
 }
 
