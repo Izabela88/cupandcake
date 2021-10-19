@@ -102,7 +102,7 @@ function openBasket(e) {
 
 // Add products inside the basket
 function incrementProduct(item, sumProductPrice) {
-  const maxQty = 30;
+  const maxQty = 20;
   if (item.qty < maxQty) {
     let basketCupcakes = JSON.parse(localStorage.Basket);
     basketCupcakes.filter(addQty);
@@ -120,13 +120,17 @@ function incrementProduct(item, sumProductPrice) {
     updateTotalPrice();
     updateTotalProductsQty();
   } else {
-    alert('Max 30 cupcakes!');
+    swal({
+      title: 'you can order up to 20 cupcakes of the same type',
+      text: '* for larger orders, please contact us by filling out the form in the section "contact us"',
+    });
   }
 }
 
 // Subtract products inside the basket
 function decrementProduct(item, sumProductPrice) {
   const minQty = 1;
+
   if (item.qty > minQty) {
     let basketCupcakes = JSON.parse(localStorage.Basket);
     basketCupcakes.filter(subtractQty);
@@ -143,8 +147,6 @@ function decrementProduct(item, sumProductPrice) {
     localStorage.Basket = JSON.stringify(basketCupcakes);
     updateTotalPrice();
     updateTotalProductsQty();
-  } else {
-    alert('Min 1 cupcake!');
   }
 }
 
@@ -214,9 +216,11 @@ function updateTotalProductsQty() {
   let summaryItems = document.querySelector('.summary-items');
   let qty = totalProductsQty();
   let summaryItemsSuffix = 'cupcakes';
+
   if (qty === 1) {
     summaryItemsSuffix = 'cupcake';
   }
+
   let summaryItemsText = `${qty} ${summaryItemsSuffix}`;
   if (itemsCounter.hasChildNodes()) {
     itemsCounter.childNodes[0].nodeValue = qty;
@@ -230,11 +234,13 @@ function updateTotalProductsQty() {
   } else {
     summaryItems.appendChild(document.createTextNode(summaryItemsText));
   }
-  showMsg();
+
+  showAlertMsg();
+  disabledMinusBtn();
 }
 
-// Show message that basket is empty
-function showMsg() {
+// Show alert message when basket is empty
+function showAlertMsg() {
   let containerProducts = document.querySelectorAll('.product-box');
   let emptyCart = document.querySelector('#empty-basket');
   let basketCupcakes = JSON.parse(localStorage.Basket);
@@ -250,6 +256,27 @@ function showMsg() {
   });
 }
 
+function disabledMinusBtn() {
+  let productsQty = document.querySelectorAll('.product-quantity');
+
+  // let qtyInput = document.querySelector('.quantity-input');
+  console.log(productsQty);
+
+  productsQty.forEach((productQty) => {
+    let minusBtn = productQty.children[0];
+    let qtyInput = productQty.children[1];
+    console.log('text');
+
+    if (qtyInput.value <= 1) {
+      minusBtn.disabled = true;
+    } else {
+      minusBtn.disabled = false;
+    }
+  });
+}
+
 basketIcon.addEventListener('click', openBasket);
+basketIcon.addEventListener('click', disabledMinusBtn);
 closeBasket.addEventListener('click', openBasket);
+
 updateTotalProductsQty();
