@@ -116,6 +116,10 @@ li {
   font-size: 26px;
 }
 
+.swal-modal {
+  z-index: 1000001;
+}
+
 .swal-button {
   height: 40px;
   border: none;
@@ -450,7 +454,7 @@ button[class*='btn'] {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  z-index: 10000;
+  z-index: 1000;
   cursor: pointer;
 }
 
