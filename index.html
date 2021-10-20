@@ -10,6 +10,35 @@
 </head>
 
 <body>
+  <!-- shopping cart -->
+  <div class="shopping-cart-container">
+    <div class="shopping-cart-box">
+      <div class="cart-title">
+        <h2>shopping basket</h2>
+        <div class="close-shopping-cart">
+          <i class="fas fa-times"></i>
+        </div>
+      </div>
+      <div class="basket-container">
+        <div id="empty-basket">
+          <img src="assets/images/psstcupcake.gif" alt="">
+          <p>we have noticed your basket is empty soooo ... it's time to order something delicious!</p>
+        </div>
+      </div>
+      <!-- purchase box-->
+      <div class="purchase-box">
+        <div class="summary-box">
+          <div class="summary-div">
+            <div class="summary-amount">total price</div>
+            <div class="summary-items"></div>
+          </div>
+          <div id="total-price" class="summary-amount"></div>
+        </div>
+        <button class="purchase-button">PURCHASE</button>
+      </div>
+    </div>
+  </div>
+  </div>
   <!-- header -->
   <header id="header">
     <div id="hamburger-icon">
@@ -21,10 +50,10 @@
           <i class="fas fa-times"></i>
         </div>
         <ul class="nav-list">
-          <li><a class="scroll close-sidebar" href="#home-section">Home</a></li>
-          <li><a class="scroll close-sidebar" href="#products-section">Products</a></li>
-          <li><a class="scroll close-sidebar" href="#about-section">About</a></li>
-          <li><a class="scroll close-sidebar" href="#contact-section">Contact</a></li>
+          <li><a class="scroll close-sidebar nav-link active" href="#home-section">Home</a></li>
+          <li><a class="scroll close-sidebar nav-link" href="#products-section">Products</a></li>
+          <li><a class="scroll close-sidebar nav-link" href="#about-section">About</a></li>
+          <li><a class="scroll close-sidebar nav-link" href="#contact-section">Contact</a></li>
           <a class="scroll" href="#home-section">
             <img src="assets/images/logo.png" id="logo" alt="Logo">
           </a>
@@ -42,9 +71,10 @@
     </nav>
   </header>
   <!-- hero section -->
-  <section id="home-section">
+  <section id="home-section" class="section">
     <div class="logo-home"> <img src="assets/images/logo.png" alt="Logo"></div>
-    <div class="basket"><i class="fas fa-shopping-basket"></i></div>
+    <div class="basket"><i class="fas fa-shopping-basket"></i><span class='counter-icon' id='items-counter'>0</span>
+    </div>
     <div class="bg-shape"></div>
     <div class="girl-img"></div>
     <div class="container">
@@ -70,7 +100,7 @@
 
   </section>
   <!-- products section -->
-  <section id="products-section">
+  <section id="products-section" class="section">
     <div class="main-header">
       <h1>100% organic products</h1>
       <p>Build your own box full of heavenly pleasure!
@@ -98,62 +128,20 @@
             <p>mmmm... the refreshing taste of our fruit cupcakes will surprise you! You have to try them!</p>
           </div>
         </div>
-        <button class="product-tab active">VEGAN</button>
-        <button class="product-tab">CHOCOLATE</button>
-        <button class="product-tab">FRUITY</button>
+        <button id="vegan-tab" class="product-tab">VEGAN</button>
+        <button id="chocolate-tab" class="product-tab">CHOCOLATE</button>
+        <button id="fruity-tab" class="product-tab">FRUITY</button>
       </div>
     </div>
     <!-- tab content -->
     <div class="container">
-      <div id="vegan" class="tab-content">
-        <div class="tab-card active">
-          <img class="card-img" src="assets/images/cupcakes/vegancarmel.png" alt="Cupcake image">
-          <h3>Crazy oreo</h3>
-          <p>not only for oreo fans</p>
-          <h4>£ 7.99</h4>
-          <img class="basket-icon" src="assets/images/addbasket.svg" alt="Add to basket icon">
-        </div>
-        <div class="tab-card active">
-          <img class="card-img" src="assets/images/cupcakes/vegancarrot.png" alt="Cupcake image">
-          <h3>Crazy oreo</h3>
-          <p>not only for oreo fans</p>
-          <h4>£ 7.99</h4>
-          <img class="basket-icon" src="assets/images/addbasket.svg" alt="Add to basket icon">
-        </div>
-        <div class="tab-card active">
-          <img class="card-img" src="assets/images/cupcakes/vegancherry.png" alt="Cupcake image">
-          <h3>Crazy oreo</h3>
-          <p>not only for oreo fans</p>
-          <h4>£ 7.99</h4>
-          <img class="basket-icon" src="assets/images/addbasket.svg" alt="Add to basket icon">
-        </div>
-        <div class="tab-card active">
-          <img class="card-img" src="assets/images/cupcakes/veganrainbow.png" alt="Cupcake image">
-          <h3>Crazy oreo</h3>
-          <p>not only for oreo fans</p>
-          <h4>£ 7.99</h4>
-          <img class="basket-icon" src="assets/images/addbasket.svg" alt="Add to basket icon">
-        </div>
-        <div class="tab-card active">
-          <img class="card-img" src="assets/images/cupcakes/veganred.png" alt="Cupcake image">
-          <h3>Crazy oreo</h3>
-          <p>not only for oreo fans</p>
-          <h4>£ 7.99</h4>
-          <img class="basket-icon" src="assets/images/addbasket.svg" alt="Add to basket icon">
-        </div>
-        <div class="tab-card active">
-          <img class="card-img" src="assets/images/cupcakes/vegansaltedcaramel.png" alt="Cupcake image">
-          <h3>Crazy oreo</h3>
-          <p>not only for oreo fans</p>
-          <h4>£ 7.99</h4>
-          <img class="basket-icon" src="assets/images/addbasket.svg" alt="Add to basket icon">
-          </img>
-        </div>
+      <div id="vegan" class="tab-content content"></div>
+      <div id="chocolate" class="tab-content content"></div>
+      <div id="fruity" class="tab-content content">
       </div>
-    </div>
   </section>
   <!-- about section -->
-  <section id="about-section">
+  <section id="about-section" class="section">
     <div class="container-about">
       <div class="circles-red-about"></div>
       <div class="circles-blue-about"></div>
@@ -171,19 +159,40 @@
     </div>
   </section>
   <!-- contact section -->
-  <section id="contact-section">
+  <section id="contact-section" class="section">
     <div class="contact-bg"></div>
     <div class="contact-container">
       <div class="contact-img"></div>
       <div class="contact-txt">
         <h1>questions? <br>
           feel free to contact us!</h1>
-        <form method="POST" action="https://formdump.codeinstitute.net/" class="contact-form">
-          <input id="fullname" class="text-input" name="full_name" type="text" placeholder="Your Full Name" required>
-          <input type="email" class="text-input" id="email" name="email_address" placeholder="Your Email" required>
-          <textarea placeholder="Your message" name="message" id="message" cols="30" rows="10"></textarea>
+        <form id="contact-form">
+          <div class="input-box"><input id="fullname" class="text-input" name="full_name" type="text"
+              placeholder="Your Full Name" autocomplete="off">
+            <span class="error-msg"></span>
+          </div>
+          <div class="input-box"><input type="text" class="text-input" id="email" name="email_address"
+              placeholder="Your Email" autocomplete="off">
+            <span class="error-msg"></span>
+          </div>
+          <div class="input-box"><textarea class="text-input" placeholder="Your message" name="message" id="textarea"
+              cols="30" rows="10" autocomplete="off"></textarea>
+            <span class="error-msg"></span>
+          </div>
           <input class="send-btn" type="submit" value="Send">
         </form>
+      </div>
+    </div>
+    <div id="back-to-top-button" class="go-up-btn"><i class="fas fa-chevron-circle-up"></i></div>
+    <div class="modal-container" id="contact-modal">
+      <div class="modal-box">
+        <div class="close-modal-btn"><i class="fas fa-times-circle"></i></div>
+        <h1>Well done !</h1>
+        <p>Your message has been sent! <br> we will contact you within the next 24 hours *<br>
+          <span>*... and for now, please accept a little bit of love ... ...cupcake love...<i
+              class="far fa-heart"></i></span>
+        </p>
+        <img src="assets/images/cupcake.gif" alt="Cupcake animation">
       </div>
     </div>
   </section>
@@ -237,8 +246,13 @@
     <p>Cupandcake &copy; 2021, All Rights Reserved</p>
   </footer>
 
-  <script src="https://kit.fontawesome.com/111b3a0b11.js" crossorigin="anonymous"></script>
-  <script src="assets/js/script.js"></script>
+  <script src="assets/js/navbar.js"></script>
+  <script src="assets/js/validation.js"></script>
+  <script type="text/javascript" src="assets/js/products.txt"></script>
+  <script src="assets/js/products.js"></script>
+  <script src="assets/js/basket.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="https://kit.fontawesome.com/111b3a0b11.js"></script>
 </body>
 
 </html>
