@@ -1119,17 +1119,22 @@ button[class*='btn'] {
 
 .modal-box img {
   height: 275px;
-  width: 200px;
+  width: 170px;
 }
 
 .modal-box p {
   letter-spacing: 1px;
   margin-bottom: 18px;
-  line-height: 22px;
+  line-height: 25px;
   font-weight: bold;
   text-transform: uppercase;
   width: 85%;
-  font-size: 14px;
+  font-size: 17px;
+}
+
+.modal-box span {
+  font-size: 12px;
+  text-transform: lowercase;
 }
 
 .modal-box h1 {
