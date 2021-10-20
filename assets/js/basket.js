@@ -256,11 +256,9 @@ function showAlertMsg() {
   });
 }
 
+// Make minus button disabled when qty of products is drop to 1
 function disabledMinusBtn() {
   let productsQty = document.querySelectorAll('.product-quantity');
-
-  // let qtyInput = document.querySelector('.quantity-input');
-  console.log(productsQty);
 
   productsQty.forEach((productQty) => {
     let minusBtn = productQty.children[0];
@@ -276,7 +274,6 @@ function disabledMinusBtn() {
 }
 
 basketIcon.addEventListener('click', openBasket);
-basketIcon.addEventListener('click', disabledMinusBtn);
 closeBasket.addEventListener('click', openBasket);
 
 updateTotalProductsQty();
