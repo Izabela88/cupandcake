@@ -1872,6 +1872,29 @@ button[class*='btn'] {
     font-size: 36px;
     line-height: 50px;
   }
+
+  .modal-box {
+    height: 300px;
+    width: 300px;
+  }
+
+  .modal-box p {
+    font-size: 10px;
+    line-height: 15px;
+  }
+
+  .modal-box span {
+    font-size: 9px;
+  }
+
+  .modal-box img {
+    height: 120px;
+    width: 60px;
+  }
+
+  .close-modal-btn {
+    margin-right: -120%;
+  }
 }
 
 @media screen and (max-width: 550px) {
@@ -1965,6 +1988,31 @@ button[class*='btn'] {
 
   .main-header {
     width: 300px;
+  }
+
+  .modal-box {
+    width: 250px;
+    height: 250px;
+  }
+
+  .modal-box h1 {
+    font-size: 14px;
+  }
+
+  .modal-box p {
+    font-size: 8px;
+  }
+
+  .modal-box span {
+    font-size: 7px;
+  }
+
+  .modal-box img {
+    width: 45px;
+  }
+
+  .close-modal-btn {
+    font-size: 30px;
   }
 }
 
