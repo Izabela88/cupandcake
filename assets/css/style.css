@@ -1727,6 +1727,8 @@ button[class*='btn'] {
     border-radius: 50%;
     width: 600px;
     height: 600px;
+    left: 0;
+    margin: 0 auto;
   }
 
   .home-text h1 {
