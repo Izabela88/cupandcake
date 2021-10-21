@@ -32,7 +32,7 @@ cupcakes.forEach(function (cupcake) {
   // create basket icon
   let productsBasketIcon = document.createElement('img');
   productsBasketIcon.classList = 'basket-icon';
-  productsBasketIcon.src = 'assets/images/addbasket.svg';
+  productsBasketIcon.src = 'assets/images/addbasket.png';
   tabCard.appendChild(productsBasketIcon);
   // add onclick event to basket icons
   productsBasketIcon.onclick = function (e) {
