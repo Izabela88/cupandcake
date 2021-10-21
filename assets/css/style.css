@@ -779,7 +779,7 @@ button[class*='btn'] {
 
 .tab-content {
   display: grid;
-  gap: 40px;
+  gap: 25px;
   grid-template-columns: repeat(3, 1fr);
   justify-self: center;
   width: 100%;
@@ -803,7 +803,6 @@ button[class*='btn'] {
 }
 
 .tab-card:hover {
-  transform: scale(1.1);
   background-color: var(--white-color);
 }
 
@@ -829,8 +828,8 @@ button[class*='btn'] {
 }
 
 .card-img {
-  height: 150px;
-  width: 150px;
+  height: 250px;
+  width: 250px;
   filter: drop-shadow(3px 1px 5px rgb(0 0 0 / 49%));
 }
 
@@ -838,13 +837,14 @@ button[class*='btn'] {
   width: 40px;
   height: 40px;
   cursor: pointer;
-  transition-duration: 0.2s;
+  position: relative;
+  right: -40%;
+  top: -87%;
+  transition-duration: 0.3s;
 }
 
-.basket-icon:hover,
-.basket-icon:focus {
-  filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg)
-    brightness(104%) contrast(97%);
+.basket-icon:hover {
+  transform: scale(1.2);
 }
 
 /* about section */
@@ -1398,7 +1398,7 @@ button[class*='btn'] {
     height: 400px;
     width: 400px;
     left: -19px;
-    top: 30%;
+    top: 18%;
   }
 
   .about-img {
@@ -1485,9 +1485,6 @@ button[class*='btn'] {
     width: 90%;
     height: 90%;
   }
-  .container {
-    width: auto;
-  }
 
   .cupcake-img {
     left: 0;
@@ -1532,22 +1529,21 @@ button[class*='btn'] {
   }
 
   .tab-content {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     height: 100%;
-    width: 40%;
-    gap: 0;
+    width: 100%;
+    gap: 20px;
+  }
+
+  .tab-card {
+    width: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+    position: relative;
   }
 
   .product-tab {
     margin: 20px auto;
-  }
-
-  .card-img {
-    margin: 40px auto;
-  }
-
-  .basket-icon {
-    margin: 40px auto;
   }
 
   .tab-card {
@@ -1803,7 +1799,10 @@ button[class*='btn'] {
   }
 
   .tab-content {
-    width: 400px;
+    grid-template-columns: repeat(1, 1fr);
+    height: 100%;
+    width: 500px;
+    gap: 0;
   }
 
   .product-tab {
@@ -2025,7 +2024,7 @@ button[class*='btn'] {
   }
 
   .btns {
-    top: 75%;
+    top: 107%;
   }
 
   .red-btn {
@@ -2055,8 +2054,22 @@ button[class*='btn'] {
     display: none;
   }
 
+  .tab-card {
+    width: 100%;
+    height: 90%;
+  }
+
   .tab-card p {
     font-size: 15px;
+  }
+
+  .tab-card img {
+    margin: 0;
+  }
+
+  .tab-card h3 {
+    font-size: 22px;
+    padding: 10px;
   }
 
   #hamburger-icon {
@@ -2116,6 +2129,12 @@ button[class*='btn'] {
   .purchase-box {
     height: fit-content;
   }
+
+  .card-img {
+    margin: 40px auto;
+    width: 200px;
+    height: 200px;
+  }
 }
 
 @media screen and (max-width: 380px) {
@@ -2133,11 +2152,6 @@ button[class*='btn'] {
   .product-tab {
     width: 250px;
     font-size: 20px;
-  }
-
-  .card-img {
-    height: 100px;
-    width: 100px;
   }
 
   .tab-content {
