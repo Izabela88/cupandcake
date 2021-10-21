@@ -204,7 +204,20 @@ li {
   height: 100%;
   width: 100%;
   align-items: center;
-  overflow: overlay;
+  overflow-y: scroll;
+}
+
+.basket-container::-webkit-scrollbar {
+  width: 12px;
+}
+
+.basket-container::-webkit-scrollbar-track {
+  background: var(--white-color);
+}
+
+.basket-container::-webkit-scrollbar-thumb {
+  background-color: var(--light-pink-color);
+  border-radius: 20px;
 }
 
 #empty-basket {
@@ -633,9 +646,12 @@ button[class*='btn'] {
 
 .main-header {
   position: relative;
-  margin: 135px auto;
   width: 700px;
   text-align: center;
+  margin-top: 100px;
+  left: 50%;
+  transform: translate(-50%);
+  margin-bottom: 80px;
 }
 
 .main-header h1 {
@@ -766,8 +782,8 @@ button[class*='btn'] {
   height: 764px;
   width: 329px;
   position: relative;
-  transform: scale(0.5) rotate(8deg);
-  right: 32px;
+  transform: scale(0.5) rotate(20deg);
+  right: 20px;
   bottom: 326px;
   filter: drop-shadow(2px 1px 8px #000000);
 }
@@ -833,18 +849,34 @@ button[class*='btn'] {
   filter: drop-shadow(3px 1px 5px rgb(0 0 0 / 49%));
 }
 
-.basket-icon {
-  width: 40px;
-  height: 40px;
+.product-basket-box {
+  width: 70px;
+  height: 70px;
   cursor: pointer;
   position: relative;
-  right: -40%;
-  top: -87%;
-  transition-duration: 0.3s;
+  right: -33%;
+  top: -3%;
+  transition-duration: 0.2s;
+  box-shadow: rgb(254 165 187 / 35%) 0px 5px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.basket-icon {
+  width: 60%;
+  height: 60%;
+  transition-duration: 0.2s;
+}
+
+.product-basket-box:hover {
+  transform: scale(0.9);
+  box-shadow: rgb(254 165 187 / 35%) 0px 0px 5px;
 }
 
 .basket-icon:hover {
-  transform: scale(1.2);
+  transform: scale(0.9);
 }
 
 /* about section */
@@ -1996,8 +2028,8 @@ button[class*='btn'] {
   }
 
   .basket {
-    top: 5%;
-    left: 83%;
+    top: 4%;
+    left: 81%;
   }
 
   #contact-form {
@@ -2017,6 +2049,7 @@ button[class*='btn'] {
   .home-text h1 {
     font-size: 34px;
     line-height: 40px;
+    margin-top: 20px;
   }
   .home-text p {
     font-size: 20px;
@@ -2028,8 +2061,7 @@ button[class*='btn'] {
   }
 
   .red-btn {
-    font-size: 8px;
-    width: 80px;
+    font-size: 10px;
     height: 40px;
   }
   .about-txt {

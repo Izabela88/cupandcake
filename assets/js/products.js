@@ -29,11 +29,15 @@ cupcakes.forEach(function (cupcake) {
   let h4TextNode = document.createTextNode(currency.concat(cupcake.price));
   tabCard.appendChild(h4);
   h4.appendChild(h4TextNode);
+  // create div which hold basket icon
+  let productsBasketBox = document.createElement('div');
+  productsBasketBox.classList = 'product-basket-box';
+  tabCard.appendChild(productsBasketBox);
   // create basket icon
   let productsBasketIcon = document.createElement('img');
   productsBasketIcon.classList = 'basket-icon';
   productsBasketIcon.src = 'assets/images/addbasket.png';
-  tabCard.appendChild(productsBasketIcon);
+  productsBasketBox.appendChild(productsBasketIcon);
   // add onclick event to basket icons
   productsBasketIcon.onclick = function (e) {
     appendToBasket(cupcake);
