@@ -49,7 +49,6 @@ const closeButtons = document.querySelectorAll('.close-sidebar');
 let openSidebar;
 
 hamburgerIcon.addEventListener('click', function (e) {
-  console.log(closeButtons);
   openSidebar = true;
   document.getElementById('my-sidebar').style.width = '50%';
 });
