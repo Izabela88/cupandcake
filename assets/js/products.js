@@ -134,9 +134,9 @@ function updateQtyCounter() {
 }
 
 // Add onclick animation to basket icon in the product card
-const productBasketBox = document.querySelectorAll('.product-basket-box');
+const productBasketBoxes = document.querySelectorAll('.product-basket-box');
 
-productBasketBox.forEach((box) => {
+productBasketBoxes.forEach((box) => {
   box.addEventListener('click', () => {
     box.classList.remove('run-button');
 
