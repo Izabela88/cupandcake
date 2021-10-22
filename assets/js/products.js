@@ -132,3 +132,16 @@ function updateQtyCounter() {
     itemsCounter.appendChild(qty);
   }
 }
+
+// Add onclick animation to basket icon in the product card
+const productBasketBox = document.querySelectorAll('.product-basket-box');
+
+productBasketBox.forEach((box) => {
+  box.addEventListener('click', () => {
+    box.classList.remove('run-button');
+
+    setTimeout(function () {
+      box.classList.add('run-button');
+    }, 10);
+  });
+});

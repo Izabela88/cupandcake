@@ -263,7 +263,6 @@ function disabledMinusBtn() {
   productsQty.forEach((productQty) => {
     let minusBtn = productQty.children[0];
     let qtyInput = productQty.children[1];
-    console.log('text');
 
     if (qtyInput.value <= 1) {
       minusBtn.disabled = true;
@@ -275,5 +274,4 @@ function disabledMinusBtn() {
 
 basketIcon.addEventListener('click', openBasket);
 closeBasket.addEventListener('click', openBasket);
-
 updateTotalProductsQty();
