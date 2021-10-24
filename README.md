@@ -75,6 +75,13 @@ Using the principles of UX design, this fully responsive and interactive website
 
 - Interactive elements
 
+- #### Features left to implement
+
+  - The checkout form with payment
+  - Sign up page
+  - Login page
+  - My profile page
+
 ## Technologies Used
 
 ### Languages Used
