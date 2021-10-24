@@ -43,3 +43,18 @@ Using the principles of UX design, this fully responsive and interactive website
       2. I want to check if the contact details have changed.
       3. I want to sign up to the Newsletter so that I am emailed any major updates and/or changes to the website or organisation.
       4. I want to be able to contact the company easily.
+
+- ### Design
+
+The website is designed to be simple and orderly. All sections clearly present the information. The colours, texts and photos are selected in such a way as to arouse positive emotions among the users.
+
+- #### Colour Scheme
+
+- #### Typography
+
+  - The Coiny and Montserrat fonts are used throughout the whole website with Sans Serif as the fallback font in case for any reason the font isn't being imported into the site correctly. Both fonts are both attractive and appropriate. The Coiny font is used for headings and Montserrat is used for the rest of the text.
+
+- #### Imagery
+  - Hero image is designed to catch the user's attention. It also has a modern, energetic aesthetic.
+  - Product photos are large, clear and catch the user's attention.
+  - The photos in the 'about me' and 'contact' section are very positive and are meant to inspire the trust of the users.
