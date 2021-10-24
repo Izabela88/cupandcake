@@ -33,7 +33,8 @@ Using the principles of UX design, this fully responsive and interactive website
       3. I want to be able to send an inquiry to the company in case of any doubts or larger orders.
       4. I want to know what size an order I can place.
       5. I want to know a total price of all products in the basket.
-      6. I want to know the contact details of the company.
+      6. I want to be able to add and subtract products.
+      7. I want to know the contact details of the company.
 
   - #### Frequent User Goals
 
@@ -186,9 +187,13 @@ Using the principles of UX design, this fully responsive and interactive website
 
      - Inside the shopping basket there is information about the total amount to be paid.
 
-     ![Basket](https://github.com/Izabela88/cupandcake/blob/feature-readme/media/full-basket.png)
+  6. I want to be able to add and subtract products.
 
-  6. I want to know the contact details of the company.
+     - Inside the shopping basket are: a subtraction icon and an add icon that allow the user to add and subtract products.
+
+  ![Basket](https://github.com/Izabela88/cupandcake/blob/feature-readme/media/full-basket.png)
+
+  7. I want to know the contact details of the company.
 
      - The footer contains all the information the user needs to know, to contact the company.
 
