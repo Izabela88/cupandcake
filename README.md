@@ -57,6 +57,51 @@ Using the principles of UX design, this fully responsive and interactive website
     - The Coiny and Montserrat fonts are used throughout the whole website with Sans Serif as the fallback font in case for any reason the font isn't being imported into the site correctly. Both fonts are both attractive and appropriate. The Coiny font is used for headings and Montserrat is used for the rest of the text.
 
   - #### Imagery
+
     - Hero image is designed to catch the user's attention. It also has a modern, energetic aesthetic.
     - Product photos are large, clear and catch the user's attention.
     - The photos in the 'about me' and 'contact' section are very positive and are meant to inspire the trust of the users.
+
+  - ### Wireframes
+
+    - Home Page Wireframe (made in Adobe XD) - [View]()
+    - Mobile Wireframe (made in Adobe XD) - [View]()
+
+## Features
+
+- Responsive on all device sizes
+
+  ![Responsive](https://github.com/Izabela88/cupandcake/blob/feature-readme/media/responsive.png)
+
+- Interactive elements
+
+## Technologies Used
+
+### Languages Used
+
+- [HTML5](https://en.wikipedia.org/wiki/HTML5)
+- [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
+- [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+
+### Frameworks, Libraries & Programs Used
+
+1. [Google Fonts:](https://fonts.google.com/)
+   - Google fonts were used to import the 'Coiny' and 'Montserrat' fonts into the style.css file which is used on all pages throughout the project.
+1. [Visual Studio Code:](https://code.visualstudio.com/)
+   - Vusual Studio Code was used to create and store code.
+1. [Font Awesome:](https://fontawesome.com/)
+   - Font Awesome was used on all pages throughout the website to add icons for aesthetic and UX purposes.
+1. [GitHub:](https://github.com/)
+   - GitHub is used to store the projects code.
+1. [Crello:](https://crello.com/home/)
+   - Crello was used to create the logo.
+1. [Adobe XD:](https://www.adobe.com/uk/products/xd.html?sdid=88X75SKR&mv=search&ef_id=CjwKCAjwyIKJBhBPEiwAu7zll6Ys4g-qsJjAUTP4bv4knPHl3mYJ2_1kehg62kedd_HEr9PeaVgVaxoC874QAvD_BwE:G:s&s_kwcid=AL!3085!3!529101237971!e!!g!!adobe%20xd!1642716928!71269819668)
+   - Adobe XD was used to create the website design for desktop and mobile devices.
+1. [Favicon.io:](https://favicon.io/favicon-converter/)
+   - Favicon.io was used to create favicon.
+1. [Pixlr:](https://pixlr.com/pl/e/)
+   - Pixlr.com was used to process photos used in the whole website.
+1. [Haikei:](https://app.haikei.app/)
+   - Haikei was used to create svg background shape in the hero section
+1. [Sweetalert:](https://sweetalert.js.org/)
+   - Sweetalert was used for some of alerts
