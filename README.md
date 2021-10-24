@@ -31,8 +31,8 @@ Using the principles of UX design, this fully responsive and interactive website
       1. I want to be able to add products to my shopping basket and place an order.
       2. I want to be able to remove products from shopping basket.
       3. I want to be able to send an inquiry to the company in case of any doubts or larger orders.
-      4. I want to find company opening times.
-      5. I want to know what size an order I can place.
+      4. I want to know what size an order I can place.
+      5. I want to know a total price of all products in the basket.
       6. I want to know the contact details of the company.
 
   - #### Frequent User Goals
@@ -105,3 +105,97 @@ Using the principles of UX design, this fully responsive and interactive website
    - Haikei was used to create svg background shape in the hero section
 1. [Sweetalert:](https://sweetalert.js.org/)
    - Sweetalert was used for some of alerts
+
+### Testing User Stories from User Experience (UX) Section
+
+- #### First Time Visitor Goals
+
+  1. I want to easily understand the main purpose of the website and find out more informations about the company.
+
+     - Featured at the top of the page company logo.
+     - The hero section contains a slogan that indicates what the company does.
+     - The Hero section contains images that are related to the activities of the company.
+     - The hero section contains two buttons that can direct the user directly to the 'about us' section or the 'products section' where the user will find more information about the company and all products.
+
+     ![Hero](https://github.com/Izabela88/cupandcake/blob/feature-readme/media/hero.png)
+
+  2. I want to be able to easily navigate throughout the site to find content.
+
+     - The navigation links are in the center of navbar: Home, Products, About and Contact which link to the sections of the same page.
+     - The navigation clearly tells the user the name of the company and makes easy to find all information on website.
+     - In the footer the user can find 'quick links' list which leads to a sections of the website, which also helps in the smooth navigation of the website.
+     - When the user starts scrolling down, on the right side appears the 'back to top button' which, when pressed, leads to the home page
+
+     ![Navbar]()
+
+  3. I want to look for products section to understand what the company offers and products prices to find out if I can afford the products offered.
+
+     - In the 'Products' section the users can find all informations about the products offered by the company.
+     - The 'Products' section was create to inform the user about the prices and types of the offered products.
+
+     ![Products]()
+
+  4. I want to locate social media links to find opinions about the company and check how trusted and known they are.
+
+     - In the navbar and the footer the user can find social media icons which links to the company social media websites
+
+  5. I want a responsive website so I can access it on different devices.
+
+     - The website resizes according to the device used for better visibility and user experience.
+
+  6. I want to find a section describing the company to find out when it was founded and the rest of the pertinent information about this company.
+
+     - The 'About' section provides information about the company, when it was founded and what it does.
+
+     ![About](https://github.com/Izabela88/cupandcake/blob/feature-readme/media/about.png)
+
+- #### Returning Visitor Goals
+
+  1. I want to be able to add products to my shopping basket and place an order.
+
+     - Each product card contains a shopping basket icon.
+     - After pressing the icon, the selected product is added to the shopping basket.
+     - Inside the basket is a purchase button which, after pressing, allows the user to place the order.
+
+  2. I want to be able to remove products from shopping basket.
+
+     - Inside the basket, next to each product, is a bin icon that allows user to remove the product from the basket.
+
+  3. I want to be able to send an inquiry to the company in case of any doubts or larger orders.
+
+     - In the contact section is a form that allows the user to send a message to the company.
+
+     ![Contact](https://github.com/Izabela88/cupandcake/blob/feature-readme/media/contact.png)
+
+  4. I want to know what size an order I can place.
+
+     - On the main page of the 'Products' section the user can find information about the minimum order quantity.
+     - When the user adding products after reaching the number 20, on the screen is appear the information about the maximum number of cupcakes of one type.
+
+     ![Info]()
+
+  5. I want to know a total price of all products in the basket.
+
+     - Inside the shopping basket there is information about the total amount to be paid.
+
+     ![Basket](https://github.com/Izabela88/cupandcake/blob/feature-readme/media/full-basket.png)
+
+  6. I want to know the contact details of the company.
+
+     - The footer contains all the information the user needs to know, to contact the company.
+
+     ![Footer](https://github.com/Izabela88/cupandcake/blob/feature-readme/media/footer.png)
+
+- #### Frequent User Goals
+
+  1. I want to check whether the company's opening hours have changed.
+
+     - The user can check the current opening hours of the hotel on Facebook or on the webpage in footer.
+
+  2. I want to check if the contact details have changed.
+
+     - The user would already be comfortable with the website layout and can easily find informations in the footer.
+
+  3. I want to sign up to the Newsletter so that I am emailed any major updates and/or changes to the website or organisation.
+
+  4. I want to be able to contact the company easily.
