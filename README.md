@@ -126,14 +126,15 @@ Using the principles of UX design, this fully responsive and interactive website
      - In the footer the user can find 'quick links' list which leads to a sections of the website, which also helps in the smooth navigation of the website.
      - When the user starts scrolling down, on the right side appears the 'back to top button' which, when pressed, leads to the home page
 
-     ![Navbar]()
+     ![Navbar](https://github.com/Izabela88/cupandcake/blob/feature-readme/media/navbar.png)
 
   3. I want to look for products section to understand what the company offers and products prices to find out if I can afford the products offered.
 
      - In the 'Products' section the users can find all informations about the products offered by the company.
      - The 'Products' section was create to inform the user about the prices and types of the offered products.
 
-     ![Products]()
+     ![Products](https://github.com/Izabela88/cupandcake/blob/feature-readme/media/products1.png)
+     ![Products](https://github.com/Izabela88/cupandcake/blob/feature-readme/media/products2.png)
 
   4. I want to locate social media links to find opinions about the company and check how trusted and known they are.
 
@@ -172,7 +173,7 @@ Using the principles of UX design, this fully responsive and interactive website
      - On the main page of the 'Products' section the user can find information about the minimum order quantity.
      - When the user adding products after reaching the number 20, on the screen is appear the information about the maximum number of cupcakes of one type.
 
-     ![Info]()
+     ![Info](https://github.com/Izabela88/cupandcake/blob/feature-readme/media/info.png)
 
   5. I want to know a total price of all products in the basket.
 
