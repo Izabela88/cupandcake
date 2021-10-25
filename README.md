@@ -123,6 +123,9 @@ Using the principles of UX design, this fully responsive and interactive website
   - The products are sorted into three groups and presented in tabs.
   - Cupcakes are displayed when the button tab is clicked by the user.
   - Each product card contains a basket icon which, when pressed, adds the product to the basket.
+
+  ![Products](https://github.com/Izabela88/cupandcake/blob/feature-readme/media/products2.png)
+
   - The section also describes the three types of cupcakes. When the user hovers the mouse over the image, the type description will appear.
 
   ![Types Description](https://github.com/Izabela88/cupandcake/blob/feature-readme/media/types-description.png)
