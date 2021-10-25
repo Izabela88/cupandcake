@@ -17,7 +17,7 @@ Using the principles of UX design, this fully responsive and interactive website
 - [Features](#features)
 - [Technologies Used](#technologies-used)
   - [Languages Used](#languages-used)
-  - [Frameworks, Libraries & Programs Used](#frameworks-libraries-programs-used)
+  - [Frameworks, Libraries and Programs Used](#frameworks-libraries-and-programs-used)
 - [Code organisation](#code-organisation)
 - [Data validation](#data-validation)
 - [Testing](#testing)
@@ -159,7 +159,7 @@ Using the principles of UX design, this fully responsive and interactive website
 - [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
 - [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
 
-### Frameworks, Libraries & Programs Used
+### Frameworks, Libraries and Programs Used
 
 1. [Google Fonts:](https://fonts.google.com/)
    - Google fonts were used to import the 'Coiny' and 'Montserrat' fonts into the style.css file which is used on all pages throughout the project.
