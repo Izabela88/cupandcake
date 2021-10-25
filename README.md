@@ -74,7 +74,58 @@ Using the principles of UX design, this fully responsive and interactive website
 
   ![Responsive](https://github.com/Izabela88/cupandcake/blob/feature-readme/media/responsive.png)
 
-- Interactive elements
+- Collapsible and interactive navbar
+
+  - The website features a navigation menu on top of the page to allow users to easily navigate throughout the website.
+  - The navigation is collapsible on mobile devices for better visibility.
+  - The navbar closes automatically after scroll to a section.
+
+  ![Navigation](https://github.com/Izabela88/cupandcake/blob/feature-readme/media/navbar.png)
+  ![Navigation]()
+
+- Interactive design
+
+  - All interactive elements - including icons, links and buttons - feature hovering effects and all modals.
+
+- Basket icon
+
+  - The basket icon displays the current amount of products in the shopping basket.
+  - When products are added or subtracted, the displayed number is updated.
+  - After pressing, the shopping basket is open.
+
+  ![Basket icon]()
+
+- Shopping Basket
+
+  - Shopping basket is easy to read and has a simple structure, which includes:
+
+    - Product photo
+    - Name of product
+    - Price of product
+    - Minus button
+    - Plus button
+    - Quantity input
+    - Total produkt price
+    - Bin icon
+    - Total price of all products in the basket
+    - Total quantity of all products in the basket
+
+  - Minus button is become disabled when product quantity dropped to 1 , which makes impossible to reach zero quantity.
+
+  ![Full basket](https://github.com/Izabela88/cupandcake/blob/feature-readme/media/full-basket.png)
+
+  - When the basket is empty, a funny gif animation is displayed with a text informing that the basket is empty.
+
+  ![Empty basket](https://github.com/Izabela88/cupandcake/blob/feature-readme/media/empty-basket.png)
+
+- Products section
+
+  - The products are sorted into three groups and presented in tabs.
+  - Cupcakes are displayed when the button tab is clicked by the user.
+  - Each product card contains a basket icon which, when pressed, adds the product to the basket.
+  - The section also describes the three types of cupcakes. When the user hovers the mouse over the image, the type description will appear.
+
+  ![Types Description]()
 
 - #### Features left to implement
 
