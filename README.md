@@ -81,7 +81,7 @@ Using the principles of UX design, this fully responsive and interactive website
   - The navbar closes automatically after scroll to a section.
 
   ![Navigation](https://github.com/Izabela88/cupandcake/blob/feature-readme/media/navbar.png)
-  ![Navigation]()
+  ![Navigation](https://github.com/Izabela88/cupandcake/blob/feature-readme/media/mobile-menu.png)
 
 - Interactive design
 
@@ -93,7 +93,7 @@ Using the principles of UX design, this fully responsive and interactive website
   - When products are added or subtracted, the displayed number is updated.
   - After pressing, the shopping basket is open.
 
-  ![Basket icon]()
+  ![Basket icon](https://github.com/Izabela88/cupandcake/blob/feature-readme/media/basket.png)
 
 - Shopping Basket
 
@@ -125,7 +125,7 @@ Using the principles of UX design, this fully responsive and interactive website
   - Each product card contains a basket icon which, when pressed, adds the product to the basket.
   - The section also describes the three types of cupcakes. When the user hovers the mouse over the image, the type description will appear.
 
-  ![Types Description]()
+  ![Types Description](https://github.com/Izabela88/cupandcake/blob/feature-readme/media/types-description.png)
 
 - #### Features left to implement
 
