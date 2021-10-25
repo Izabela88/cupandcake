@@ -11,16 +11,16 @@ Using the principles of UX design, this fully responsive and interactive website
 
 ## **Table of content**
 
-- [User Experience](##user-experience)
-  - [User stories](###user-stories)
-  - [Design](###design)
-- [Features](##features)
-- [Technologies Used](##technologies-used)
-  - [Languages](###languages-used)
-  - [Frameworks, Libraries & Programs Used](###frameworks-libraries-programs-used)
+- [User Experience](#user-experience)
+  - [User stories](#user-stories)
+  - [Design](#design)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+  - [Languages](#languages-used)
+  - [Frameworks, Libraries & Programs Used](#frameworks-libraries-programs-used)
 - [Code organisation](#code-organisation)
 - [Data validation](#data-validation)
-- [Testing](###testing-user-stories-from-user-experience)
+- [Testing](#testing-user-stories-from-user-experience)
 
 ## User Experience (UX)
 
