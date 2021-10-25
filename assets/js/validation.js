@@ -7,10 +7,10 @@ const inputs = document.querySelectorAll('.text-input');
 const modal = document.querySelector('#contact-modal');
 const closeButton = document.querySelector('.close-modal-btn');
 
-// This function check if imput field is empty
+// This function checks if imput field is empty
 const required = (value) => (value === '' ? false : true);
 
-// This function check if the length argument is between max and min argument
+// This function checks if the length argument is between max and min argument
 const between = (length, min, max) =>
   length < min || length > max ? false : true;
 
@@ -20,19 +20,20 @@ const onlyLettersRegex = (usernameValue) => {
   return letters.test(usernameValue);
 };
 
-// This function check if the email has correct form
+// This function checks with regex if the email has correct form
 const isEmailValid = (emailAddress) => {
   const userEmail =
     /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   return userEmail.test(emailAddress);
 };
 
-// Function check if full name field is complete correct
+// Function checks if full name field is complete correct
 const checkUsernameField = () => {
   let isValid = false;
   const min = 3,
     max = 25;
-  // set variable which store username value and add trim method for removes whitespace from both sides of a string
+
+  // Trim username
   const usernameValue = username.value.trim();
 
   if (!required(usernameValue)) {
@@ -51,7 +52,7 @@ const checkUsernameField = () => {
   return isValid;
 };
 
-// Function check if email field is complete correct
+// Function checks if email field is complete correct
 const checkUserEmail = () => {
   const min = 2,
     max = 150;
@@ -73,7 +74,7 @@ const checkUserEmail = () => {
   return isValid;
 };
 
-// Function check if textarea field is complete correct
+// Function checks if textarea field is complete correct
 const checkUserMessage = () => {
   const min = 2,
     max = 500;
@@ -96,18 +97,14 @@ const checkUserMessage = () => {
 
 // Show the error message function
 const showErrorMessage = (input, message) => {
-  // get the parent element where the error message will appear
   const parentElement = input.parentElement;
-  // show the error message
   const errorMsg = parentElement.querySelector('.error-msg');
   errorMsg.textContent = message;
 };
 
 // Remove the error message function
 const removeErrorMessage = (input) => {
-  // get the parent element from which the error message will be removed
   const parentElement = input.parentElement;
-  // remove the error message
   const errorMsg = parentElement.querySelector('.error-msg');
   errorMsg.textContent = '';
 };
