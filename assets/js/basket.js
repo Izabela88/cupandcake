@@ -85,8 +85,7 @@ function buildBasketItem(item) {
 }
 
 // Open and close shopping cart and create new basket elements or refresh items quantity
-function openBasket(e) {
-  e.preventDefault();
+function openBasket() {
   shoppingCartContainer.classList.toggle('show-shopping-cart');
   let basketCupcakes = JSON.parse(localStorage.Basket);
 
@@ -256,7 +255,7 @@ const updateTotalProductsQty = () => {
 };
 
 // Show alert message when basket is empty
-function showAlertMsg() {
+const showAlertMsg = () => {
   let containerProducts = document.querySelectorAll('.product-box');
   let emptyCart = document.querySelector('#empty-basket');
   let basketCupcakes = JSON.parse(localStorage.Basket);
@@ -270,7 +269,7 @@ function showAlertMsg() {
       emptyCart.style.display = 'block';
     }
   });
-}
+};
 
 // Make minus button disabled when product qty dropped to 1
 function disabledMinusBtn() {
@@ -302,6 +301,16 @@ function submitPurchase(e) {
       title: 'Yasss!',
       text: 'Thank you for your purchase!',
       icon: 'success',
+    }).then((value) => {
+      localStorage.Basket = JSON.stringify([]);
+      let productsBoxes = document.querySelectorAll('.product-box');
+      showAlertMsg();
+      updateTotalProductsQty();
+      updateTotalPrice();
+
+      productsBoxes.forEach((productBox) => {
+        productBox.remove();
+      });
     });
   }
 }
