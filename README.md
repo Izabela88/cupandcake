@@ -16,11 +16,12 @@ Using the principles of UX design, this fully responsive and interactive website
   - [Design](#design)
 - [Features](#features)
 - [Technologies Used](#technologies-used)
-  - [Languages](#languages-used)
+  - [Languages Used](#languages-used)
   - [Frameworks, Libraries & Programs Used](#frameworks-libraries-programs-used)
 - [Code organisation](#code-organisation)
 - [Data validation](#data-validation)
-- [Testing](#testing-user-stories-from-user-experience)
+- [Testing](#testing)
+  - [Testing User Stories from User Experience Section](#testing-user-stories-from-user-experience-section)
 
 ## User Experience (UX)
 
@@ -76,7 +77,7 @@ Using the principles of UX design, this fully responsive and interactive website
     - Product photos are large, clear and catch the user's attention.
     - The photos in the 'about me' and 'contact' section are very positive and are meant to inspire the trust of the users.
 
-  - ### Wireframes
+  - #### Wireframes
 
     - Home Page Wireframe (made in Adobe XD) - [View]()
     - Mobile Wireframe (made in Adobe XD) - [View]()
@@ -181,7 +182,9 @@ Using the principles of UX design, this fully responsive and interactive website
 1. [Sweetalert:](https://sweetalert.js.org/)
    - Sweetalert was used for some of alerts
 
-### Testing User Stories from User Experience (UX) Section
+## Testing
+
+### Testing User Stories from User Experience Section
 
 - #### First Time Visitor Goals
 
