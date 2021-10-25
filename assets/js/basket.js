@@ -2,9 +2,11 @@ const basketIcon = document.querySelector('.basket');
 const shoppingCartContainer = document.querySelector(
   '.shopping-cart-container'
 );
+const shoppingCartBox = document.querySelector('.shopping-cart-box');
 const closeBasket = document.querySelector('.close-shopping-cart');
 const imageBasePath = 'assets/images/cupcakes/';
 const basketContainer = document.querySelector('.basket-container');
+const purchaseButton = document.querySelector('.purchase-button');
 
 // Dynamically create html basket items
 function buildBasketItem(item) {
@@ -243,6 +245,12 @@ const updateTotalProductsQty = () => {
     summaryItems.appendChild(document.createTextNode(summaryItemsText));
   }
 
+  if (qty === 0) {
+    purchaseButton.disabled = true;
+  } else {
+    purchaseButton.disabled = false;
+  }
+
   showAlertMsg();
   disabledMinusBtn();
 };
@@ -279,6 +287,26 @@ function disabledMinusBtn() {
     }
   });
 }
+
+// Function is summarizes the purchase
+function submitPurchase(e) {
+  e.preventDefault();
+  let qty = totalProductsQty();
+  if (qty < 5) {
+    swal({
+      title: 'Ouch!',
+      text: 'Your order must contain a min of five cupcakes!',
+    });
+  } else {
+    swal({
+      title: 'Yasss!',
+      text: 'Thank you for your purchase!',
+      icon: 'success',
+    });
+  }
+}
+
+purchaseButton.addEventListener('click', submitPurchase);
 
 // Add on click listener to open basket
 basketIcon.addEventListener('click', openBasket);
