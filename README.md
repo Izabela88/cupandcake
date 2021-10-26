@@ -15,6 +15,7 @@ Using the principles of UX design, this fully responsive and interactive website
   - [User stories](#user-stories)
   - [Design](#design)
 - [Features](#features)
+  - [Features left to implement](#features-left-to-implement)
 - [Technologies Used](#technologies-used)
   - [Languages Used](#languages-used)
   - [Frameworks, Libraries and Programs Used](#frameworks-libraries-and-programs-used)
@@ -86,77 +87,77 @@ Using the principles of UX design, this fully responsive and interactive website
 
 - Responsive on all device sizes
 
-  ![Responsive](https://github.com/Izabela88/cupandcake/blob/feature-readme/media/responsive.png)
+![Responsive](https://github.com/Izabela88/cupandcake/blob/feature-readme/media/responsive.png)
 
 - Collapsible and interactive navbar
 
-  - The website features a navigation menu on top of the page to allow users to easily navigate throughout the website.
-  - The navigation is collapsible on mobile devices for better visibility.
-  - The navbar closes automatically after scroll to a section.
+- The website features a navigation menu on top of the page to allow users to easily navigate throughout the website.
+- The navigation is collapsible on mobile devices for better visibility.
+- The navbar closes automatically after scroll to a section.
 
-  ![Navigation](https://github.com/Izabela88/cupandcake/blob/feature-readme/media/navbar.png)
-  ![Navigation](https://github.com/Izabela88/cupandcake/blob/feature-readme/media/mobile-menu.png)
+![Navigation](https://github.com/Izabela88/cupandcake/blob/feature-readme/media/navbar.png)
+![Navigation](https://github.com/Izabela88/cupandcake/blob/feature-readme/media/mobile-menu.png)
 
 - Interactive design
 
-  - All interactive elements - including icons, links and buttons - feature hovering effects and all modals.
+- All interactive elements - including icons, links and buttons - feature hovering effects and all modals.
 
 - Basket icon
 
-  - The basket icon displays the current amount of products in the shopping basket.
-  - When products are added or subtracted, the displayed number is updated.
-  - After pressing, the shopping basket is open.
+- The basket icon displays the current amount of products in the shopping basket.
+- When products are added or subtracted, the displayed number is updated.
+- After pressing, the shopping basket is open.
 
-  ![Basket icon](https://github.com/Izabela88/cupandcake/blob/feature-readme/media/basket.png)
+![Basket icon](https://github.com/Izabela88/cupandcake/blob/feature-readme/media/basket.png)
 
 - Shopping Basket
 
-  - Shopping basket is easy to read and has a simple structure, which includes:
+- Shopping basket is easy to read and has a simple structure, which includes:
 
-    - Product photo
-    - Name of product
-    - Price of product
-    - Minus button
-    - Plus button
-    - Quantity input
-    - Total produkt price
-    - Bin icon
-    - Total price of all products in the basket
-    - Total quantity of all products in the basket
+  - Product photo
+  - Name of product
+  - Price of product
+  - Minus button
+  - Plus button
+  - Quantity input
+  - Total produkt price
+  - Bin icon
+  - Total price of all products in the basket
+  - Total quantity of all products in the basket
 
-  - Minus button is become disabled when product quantity dropped to 1 , which makes impossible to reach zero quantity.
+- Minus button is become disabled when product quantity dropped to 1 , which makes impossible to reach zero quantity.
 
-  ![Full basket](https://github.com/Izabela88/cupandcake/blob/feature-readme/media/full-basket.png)
+![Full basket](https://github.com/Izabela88/cupandcake/blob/feature-readme/media/full-basket.png)
 
-  - When the basket is empty, a funny gif animation is displayed with a text informing that the basket is empty.
+- When the basket is empty, a funny gif animation is displayed with a text informing that the basket is empty.
 
-  ![Empty basket](https://github.com/Izabela88/cupandcake/blob/feature-readme/media/empty-basket.png)
+![Empty basket](https://github.com/Izabela88/cupandcake/blob/feature-readme/media/empty-basket.png)
 
 - Products section
 
-  - The products are sorted into three groups and presented in tabs.
-  - Cupcakes are displayed when the button tab is clicked by the user.
-  - Each product card contains a basket icon which, when pressed, adds the product to the basket.
+- The products are sorted into three groups and presented in tabs.
+- Cupcakes are displayed when the button tab is clicked by the user.
+- Each product card contains a basket icon which, when pressed, adds the product to the basket.
 
-  ![Products](https://github.com/Izabela88/cupandcake/blob/feature-readme/media/products2.png)
+![Products](https://github.com/Izabela88/cupandcake/blob/feature-readme/media/products2.png)
 
-  - The section also describes the three types of cupcakes. When the user hovers the mouse over the image, the type description will appear.
+- The section also describes the three types of cupcakes. When the user hovers the mouse over the image, the type description will appear.
 
-  ![Types description](https://github.com/Izabela88/cupandcake/blob/feature-readme/media/types-description.png)
+![Types description](https://github.com/Izabela88/cupandcake/blob/feature-readme/media/types-description.png)
 
 - Back to top button
 
-  - When the page is scrolled down, the button appears in the lower right corner.
-  - After pressing the button, the page automatically scrolls to the home page and the button disappears.
+- When the page is scrolled down, the button appears in the lower right corner.
+- After pressing the button, the page automatically scrolls to the home page and the button disappears.
 
-  ![Back to top button](https://github.com/Izabela88/cupandcake/blob/feature-readme/media/back-to-top-button.png)
+![Back to top button](https://github.com/Izabela88/cupandcake/blob/feature-readme/media/back-to-top-button.png)
 
-- #### Features left to implement
+#### Features left to implement
 
-  - The checkout form with payment
-  - Sign up page
-  - Login page
-  - My profile page
+- The checkout form with payment
+- Sign up page
+- Login page
+- My profile page
 
 ## Technologies Used
 
