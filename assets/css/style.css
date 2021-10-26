@@ -500,44 +500,14 @@ button[class*='btn'] {
   z-index: 10000;
 }
 
-.circles-red-hero {
-  background: url(../images/circle2.svg) no-repeat center center/cover;
-  position: absolute;
-  height: 800px;
-  width: 900px;
-  position: absolute;
-  right: 0;
-  transform: rotate(270deg);
-}
-
-.circles-blue-hero {
-  background: url(../images/circle1.svg) no-repeat center center/cover;
-  position: absolute;
-  height: 800px;
-  width: 900px;
-  position: absolute;
-  transform: rotate(351deg);
-  left: 0;
-}
-
-.circles-white-hero {
-  background: url(../images/circle3.svg) no-repeat center center/cover;
-  position: absolute;
-  height: 800px;
-  width: 900px;
-  position: absolute;
-  transform: rotate(347deg);
-  left: -20%;
-}
-
 .cupcake-img {
   background: url(../images/cupcake.png) no-repeat center center/cover;
-  position: absolute;
+  position: relative;
   height: 600px;
   width: 600px;
   transform: rotate(-15deg);
-  left: -190px;
-  top: 1%;
+  left: -10%;
+  top: -7%;
   filter: drop-shadow(3px 1px 8px #d61443);
 }
 
@@ -564,18 +534,18 @@ button[class*='btn'] {
   background: url(../images/round-cupcake.png) no-repeat center center/cover;
   height: 200px;
   width: 200px;
-  position: absolute;
-  left: 30%;
-  bottom: -25%;
+  position: relative;
+  left: 10%;
+  bottom: 44%;
   z-index: -1;
   opacity: 0.6;
 }
 
 .home-text {
-  width: 642px;
-  height: 383px;
+  width: 700px;
+  height: 520px;
   top: 3%;
-  right: 2%;
+  right: 15%;
   color: var(--red-color);
   z-index: 100;
   position: relative;
@@ -591,12 +561,13 @@ button[class*='btn'] {
 
 .home-text p {
   font-size: 25px;
-  padding: 31px;
+  padding: 33px;
   text-align: center;
   font-family: 'Coiny', cursive;
   line-height: 31px;
-  margin-left: 242px;
+  margin-left: 160px;
   margin-top: 118px;
+  margin-right: 118px;
 }
 
 .btns {
@@ -928,38 +899,6 @@ button[class*='btn'] {
   justify-content: center;
   align-items: center;
   max-width: 1200px;
-}
-
-.circles-red-about {
-  background: url(../images/circle2.svg) no-repeat center center/cover;
-  position: absolute;
-  height: 800px;
-  width: 900px;
-  position: absolute;
-  left: 0;
-  transform: rotate(274deg);
-}
-
-.circles-blue-about {
-  background: url(../images/circle1.svg) no-repeat center center/cover;
-  position: absolute;
-  height: 800px;
-  width: 900px;
-  position: absolute;
-  transform: rotate(116deg);
-  left: 0;
-  bottom: 0;
-}
-
-.circles-white-about {
-  background: url(../images/circle3.svg) no-repeat center center/cover;
-  position: absolute;
-  height: 800px;
-  width: 900px;
-  position: absolute;
-  transform: rotate(250deg);
-  right: 0;
-  z-index: 101;
 }
 
 .about-txt {
@@ -1366,16 +1305,23 @@ button[class*='btn'] {
 /* media queries */
 @media screen and (max-width: 1600px) {
   .cupcake-img {
-    height: 500px;
     width: 500px;
-    left: -145px;
-    top: 20%;
+    height: 500px;
+    left: 0;
   }
 
   .red-circle-big {
-    left: -12%;
-    height: 500px;
     width: 500px;
+    height: 500px;
+    left: 0;
+  }
+
+  .round-cupcake-img {
+    left: 32%;
+  }
+
+  .home-text {
+    right: 18%;
   }
 
   .home-text h1 {
@@ -1384,24 +1330,13 @@ button[class*='btn'] {
     font-size: 61px;
   }
 
+  .home-text p {
+    margin-left: 340px;
+    margin-right: 20px;
+  }
+
   .btns {
     margin-left: 130px;
-  }
-
-  .circles-blue-hero {
-    bottom: 0;
-    transform: rotate(25deg);
-  }
-
-  .circles-white-hero {
-    left: -22%;
-  }
-
-  .circles-red-hero {
-    right: unset;
-    top: 0;
-    left: 0;
-    transform: rotate(150deg);
   }
 
   .about-img {
@@ -1439,7 +1374,7 @@ button[class*='btn'] {
   }
 
   .yummy-txt {
-    right: 5px;
+    right: 100px;
     font-size: 60px;
     line-height: 43px;
   }
@@ -1451,7 +1386,7 @@ button[class*='btn'] {
   .red-circle-small {
     height: 200px;
     width: 200px;
-    right: -35px;
+    right: 4%;
   }
 
   .red-circle-big {
@@ -1461,53 +1396,14 @@ button[class*='btn'] {
   }
 
   .cupcake-img {
-    height: 400px;
     width: 400px;
-    left: -19px;
-    top: 18%;
+    height: 400px;
+    left: -5%;
   }
 
   .about-img {
-    height: 430px;
+    height: 460px;
     width: 35vw;
-  }
-
-  .circles-white-hero {
-    width: 600px;
-    height: 600px;
-    left: 0;
-    transform: rotate(84deg);
-  }
-
-  .circles-red-hero {
-    display: none;
-  }
-
-  .circles-blue-hero {
-    width: 600px;
-    height: 600px;
-    transform: rotate(125deg);
-  }
-
-  .circles-blue-about {
-    width: 500px;
-    height: 500px;
-    left: 285px;
-    transform: rotate(120deg);
-  }
-
-  .circles-red-about {
-    width: 600px;
-    height: 600px;
-    transform: rotate(108deg);
-    left: -40px;
-  }
-
-  .circles-white-about {
-    width: 600px;
-    height: 600px;
-    right: 125px;
-    transform: rotate(267deg);
   }
 
   .cupcakes-img {
@@ -1530,6 +1426,10 @@ button[class*='btn'] {
 }
 
 @media screen and (max-width: 1050px) {
+  .home-text {
+    top: 11%;
+  }
+
   .logo-home {
     display: flex;
     justify-content: center;
@@ -1553,23 +1453,13 @@ button[class*='btn'] {
   }
 
   .cupcake-img {
-    left: 0;
+    left: 2%;
+    transform: rotate(356deg);
+    top: -4%;
   }
 
   .red-circle-big {
     left: 3%;
-  }
-
-  .circles-red-hero {
-    display: none;
-  }
-
-  .circles-white-hero {
-    display: none;
-  }
-
-  .circles-blue-hero {
-    display: none;
   }
 
   .yummy-txt {
@@ -1648,18 +1538,6 @@ button[class*='btn'] {
 
   .about-txt h1 {
     font-size: 40px;
-  }
-
-  .circles-blue-about {
-    display: none;
-  }
-
-  .circles-red-about {
-    display: none;
-  }
-
-  .circles-white-about {
-    display: none;
   }
 
   #contact-section {
