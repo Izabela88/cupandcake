@@ -183,8 +183,8 @@ Using the principles of UX design, this fully responsive and interactive website
    - Google fonts were used to import the 'Coiny' and 'Montserrat' fonts into the style.css file which is used on all pages throughout the project.
 1. [Local Storage:](https://blog.logrocket.com/localstorage-javascript-complete-guide/)
    - Local Storage was used as a replacement for the database to store data used during shopping basket operations.
-1. [Visual Studio Media:](https://code.visualstudio.com/)
-   - Vusual Studio Code was used to create and store code.
+1. [Visual Studio Code:](https://code.visualstudio.com/)
+   - Visual Studio Code was used to create and store code.
 1. [Font Awesome:](https://fontawesome.com/)
    - Font Awesome was used on all pages throughout the website to add icons for aesthetic and UX purposes.
 1. [GitHub:](https://github.com/)
@@ -198,11 +198,11 @@ Using the principles of UX design, this fully responsive and interactive website
 1. [Pixlr:](https://pixlr.com/pl/e/)
    - Pixlr.com was used to process photos used in the whole website.
 1. [Haikei:](https://app.haikei.app/)
-   - Haikei was used to create svg background shape in the hero section
+   - Haikei was used to create svg background shape in the hero section.
 1. [Sweetalert:](https://sweetalert.js.org/)
-   - Sweetalert was used for some warning alerts
+   - Sweetalert was used for some warning alerts.
 1. [Animista:](https://animista.net/play/entrances/scale-in)
-   - Animista was ued for shopping basket icons animation
+   - Animista was ued for shopping basket icons animation.
 
 ## Code Organisation
 
