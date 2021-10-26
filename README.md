@@ -87,7 +87,7 @@ Using the principles of UX design, this fully responsive and interactive website
   - #### Wireframes
 
     - Home Page Wireframe (made in Adobe XD) - [View](https://github.com/Izabela88/cupandcake/blob/feature-readme/media/project.jpg)
-    - Mobile Wireframe (made in Adobe XD) - [View]()
+    - Mobile Wireframe (made in Adobe XD) - [View](https://github.com/Izabela88/cupandcake/blob/feature-readme/media/mobile-design.png)
 
 ## Features
 
