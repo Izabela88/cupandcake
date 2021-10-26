@@ -221,7 +221,7 @@ Using the principles of UX design, this fully responsive and interactive website
 - Purchase button is disabled by default.
 - The button becomes active when the order includes cupcakes.
 
-  ![Purchase Button]()
+  ![Purchase Button](https://github.com/Izabela88/cupandcake/blob/feature-readme/media/purchase-button.png)
 
 ## Testing
 
