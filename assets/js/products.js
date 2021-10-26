@@ -6,39 +6,39 @@ let cupcakes = JSON.parse(cupcakesData);
 
 // Dynamically create tab cards
 cupcakes.forEach(function (cupcake) {
-  // create div with tab card class name
+  // Create div
   let tabCard = document.createElement('div');
   tabCard.classList = 'tab-card';
-  // create cupcake image
+  // Create cupcake image
   let image = document.createElement('img');
   image.classList = 'card-img';
   image.src = imgBasePath.concat(cupcake.image);
   tabCard.appendChild(image);
-  // create name heading
+  // Create name heading
   let h3 = document.createElement('h3');
   let h3TextNode = document.createTextNode(cupcake.name);
   tabCard.appendChild(h3);
   h3.appendChild(h3TextNode);
-  // create product description
+  // Create product description
   let p = document.createElement('p');
   let pTextNode = document.createTextNode(cupcake.description);
   tabCard.appendChild(p);
   p.appendChild(pTextNode);
-  // create price heading
+  // Create price heading
   let h4 = document.createElement('h4');
   let h4TextNode = document.createTextNode(currency.concat(cupcake.price));
   tabCard.appendChild(h4);
   h4.appendChild(h4TextNode);
-  // create div which hold basket icon
+  // Create div which hold basket icon
   let productsBasketBox = document.createElement('div');
   productsBasketBox.classList = 'product-basket-box';
   tabCard.appendChild(productsBasketBox);
-  // create basket icon
+  // Create basket icon
   let productsBasketIcon = document.createElement('img');
   productsBasketIcon.classList = 'basket-icon';
   productsBasketIcon.src = 'assets/images/addbasket.png';
   productsBasketBox.appendChild(productsBasketIcon);
-  // add onclick event to basket icons
+  // Add onclick event to basket icons
   productsBasketIcon.onclick = function (e) {
     appendToBasket(cupcake);
     updateQtyCounter();
@@ -48,7 +48,7 @@ cupcakes.forEach(function (cupcake) {
   tabContent.appendChild(tabCard);
 });
 
-// Open tab content depending on the type of products
+// Open tab content depending on the type of product
 function openTabContent(evt, type) {
   let tabsContent = document.querySelectorAll('.content');
   for (const tabContent of tabsContent) {
@@ -62,7 +62,7 @@ function openTabContent(evt, type) {
   evt.currentTarget.className += ' active';
 }
 
-// Add onclick event for each tab
+// Add onclick event to open each tab
 document.getElementById('vegan-tab').onclick = function (event) {
   openTabContent(event, 'vegan');
 };
@@ -75,7 +75,7 @@ document.getElementById('fruity-tab').onclick = function (event) {
   openTabContent(event, 'fruity');
 };
 
-// Default open vegan products
+// Set the open tab by default
 function defaultOpenTab() {
   document.getElementById('vegan-tab').click();
 }
@@ -94,13 +94,31 @@ function appendToBasket(cupcake) {
   if (!basket) {
     localStorage.Basket = JSON.stringify([basketItem]);
   } else {
+    addToBasket(cupcake);
+  }
+
+  /*
+ The function will increment by one if an item exists in the basket
+ else it will insert a new record/item in the basket.
+ At the end function commit basket to the local storage.
+ If the maximum qty is reached the alert will be displayed
+ */
+  function addToBasket(cupcake) {
+    const maxQty = 20;
     let isInBasket = false;
     basket = JSON.parse(basket);
     for (let item of basket) {
       if (item.id === cupcake.id) {
-        item.qty++;
         isInBasket = true;
-        break;
+        if (item.qty < maxQty) {
+          item.qty++;
+          break;
+        } else {
+          swal({
+            title: 'you can order up to 20 cupcakes of the same type',
+            text: '* for larger orders, please contact us by filling out the form in the section "contact us"',
+          });
+        }
       }
     }
     if (!isInBasket) {

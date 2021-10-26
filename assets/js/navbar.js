@@ -1,4 +1,4 @@
-// smooth scrolling
+// Smooth scrolling
 document.querySelectorAll('.scroll').forEach((cliked) => {
   cliked.onclick = function (e) {
     e.preventDefault();
@@ -53,7 +53,7 @@ hamburgerIcon.addEventListener('click', function (e) {
   document.getElementById('my-sidebar').style.width = '50%';
 });
 
-for (button of closeButtons) {
+for (const button of closeButtons) {
   button.addEventListener('click', function (e) {
     openSidebar = false;
     document.getElementById('my-sidebar').style.width = null;
@@ -81,7 +81,6 @@ window.addEventListener('scroll', (e) => {
   // Get the current scroll value
   let currentPosition = window.scrollY;
 
-  // If the scroll value is greater than the window height, add a class to the go-up-btn to show it
   if (currentPosition > 300) {
     backToTopButton.className = 'go-up-btn show-btn';
   } else {
@@ -93,12 +92,9 @@ const backToTop = () => {
   // Set a variable for the number of pixels we are from the top of the document
   const pxNumber =
     document.documentElement.scrollTop || document.body.scrollTop;
-  // If that number is greater than 0, we'll scroll back to 0, or the top of the document
   // Animate that scroll with requestAnimationFrame:
   if (pxNumber > 0) {
     window.requestAnimationFrame(backToTop);
-    // ScrollTo takes an x and a y coordinate.
-    // Increase the '20' value to get a animate scroll
     window.scrollTo(0, pxNumber - pxNumber / 20);
   }
 };

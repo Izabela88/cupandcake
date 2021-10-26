@@ -2,31 +2,34 @@ const basketIcon = document.querySelector('.basket');
 const shoppingCartContainer = document.querySelector(
   '.shopping-cart-container'
 );
+const shoppingCartBox = document.querySelector('.shopping-cart-box');
 const closeBasket = document.querySelector('.close-shopping-cart');
 const imageBasePath = 'assets/images/cupcakes/';
 const basketContainer = document.querySelector('.basket-container');
+const purchaseButton = document.querySelector('.purchase-button');
 
-//Dynamically create html basket items
+// Dynamically create html basket items
 function buildBasketItem(item) {
+  // Create div and add class name and dynamically create id
   productBox = document.createElement('div');
   productBox.setAttribute('id', `basket-id-${item.id}`);
   productBox.className = 'product-box';
-
+  // Create product image
   let productImage = document.createElement('img');
   productImage.classList = 'product-image';
   productImage.src = imageBasePath.concat(item.image);
   productBox.appendChild(productImage);
-
+  // Create div
   let description = document.createElement('div');
   description.className = 'product-description';
   productBox.appendChild(description);
-
+  // Create paragraph witj product name
   let productName = document.createElement('p');
   let productNameTextNode = document.createTextNode(item.name);
   productName.className = 'cupcake-name';
   productName.appendChild(productNameTextNode);
   description.appendChild(productName);
-
+  // Create product price and format it on british currency
   let productPrice = document.createElement('p');
   productPrice.className = 'cupcake-price';
   let cupcakePrice = new Intl.NumberFormat('en-CA', {
@@ -35,17 +38,17 @@ function buildBasketItem(item) {
   }).format(item.price);
   productPrice.textContent = cupcakePrice;
   description.appendChild(productPrice);
-
+  // Create div
   let quantity = document.createElement('div');
   quantity.className = 'product-quantity';
   productBox.appendChild(quantity);
-
+  // Create total product price
   let sumProductPrice = document.createElement('div');
   sumProductPrice.className = 'total-product-price';
   let totalCost = totalProductPrice(item);
   sumProductPrice.textContent = totalCost;
   productBox.appendChild(sumProductPrice);
-
+  // Create minus button
   let minusBtn = document.createElement('button');
   minusBtn.className = 'minus-btn';
   minusBtn.textContent = '-';
@@ -53,7 +56,7 @@ function buildBasketItem(item) {
   minusBtn.onclick = function (e) {
     decrementProduct(item, sumProductPrice);
   };
-
+  // Create qty input
   let quantityInput = document.createElement('input');
   quantityInput.className = 'quantity-input';
   quantityInput.setAttribute('id', `input-id-${item.id}`);
@@ -61,7 +64,7 @@ function buildBasketItem(item) {
   quantityInput.setAttribute('value', item.qty);
   quantityInput.setAttribute('readonly', true);
   quantity.appendChild(quantityInput);
-
+  // Create plus button
   let plusBtn = document.createElement('button');
   plusBtn.className = 'plus-btn';
   plusBtn.textContent = '+';
@@ -69,7 +72,7 @@ function buildBasketItem(item) {
   plusBtn.onclick = function (e) {
     incrementProduct(item, sumProductPrice);
   };
-
+  // Create delete icon
   let deleteIcon = document.createElement('div');
   deleteIcon.className = 'delete-icon';
   deleteIcon.innerHTML = '<i class="far fa-trash-alt" ></i>';
@@ -82,8 +85,7 @@ function buildBasketItem(item) {
 }
 
 // Open and close shopping cart and create new basket elements or refresh items quantity
-function openBasket(e) {
-  e.preventDefault();
+function openBasket() {
   shoppingCartContainer.classList.toggle('show-shopping-cart');
   let basketCupcakes = JSON.parse(localStorage.Basket);
 
@@ -95,7 +97,7 @@ function openBasket(e) {
       productQty.setAttribute('value', item.qty);
     }
   });
-
+  // Update total price and qty every time basket is opened
   updateTotalPrice();
   updateTotalProductsQty();
 }
@@ -106,7 +108,7 @@ function incrementProduct(item, sumProductPrice) {
   if (item.qty < maxQty) {
     let basketCupcakes = JSON.parse(localStorage.Basket);
     basketCupcakes.filter(addQty);
-    //add items
+    // Add items
     function addQty(basketItem) {
       if (basketItem.id === item.id) {
         let productQty = document.querySelector(`#input-id-${item.id}`);
@@ -114,9 +116,11 @@ function incrementProduct(item, sumProductPrice) {
         productQty.setAttribute('value', basketItem.qty);
         item.qty = basketItem.qty;
         sumProductPrice.textContent = totalProductPrice(item);
+        // Commit basket
+        localStorage.Basket = JSON.stringify(basketCupcakes);
       }
     }
-    localStorage.Basket = JSON.stringify(basketCupcakes);
+    // Update total price and qty on each increament operation
     updateTotalPrice();
     updateTotalProductsQty();
   } else {
@@ -134,7 +138,7 @@ function decrementProduct(item, sumProductPrice) {
   if (item.qty > minQty) {
     let basketCupcakes = JSON.parse(localStorage.Basket);
     basketCupcakes.filter(subtractQty);
-    //subtract items
+    // Subtract items
     function subtractQty(basketItem) {
       if (basketItem.id === item.id) {
         let productQty = document.querySelector(`#input-id-${item.id}`);
@@ -142,16 +146,19 @@ function decrementProduct(item, sumProductPrice) {
         productQty.setAttribute('value', basketItem.qty);
         item.qty = basketItem.qty;
         sumProductPrice.textContent = totalProductPrice(item);
+        // Commit basket
+        localStorage.Basket = JSON.stringify(basketCupcakes);
       }
     }
-    localStorage.Basket = JSON.stringify(basketCupcakes);
+
+    // Update total price and qty on each decrement operation
     updateTotalPrice();
     updateTotalProductsQty();
   }
 }
 
-// Remove product from the basket
-function deleteProduct(item) {
+// Remove product from the basket and local storage
+const deleteProduct = (item) => {
   let basketCupcakes = JSON.parse(localStorage.Basket);
   let productBox = document.querySelector(`#basket-id-${item.id}`);
   basketCupcakes.splice(
@@ -159,22 +166,24 @@ function deleteProduct(item) {
     1
   );
   localStorage.Basket = JSON.stringify(basketCupcakes);
+
+  // Update total price and qty on each deletion
   updateTotalPrice();
   updateTotalProductsQty();
   productBox.remove();
-}
+};
 
 // Sum of total product price in product box
-function totalProductPrice(item) {
+const totalProductPrice = (item) => {
   let totalProductCost = new Intl.NumberFormat('en-CA', {
     style: 'currency',
     currency: 'GBP',
   }).format(item.qty * item.price);
   return totalProductCost;
-}
+};
 
-// Sum price of all products in the basket
-function totalBasketPrice() {
+// Sum price of all products in the basket. Returns total formatted price.
+const totalBasketPrice = () => {
   let basketCupcakes = JSON.parse(localStorage.Basket);
   let total = 0;
   basketCupcakes.forEach((basketCupcake) => {
@@ -186,10 +195,10 @@ function totalBasketPrice() {
     currency: 'GBP',
   }).format(total);
   return totalFormattedPrice;
-}
+};
 
 // Update total displayed price in the basket
-function updateTotalPrice() {
+const updateTotalPrice = () => {
   let totalPrice = document.querySelector('#total-price');
   if (totalPrice.hasChildNodes()) {
     totalPrice.childNodes[0].nodeValue = totalBasketPrice();
@@ -197,9 +206,9 @@ function updateTotalPrice() {
     let price = document.createTextNode(totalBasketPrice());
     totalPrice.appendChild(price);
   }
-}
+};
 
-//Calculate total products quantity
+// Calculate total products quantity. Returns total qty as integer
 function totalProductsQty() {
   let basketCupcakes = JSON.parse(localStorage.Basket);
   let total = 0;
@@ -210,18 +219,13 @@ function totalProductsQty() {
   return total;
 }
 
-// Update displayed products quantity
-function updateTotalProductsQty() {
+// Update displayed all products quantity
+const updateTotalProductsQty = () => {
   let itemsCounter = document.querySelector('#items-counter');
   let summaryItems = document.querySelector('.summary-items');
   let qty = totalProductsQty();
-  let summaryItemsSuffix = 'cupcakes';
 
-  if (qty === 1) {
-    summaryItemsSuffix = 'cupcake';
-  }
-
-  let summaryItemsText = `${qty} ${summaryItemsSuffix}`;
+  // Update counter quantity
   if (itemsCounter.hasChildNodes()) {
     itemsCounter.childNodes[0].nodeValue = qty;
   } else {
@@ -229,18 +233,29 @@ function updateTotalProductsQty() {
     itemsCounter.appendChild(qty);
   }
 
+  // Create a plural or singular suffix
+  let summaryItemsSuffix = qty === 1 ? 'cupcake' : 'cupcakes';
+  let summaryItemsText = `${qty} ${summaryItemsSuffix}`;
+
+  // Update total qty in the basket summary
   if (summaryItems.hasChildNodes()) {
     summaryItems.childNodes[0].nodeValue = summaryItemsText;
   } else {
     summaryItems.appendChild(document.createTextNode(summaryItemsText));
   }
 
+  if (qty === 0) {
+    purchaseButton.disabled = true;
+  } else {
+    purchaseButton.disabled = false;
+  }
+
   showAlertMsg();
   disabledMinusBtn();
-}
+};
 
 // Show alert message when basket is empty
-function showAlertMsg() {
+const showAlertMsg = () => {
   let containerProducts = document.querySelectorAll('.product-box');
   let emptyCart = document.querySelector('#empty-basket');
   let basketCupcakes = JSON.parse(localStorage.Basket);
@@ -254,9 +269,9 @@ function showAlertMsg() {
       emptyCart.style.display = 'block';
     }
   });
-}
+};
 
-// Make minus button disabled when qty of products is drop to 1
+// Make minus button disabled when product qty dropped to 1
 function disabledMinusBtn() {
   let productsQty = document.querySelectorAll('.product-quantity');
 
@@ -272,6 +287,39 @@ function disabledMinusBtn() {
   });
 }
 
+// Function is summarizes the purchase
+function submitPurchase(e) {
+  e.preventDefault();
+  let qty = totalProductsQty();
+  if (qty < 5) {
+    swal({
+      title: 'Ouch!',
+      text: 'Your order must contain a min of five cupcakes!',
+    });
+  } else {
+    swal({
+      title: 'Yasss!',
+      text: 'Thank you for your purchase!',
+      icon: 'success',
+    }).then((value) => {
+      localStorage.Basket = JSON.stringify([]);
+      let productsBoxes = document.querySelectorAll('.product-box');
+      showAlertMsg();
+      updateTotalProductsQty();
+      updateTotalPrice();
+
+      productsBoxes.forEach((productBox) => {
+        productBox.remove();
+      });
+    });
+  }
+}
+
+purchaseButton.addEventListener('click', submitPurchase);
+
+// Add on click listener to open basket
 basketIcon.addEventListener('click', openBasket);
 closeBasket.addEventListener('click', openBasket);
+
+// Update total product qty when application is first time loaded
 updateTotalProductsQty();

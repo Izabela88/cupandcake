@@ -397,6 +397,10 @@ button[class*='btn'] {
   filter: drop-shadow(3px 1px 5px rgb(0 0 0 / 30%));
 }
 
+.purchase-button:disabled {
+  opacity: 0.5;
+}
+
 /* navbar */
 #header {
   width: 100%;
