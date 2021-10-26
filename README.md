@@ -152,6 +152,12 @@ Using the principles of UX design, this fully responsive and interactive website
 
   ![Back to top button](https://github.com/Izabela88/cupandcake/blob/feature-readme/media/back-to-top-button.png)
 
+- Send message information in the contact section
+
+  - After completing the contact form, on the screen appears a message confirming that the message has been sent.
+
+  ![Contact message](https://github.com/Izabela88/cupandcake/blob/feature-readme/media/contact-message.png)
+
 ### Features Left To Implement
 
 - The checkout form with payment
