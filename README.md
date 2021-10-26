@@ -237,7 +237,7 @@ As the code grew, the developer decided to split all JavaScript code for parts:
   ![Alert](https://github.com/Izabela88/cupandcake/blob/feature-readme/media/qty-alert.png)
 
 - Purchase button is disabled by default.
-- The button becomes active when the order includes cupcakes.
+- The button becomes active when cupcakes are added to the shopping basket.
 
   ![Purchase Button](https://github.com/Izabela88/cupandcake/blob/feature-readme/media/purchase-button.png)
 
