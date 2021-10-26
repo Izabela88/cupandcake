@@ -243,7 +243,7 @@ As the code grew, the developer decided to split all JavaScript code for parts:
 
 - Minus button is become disabled when product quantity dropped to 1 , which makes impossible to reach zero quantity.
 
-  ![Disabled minus button]()
+  ![Disabled minus button](https://github.com/Izabela88/cupandcake/blob/feature-readme/media/disabled-minus-button.png)
 
 ## Testing
 
