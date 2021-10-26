@@ -24,6 +24,11 @@ Using the principles of UX design, this fully responsive and interactive website
 - [Testing](#testing)
   - [Testing User Stories from User Experience Section](#testing-user-stories-from-user-experience-section)
 - [Deployment](#deployment)
+- [Credits](#credits)
+  - [Code](#code)
+  - [Content](#content)
+  - [Media](#media)
+  - [Acknowledgements](#acknowledgements)
 
 ## User Experience
 
@@ -178,7 +183,7 @@ Using the principles of UX design, this fully responsive and interactive website
    - Google fonts were used to import the 'Coiny' and 'Montserrat' fonts into the style.css file which is used on all pages throughout the project.
 1. [Local Storage:](https://blog.logrocket.com/localstorage-javascript-complete-guide/)
    - Local Storage was used as a replacement for the database to store data used during shopping basket operations.
-1. [Visual Studio Code:](https://code.visualstudio.com/)
+1. [Visual Studio Media:](https://code.visualstudio.com/)
    - Vusual Studio Code was used to create and store code.
 1. [Font Awesome:](https://fontawesome.com/)
    - Font Awesome was used on all pages throughout the website to add icons for aesthetic and UX purposes.
@@ -248,7 +253,7 @@ As the code grew, the developer decided to split all JavaScript code for parts:
 
 ## Testing
 
-The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project.
+The W3C Markup Validator and W3C CSS Validator Services and JSHint were used to validate every page of the project to ensure there were no syntax errors in the project.
 
 - [W3C Markup Validator](https://validator.w3.org/) - [Results]()
 - [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) - [Results]()
@@ -407,3 +412,29 @@ $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
 ```
 
 Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop) to retrieve pictures for some of the buttons and more detailed explanations of the above process.
+
+## Credits
+
+### Code
+
+While coding for some problems and inspirations with JavaScript code, I looked for answers on websites:
+
+- [W3School](https://www.w3schools.com/)
+- [Stack Overflow](https://stackoverflow.com/)
+- [JavaScript Tutorial](https://www.javascripttutorial.net/)
+- [MDN Web Docs](https://developer.mozilla.org/en-US/)
+- [Sabe Io](https://sabe.io/)
+
+### Content
+
+- All content was written by the developer.
+
+### Media
+
+- The images was taken from [Pixlr](https://pixlr.com/e/) and [Pixabay](https://pixabay.com/).
+- The icons was taken from: [Vecteezy](https://www.vecteezy.com/), [Flaticon](https://www.flaticon.com/),
+  [Iconmonstr](https://iconmonstr.com/twitter-5-png/), [Giphy](https://giphy.com/gifs/buzzfeedanimation-cupcake-cuppy-the-good-advice-LwIRDtAxK0t2o4p2IS)
+
+### Acknowledgements
+
+- My Mentor for continuous helpful feedback.
