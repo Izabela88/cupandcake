@@ -149,7 +149,7 @@ Using the principles of UX design, this fully responsive and interactive website
   - When the page is scrolled down, the button appears in the lower right corner.
   - After pressing the button, the page automatically scrolls to the home page and the button disappears.
 
-  ![Back to top button]()
+  ![Back to top button](https://github.com/Izabela88/cupandcake/blob/feature-readme/media/back-to-top-button.png)
 
 - #### Features left to implement
 
