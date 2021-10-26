@@ -125,10 +125,6 @@ Using the principles of UX design, this fully responsive and interactive website
     - Total price of all products in the basket
     - Total quantity of all products in the basket
 
-  - Minus button is become disabled when product quantity dropped to 1 , which makes impossible to reach zero quantity.
-
-  ![Full basket](https://github.com/Izabela88/cupandcake/blob/feature-readme/media/full-basket.png)
-
   - When the basket is empty, a funny gif animation is displayed with a text informing that the basket is empty.
 
   ![Empty basket](https://github.com/Izabela88/cupandcake/blob/feature-readme/media/empty-basket.png)
@@ -242,6 +238,10 @@ As the code grew, the developer decided to split all JavaScript code for parts:
 - The button becomes active when the order includes cupcakes.
 
   ![Purchase Button](https://github.com/Izabela88/cupandcake/blob/feature-readme/media/purchase-button.png)
+
+- Minus button is become disabled when product quantity dropped to 1 , which makes impossible to reach zero quantity.
+
+  ![Full basket](https://github.com/Izabela88/cupandcake/blob/feature-readme/media/full-basket.png)
 
 ## Testing
 
