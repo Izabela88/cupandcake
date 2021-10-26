@@ -53,7 +53,7 @@ hamburgerIcon.addEventListener('click', function (e) {
   document.getElementById('my-sidebar').style.width = '50%';
 });
 
-for (button of closeButtons) {
+for (const button of closeButtons) {
   button.addEventListener('click', function (e) {
     openSidebar = false;
     document.getElementById('my-sidebar').style.width = null;

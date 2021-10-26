@@ -247,6 +247,22 @@ As the code grew, the developer decided to split all JavaScript code for parts:
 
 ## Testing
 
+The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project.
+
+- [W3C Markup Validator](https://validator.w3.org/) - [Results]()
+- [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) - [Results]()
+- [JSHint](https://jshint.com/)
+
+- I confirmed that the colors and fonts chosen are easy to read and accessible by running it through lighthouse in devtools.
+
+- Accessibility for desktops
+
+  ![Accessibility for desktops]()
+
+- Accessibility for mobile devices
+
+  ![Accessibility for mobile devices]()
+
 ### Testing User Stories from User Experience Section
 
 - #### First Time Visitor Goals
