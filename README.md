@@ -23,7 +23,7 @@ Using the principles of UX design, this fully responsive and interactive website
 - [Testing](#testing)
   - [Testing User Stories from User Experience Section](#testing-user-stories-from-user-experience-section)
 
-## User Experience (UX)
+## User Experience
 
 - ### User stories
 
@@ -142,7 +142,14 @@ Using the principles of UX design, this fully responsive and interactive website
 
   - The section also describes the three types of cupcakes. When the user hovers the mouse over the image, the type description will appear.
 
-  ![Types Description](https://github.com/Izabela88/cupandcake/blob/feature-readme/media/types-description.png)
+  ![Types description](https://github.com/Izabela88/cupandcake/blob/feature-readme/media/types-description.png)
+
+- Back to top button
+
+  - When the page is scrolled down, the button appears in the lower right corner.
+  - After pressing the button, the page automatically scrolls to the home page and the button disappears.
+
+  ![Back to top button]()
 
 - #### Features left to implement
 
