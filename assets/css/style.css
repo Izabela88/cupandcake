@@ -462,40 +462,6 @@ button[class*='btn'] {
   height: 100vh;
   overflow: hidden;
 }
-/* 
-.red-small-hero {
-  position: relative;
-  top: 52%;
-  left: 58%;
-  margin-bottom: -100px;
-}
-
-.red-medium-hero {
-  top: 70%;
-  left: 15%;
-  margin-bottom: -200px;
-  position: relative;
-}
-
-.red-big-hero {
-  top: 60%;
-  right: 65%;
-}
-
-.blue-small-hero {
-  top: 15%;
-  right: 50%;
-}
-
-.blue-medium-hero {
-  top: 8%;
-  left: 0;
-}
-
-.blue-big-hero {
-  top: 35%;
-  right: 25%;
-} */
 
 .logo-home {
   display: none;
