@@ -12,15 +12,15 @@ Using the principles of UX design, this fully responsive and interactive website
 ## **Table of content**
 
 - [User Experience](#user-experience)
-  - [User stories](#user-stories)
+  - [User Stories](#user-stories)
   - [Design](#design)
 - [Features](#features)
   - [Features Left To Implement](#features-left-to-implement)
 - [Technologies Used](#technologies-used)
   - [Languages Used](#languages-used)
   - [Frameworks, Libraries and Programs Used](#frameworks-libraries-and-programs-used)
-- [Code organisation](#code-organisation)
-- [Data validation](#data-validation)
+- [Code Organisation](#code-organisation)
+- [Data Validation](#data-validation)
 - [Testing](#testing)
   - [Testing User Stories from User Experience Section](#testing-user-stories-from-user-experience-section)
 
@@ -177,6 +177,8 @@ Using the principles of UX design, this fully responsive and interactive website
 
 1. [Google Fonts:](https://fonts.google.com/)
    - Google fonts were used to import the 'Coiny' and 'Montserrat' fonts into the style.css file which is used on all pages throughout the project.
+1. [Local Storage:](https://blog.logrocket.com/localstorage-javascript-complete-guide/)
+   - Local Storage was used as a replacement for the database to store data used during shopping basket operations.
 1. [Visual Studio Code:](https://code.visualstudio.com/)
    - Vusual Studio Code was used to create and store code.
 1. [Font Awesome:](https://fontawesome.com/)
@@ -194,7 +196,19 @@ Using the principles of UX design, this fully responsive and interactive website
 1. [Haikei:](https://app.haikei.app/)
    - Haikei was used to create svg background shape in the hero section
 1. [Sweetalert:](https://sweetalert.js.org/)
-   - Sweetalert was used for some of alerts
+   - Sweetalert was used for some warning alerts
+1. [Animista:](https://animista.net/play/entrances/scale-in)
+   - Animista was ued for shopping basket icons animation
+
+## Code Organisation
+
+As the code grew, the developer decided to split all JavaScript code for parts:
+
+- navbar.js: contains code which is responsible for the operation and animations of the navigation bar
+- products.js: handles rendering of the product cards, append items to local storage memory, and the process of adding products to the shopping basket
+- validation.js: handles validation functionalities of contact form
+- basket.js: handles functions of the operation in the shopping basket
+- products.txt: contains products data
 
 ## Data Validation
 
@@ -297,8 +311,6 @@ Using the principles of UX design, this fully responsive and interactive website
 
      - On the main page of the 'Products' section the user can find information about the minimum order quantity.
      - When the user adding products after reaching the number 20, on the screen is appear the information about the maximum number of cupcakes of one type.
-
-     ![Info](https://github.com/Izabela88/cupandcake/blob/feature-readme/media/info.png)
 
   5. I want to know a total price of all products in the basket.
 
