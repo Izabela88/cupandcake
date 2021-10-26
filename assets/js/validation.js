@@ -30,7 +30,7 @@ const isEmailValid = (emailAddress) => {
 // Function checks if full name field is complete correct
 const checkUsernameField = () => {
   let isValid = false;
-  const min = 3,
+  const min = 2,
     max = 25;
 
   // Trim username

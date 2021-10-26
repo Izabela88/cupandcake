@@ -190,6 +190,39 @@ Using the principles of UX design, this fully responsive and interactive website
 1. [Sweetalert:](https://sweetalert.js.org/)
    - Sweetalert was used for some of alerts
 
+## Data Validation
+
+### Validating Contact Form
+
+- Some text input fields will have regex pattern to ensure that the data entered match the required format.
+- Warnings are displayed on an ongoing basis while the user completes the form.
+
+  - Full name: no empty input is allowed, valid data between 2 and 25 characters, no special characters and spaces are accepted, no digits.
+  - Email: no empty input is allowed, valid data between 2 and 150 characters, the universal regex pattern was used to validate the e-mail, no spaces.
+  - Message: no empty input is allowed, valid data between 2 and 300 characters.
+  - 'SEND' Button:
+    - The button is disabled by default to prevent sending an empty message.
+    - The button becomes active when the user starts complete the form.
+
+### Validating The Order
+
+- An order may contain a minimum of 5 cupcakes.
+- An order may contain a maximum of 20 cupcakes of one type.
+
+  - When adding cupcakes from the home page, an alert appears on the screen when the number exceeds 20 cupcakes of one type.
+  - The same alert appears when the user adds cupcakes to an order in a shopping basket.
+
+  ![Alert](https://github.com/Izabela88/cupandcake/blob/feature-readme/media/info.png)
+
+  - Another alert appears when an order does not reach a minimum of five cupcakes.
+
+  ![Alert](https://github.com/Izabela88/cupandcake/blob/feature-readme/media/qty-alert.png)
+
+- Purchase button is disabled by default.
+- The button becomes active when the order includes cupcakes.
+
+  ![Purchase Button]()
+
 ## Testing
 
 ### Testing User Stories from User Experience Section
