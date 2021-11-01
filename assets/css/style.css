@@ -1673,6 +1673,7 @@ button[class*='btn'] {
   .contact-txt {
     width: 70%;
     margin-bottom: 50px;
+    margin-right: 5%;
   }
 
   .contact-bg {
