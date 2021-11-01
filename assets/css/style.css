@@ -541,7 +541,7 @@ button[class*='btn'] {
   opacity: 0.8;
 }
 
-.small-cupcake-img {
+.strawberrys-bowl {
   height: 250px;
   width: 250px;
   position: relative;
@@ -555,7 +555,7 @@ button[class*='btn'] {
   border-radius: 50%;
 }
 
-.small-cupcake-img img {
+.strawberrys-bowl img {
   width: 100%;
   height: 100%;
   border-radius: 50%;
@@ -1381,12 +1381,8 @@ button[class*='btn'] {
     left: 0;
   }
 
-  .round-cupcake-img {
-    left: 32%;
-  }
-
   .home-text {
-    right: 18%;
+    right: 0;
   }
 
   .home-text h1 {
@@ -1395,9 +1391,10 @@ button[class*='btn'] {
     font-size: 61px;
   }
 
-  .home-text p {
-    margin-left: 340px;
-    margin-right: 20px;
+  .strawberrys-bowl {
+    width: 200px;
+    height: 200px;
+    left: 0;
   }
 
   .btns {
@@ -1438,14 +1435,37 @@ button[class*='btn'] {
     margin-right: 20px;
   }
 
-  .yummy-txt {
-    right: 100px;
-    font-size: 60px;
-    line-height: 43px;
+  .happy-girl {
+    right: 18%;
   }
 
-  .yummy-txt span {
-    font-size: 50px;
+  .yummy-txt {
+    right: 4%;
+    font-size: 45px;
+    line-height: 43px;
+    top: 49%;
+  }
+
+  .cloud {
+    right: 0;
+  }
+
+  .home-text {
+    right: 6%;
+  }
+
+  .home-text p {
+    margin-right: 0;
+    font-size: 27px;
+    margin-left: 15px;
+  }
+
+  .strawberrys-bowl {
+    left: 2%;
+  }
+
+  .star {
+    right: 14%;
   }
 
   .red-circle-big {
@@ -1487,6 +1507,36 @@ button[class*='btn'] {
 @media screen and (max-width: 1050px) {
   .home-text {
     top: 11%;
+    left: 5%;
+  }
+
+  .strawberrys-bowl {
+    display: none;
+  }
+
+  .star {
+    display: none;
+  }
+
+  .drops1 {
+    display: none;
+  }
+
+  .drops2 {
+    display: none;
+  }
+
+  .happy-girl {
+    display: none;
+  }
+
+  .cloud {
+    display: none;
+  }
+
+  .drops1 {
+    top: -19%;
+    left: 16%;
   }
 
   .logo-home {
@@ -1522,7 +1572,7 @@ button[class*='btn'] {
   }
 
   .yummy-txt {
-    right: 10%;
+    display: none;
   }
 
   .girl-img {
@@ -1593,6 +1643,14 @@ button[class*='btn'] {
 
   .about-txt h1 {
     font-size: 40px;
+  }
+
+  .circle-bg {
+    display: none;
+  }
+
+  .about-txt-bg {
+    display: none;
   }
 
   #contact-section {
@@ -1720,6 +1778,7 @@ button[class*='btn'] {
     height: 600px;
     left: 0;
     margin: 0 auto;
+    top: 0;
   }
 
   .home-text h1 {
@@ -1731,6 +1790,7 @@ button[class*='btn'] {
   .home-text p {
     margin: 0 auto;
     font-size: 30px;
+    padding: 20px;
   }
 
   .cupcake-img {
