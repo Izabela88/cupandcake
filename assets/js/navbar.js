@@ -35,7 +35,7 @@ window.addEventListener('scroll', () => {
   let currentPosition =
     window.pageYOffset || document.documentElement.currentPosition;
   //  check weather the page is scrolled up or down
-  if (currentPosition > previousPosition) {
+  if (currentPosition > previousPosition && window.innerWidth > 1050) {
     header.style.top = '-200px';
   } else {
     header.style.top = '0';
