@@ -512,7 +512,7 @@ button[class*='btn'] {
   filter: drop-shadow(3px 1px 25px #d61443);
 }
 
-.drops1 {
+.drops-one {
   background: url(../images/drop.png) no-repeat center center/cover;
   width: 100px;
   height: 100px;
@@ -538,7 +538,7 @@ button[class*='btn'] {
   position: absolute;
   right: 0;
   z-index: -2;
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
 .strawberrys-bowl {
@@ -561,7 +561,7 @@ button[class*='btn'] {
   border-radius: 50%;
 }
 
-.drops2 {
+.drops-two {
   background: url(../images/drop.png) no-repeat center center/cover;
   width: 80px;
   height: 80px;
@@ -611,7 +611,7 @@ button[class*='btn'] {
 
 .btns {
   position: relative;
-  margin-left: 48px;
+  margin-left: 55px;
   margin-top: 19px;
   display: flex;
 }
@@ -649,6 +649,7 @@ button[class*='btn'] {
   bottom: 0;
   right: 8%;
   filter: drop-shadow(3px 1px 25px #d61443);
+  opacity: 0.9;
 }
 
 .red-circle-big {
@@ -805,7 +806,7 @@ button[class*='btn'] {
   height: 764px;
   width: 329px;
   position: relative;
-  transform: scale(0.5) rotate(20deg);
+  transform: scale(0.5) rotate(26deg);
   right: 20px;
   bottom: 326px;
   filter: drop-shadow(2px 1px 8px #000000);
@@ -949,14 +950,6 @@ button[class*='btn'] {
   max-width: 1200px;
 }
 
-.about-txt-bg {
-  width: 70vw;
-  height: 100vh;
-  background: url(../images/wave-haikei.svg) no-repeat center center/cover;
-  left: 0;
-  position: absolute;
-}
-
 .about-txt {
   width: 35vw;
   color: var(--white-color);
@@ -977,8 +970,30 @@ button[class*='btn'] {
   letter-spacing: 1px;
 }
 
-.circle-bg {
-  background: url(../images/circlebg2.svg) no-repeat center center/cover;
+.drops-about-one {
+  background: url(../images/drop.png) no-repeat center center/cover;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 11%;
+  left: 42%;
+  transform: rotate(288deg);
+  z-index: 1;
+}
+
+.drops-about-two {
+  background: url(../images/drop.png) no-repeat center center/cover;
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: 30%;
+  left: 49%;
+  transform: rotate(173deg);
+  z-index: 1;
+}
+
+.about-bg {
+  background: url(../images/rainbow-vortex.svg) no-repeat center center/cover;
   height: 100%;
   width: 100%;
   position: absolute;
@@ -1003,6 +1018,7 @@ button[class*='btn'] {
   width: 45vw;
   position: relative;
   filter: drop-shadow(3px 1px 65px #d61443);
+  z-index: 0;
 }
 
 /* contact section */
@@ -1368,6 +1384,20 @@ button[class*='btn'] {
 }
 
 /* media queries */
+@media only screen and (min-width: 2000px) {
+  .home-text {
+    right: 2%;
+  }
+
+  .red-circle-big {
+    left: -26%;
+  }
+
+  .drops-one {
+    left: -13%;
+  }
+}
+
 @media screen and (max-width: 1600px) {
   .cupcake-img {
     width: 500px;
@@ -1395,6 +1425,11 @@ button[class*='btn'] {
     width: 200px;
     height: 200px;
     left: 0;
+  }
+
+  .drops-one {
+    top: -29%;
+    left: 6%;
   }
 
   .btns {
@@ -1468,6 +1503,11 @@ button[class*='btn'] {
     left: 2%;
   }
 
+  .drops-one {
+    top: -23%;
+    left: 3%;
+  }
+
   .star {
     right: 14%;
   }
@@ -1482,6 +1522,10 @@ button[class*='btn'] {
     width: 400px;
     height: 400px;
     left: -5%;
+  }
+
+  .drops-about-one {
+    left: 46%;
   }
 
   .about-img {
@@ -1522,11 +1566,11 @@ button[class*='btn'] {
     display: none;
   }
 
-  .drops1 {
+  .drops-one {
     display: none;
   }
 
-  .drops2 {
+  .drops-two {
     display: none;
   }
 
@@ -1538,7 +1582,7 @@ button[class*='btn'] {
     display: none;
   }
 
-  .drops1 {
+  .drops-one {
     top: -19%;
     left: 16%;
   }
@@ -1638,6 +1682,14 @@ button[class*='btn'] {
     height: 44vw;
     width: 44vw;
     margin-bottom: 35px;
+  }
+
+  .drops-about-one {
+    display: none;
+  }
+
+  .drops-about-two {
+    display: none;
   }
 
   .about-txt {

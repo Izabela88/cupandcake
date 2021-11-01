@@ -109,7 +109,33 @@ const removeErrorMessage = (input) => {
   errorMsg.textContent = '';
 };
 
-// Add submit event listener to form
+/* Function that sends the email when a user submits the form
+with using EmailJs service */
+function sendEmail() {
+  let fullName = document.querySelector('#fullname').value;
+  let email = document.querySelector('#email').value;
+  let message = document.querySelector('#textarea').value;
+
+  let templateParams = {
+    to_name: 'Izabela',
+    from_name: fullName,
+    user_email: email,
+    message: message,
+  };
+
+  emailjs.send('service_ipdekum', 'template_ybnc5td', templateParams).then(
+    function (response) {
+      console.log('SUCCESS!', response.status, response.text);
+    },
+    function (error) {
+      console.log('FAILED...', error);
+    }
+  );
+}
+
+/* Add submit event listener to form
+Check all form validations
+*/
 form.addEventListener('submit', function (e) {
   // prevent the form from submitting
   e.preventDefault();
@@ -118,11 +144,13 @@ form.addEventListener('submit', function (e) {
   let isMessageValid = checkUserMessage();
   let isFormValid = isUsernameValid && isUserEmailValid && isMessageValid;
   if (isFormValid) {
+    sendEmail();
     openModal;
     form.reset();
     button.disabled = true;
   } else {
     !openModal();
+    !sendEmail();
   }
 });
 
