@@ -1408,11 +1408,11 @@ button[class*='btn'] {
   .red-circle-big {
     width: 500px;
     height: 500px;
-    left: 0;
+    left: -9%;
   }
 
   .home-text {
-    right: 0;
+    right: 5%;
   }
 
   .home-text h1 {
@@ -1429,7 +1429,6 @@ button[class*='btn'] {
 
   .drops-one {
     top: -29%;
-    left: 6%;
   }
 
   .btns {
