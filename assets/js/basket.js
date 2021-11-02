@@ -298,19 +298,44 @@ function submitPurchase(e) {
     });
   } else {
     swal({
-      title: 'Yasss!',
-      text: 'Thank you for your purchase!',
-      icon: 'success',
+      title: 'Almost done...',
+      text: 'Are you sure you want to complete the purchase?',
+      icon: 'warning',
+      dangerMode: true,
+      buttons: {
+        cancel: 'Nah...',
+        approve: 'Sure!',
+      },
     }).then((value) => {
-      localStorage.Basket = JSON.stringify([]);
-      let productsBoxes = document.querySelectorAll('.product-box');
-      showAlertMsg();
-      updateTotalProductsQty();
-      updateTotalPrice();
+      switch (value) {
+        case 'approve':
+          swal({
+            text: 'Please enter your email here',
+            content: 'input',
+            buttons: {
+              cancel: 'Cancel',
+              purchase: 'Order',
+            },
+          }).then((value) => {
+            switch (value) {
+              case 'purchase':
+                swal({
+                  title: 'Yasss...',
+                  text: 'Thank you for the order! We have sent the delivery details to your email!',
+                  icon: 'success',
+                });
 
-      productsBoxes.forEach((productBox) => {
-        productBox.remove();
-      });
+                localStorage.Basket = JSON.stringify([]);
+                let productsBoxes = document.querySelectorAll('.product-box');
+                showAlertMsg();
+                updateTotalProductsQty();
+                updateTotalPrice();
+                productsBoxes.forEach((productBox) => {
+                  productBox.remove();
+                });
+            }
+          });
+      }
     });
   }
 }
