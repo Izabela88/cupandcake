@@ -114,9 +114,14 @@ function appendToBasket(cupcake) {
           item.qty++;
           break;
         } else {
-          swal({
-            title: 'you can order up to 20 cupcakes of the same type',
+          Swal.fire({
+            title: 'You can order up to 20 cupcakes of the same type',
             text: '* for larger orders, please contact us by filling out the form in the section "contact us"',
+            icon: 'warning',
+            showCancelButton: true,
+            showConfirmButton: true,
+            confirmButtonColor: '#f4afd0',
+            cancelButtonColor: '#d33',
           });
         }
       }

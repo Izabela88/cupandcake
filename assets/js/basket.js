@@ -124,9 +124,14 @@ function incrementProduct(item, sumProductPrice) {
     updateTotalPrice();
     updateTotalProductsQty();
   } else {
-    swal({
-      title: 'you can order up to 20 cupcakes of the same type',
+    Swal.fire({
+      title: 'You can order up to 20 cupcakes of the same type',
       text: '* for larger orders, please contact us by filling out the form in the section "contact us"',
+      icon: 'warning',
+      showCancelButton: true,
+      showConfirmButton: true,
+      confirmButtonColor: '#f4afd0',
+      cancelButtonColor: '#d33',
     });
   }
 }
@@ -287,54 +292,69 @@ function disabledMinusBtn() {
   });
 }
 
-// Function is summarizes the purchase
+// Remove products from basket after submit the order
+const removeBox = () => {
+  let productsBoxes = document.querySelectorAll('.product-box');
+  productsBoxes.forEach((productBox) => {
+    productBox.remove();
+  });
+};
+
+// Function is submit the purchase with Sweet Alert library
 function submitPurchase(e) {
   e.preventDefault();
   let qty = totalProductsQty();
   if (qty < 5) {
-    swal({
+    Swal.fire({
       title: 'Ouch!',
       text: 'Your order must contain a min of five cupcakes!',
+      icon: 'warning',
+      showCancelButton: true,
+      showConfirmButton: true,
+      confirmButtonColor: '#f4afd0',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'OK',
     });
   } else {
-    swal({
-      title: 'Almost done...',
+    Swal.fire({
+      title: 'Wait!',
       text: 'Are you sure you want to complete the purchase?',
       icon: 'warning',
-      dangerMode: true,
-      buttons: {
-        cancel: 'Nah...',
-        approve: 'Sure!',
-      },
-    }).then((value) => {
-      switch (value) {
-        case 'approve':
-          swal({
-            text: 'Please enter your email here',
-            content: 'input',
-            buttons: {
-              cancel: 'Cancel',
-              purchase: 'Order',
-            },
-          }).then((value) => {
-            switch (value) {
-              case 'purchase':
-                swal({
-                  title: 'Yasss...',
-                  text: 'Thank you for the order! We have sent the delivery details to your email!',
-                  icon: 'success',
-                });
-
-                localStorage.Basket = JSON.stringify([]);
-                let productsBoxes = document.querySelectorAll('.product-box');
-                showAlertMsg();
-                updateTotalProductsQty();
-                updateTotalPrice();
-                productsBoxes.forEach((productBox) => {
-                  productBox.remove();
-                });
-            }
-          });
+      showCancelButton: true,
+      showConfirmButton: true,
+      confirmButtonColor: '#f4afd0',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'SURE',
+      cancelButtonText: 'NOPE',
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire({
+          title: 'Please enter your email address',
+          input: 'email',
+          showConfirmButton: true,
+          showCancelButton: true,
+          confirmButtonColor: '#f4afd0',
+          cancelButtonColor: '#d33',
+          inputPlaceholder: 'Enter your email address',
+          confirmButtonText: 'ORDER',
+          cancelButtonText: 'CANCEL',
+        }).then((result) => {
+          if (result.isConfirmed) {
+            localStorage.Basket = JSON.stringify([]);
+            showAlertMsg();
+            updateTotalProductsQty();
+            updateTotalPrice();
+            removeBox();
+            Swal.fire({
+              icon: 'success',
+              title: 'HURRAY!',
+              confirmButtonColor: '#f4afd0',
+              text:
+                'Thank you for the order! All delivery' +
+                ' information has been sent to your email',
+            });
+          }
+        });
       }
     });
   }
