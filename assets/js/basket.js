@@ -309,7 +309,6 @@ function submitPurchase(e) {
       title: 'Ouch!',
       text: 'Your order must contain a min of five cupcakes!',
       icon: 'warning',
-      showCancelButton: true,
       showConfirmButton: true,
       confirmButtonColor: '#f4afd0',
       cancelButtonColor: '#d33',
@@ -336,22 +335,50 @@ function submitPurchase(e) {
           confirmButtonColor: '#f4afd0',
           cancelButtonColor: '#d33',
           inputPlaceholder: 'Enter your email address',
-          confirmButtonText: 'ORDER',
+          confirmButtonText: 'NEXT',
           cancelButtonText: 'CANCEL',
         }).then((result) => {
           if (result.isConfirmed) {
-            localStorage.Basket = JSON.stringify([]);
-            showAlertMsg();
-            updateTotalProductsQty();
-            updateTotalPrice();
-            removeBox();
             Swal.fire({
-              icon: 'success',
-              title: 'HURRAY!',
+              title: 'Please enter your full name',
+              input: 'text',
+              showConfirmButton: true,
+              showCancelButton: true,
               confirmButtonColor: '#f4afd0',
-              text:
-                'Thank you for the order! All delivery' +
-                ' information has been sent to your email',
+              cancelButtonColor: '#d33',
+              inputPlaceholder: 'Enter your full name',
+              confirmButtonText: 'NEXT',
+              cancelButtonText: 'CANCEL',
+            }).then((result) => {
+              if (result.isConfirmed) {
+                Swal.fire({
+                  title: 'Please enter your full address',
+                  input: 'text',
+                  showConfirmButton: true,
+                  showCancelButton: true,
+                  confirmButtonColor: '#f4afd0',
+                  cancelButtonColor: '#d33',
+                  inputPlaceholder: 'Enter your full address',
+                  confirmButtonText: 'ORDER',
+                  cancelButtonText: 'CANCEL',
+                }).then((result) => {
+                  if (result.isConfirmed) {
+                    localStorage.Basket = JSON.stringify([]);
+                    showAlertMsg();
+                    updateTotalProductsQty();
+                    updateTotalPrice();
+                    removeBox();
+                    Swal.fire({
+                      icon: 'success',
+                      title: 'HURRAY!',
+                      confirmButtonColor: '#f4afd0',
+                      text:
+                        'Thank you for the order! All delivery' +
+                        ' details has been sent to your email',
+                    });
+                  }
+                });
+              }
             });
           }
         });
