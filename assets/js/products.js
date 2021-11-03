@@ -38,6 +38,7 @@ cupcakes.forEach(function (cupcake) {
   productsBasketIcon.classList = 'basket-icon';
   productsBasketIcon.src = 'assets/images/addbasket.png';
   productsBasketBox.appendChild(productsBasketIcon);
+
   // Add onclick event to basket icons
   productsBasketIcon.onclick = function (e) {
     appendToBasket(cupcake);
@@ -94,43 +95,64 @@ function appendToBasket(cupcake) {
   if (!basket) {
     localStorage.Basket = JSON.stringify([basketItem]);
   } else {
-    addToBasket(cupcake);
+    addToBasket(cupcake, basketItem, basket);
   }
+}
 
-  /*
- The function will increment by one if an item exists in the basket
- else it will insert a new record/item in the basket.
- At the end function commit basket to the local storage.
- If the maximum qty is reached the alert will be displayed
- */
-  function addToBasket(cupcake) {
-    const maxQty = 20;
-    let isInBasket = false;
-    basket = JSON.parse(basket);
-    for (let item of basket) {
-      if (item.id === cupcake.id) {
-        isInBasket = true;
-        if (item.qty < maxQty) {
-          item.qty++;
-          break;
-        } else {
-          Swal.fire({
-            title: 'You can order up to 20 cupcakes of the same type',
-            text: '* for larger orders, please contact us by filling out the form in the section "contact us"',
-            icon: 'warning',
-            showCancelButton: true,
-            showConfirmButton: true,
-            confirmButtonColor: '#f4afd0',
-            cancelButtonColor: '#d33',
-          });
-        }
+/*The function shows a toast informing that the item has been added to the cart
+The code was copied from the website https://sweetalert2.github.io
+*/
+const addToBasketToast = () => {
+  const Toast = Swal.mixin({
+    toast: true,
+    position: 'top-end',
+    showConfirmButton: false,
+    timer: 700,
+    didOpen: (toast) => {
+      toast.addEventListener('mouseenter', Swal.stopTimer);
+      toast.addEventListener('mouseleave', Swal.resumeTimer);
+    },
+  });
+  Toast.fire({
+    icon: 'success',
+    title: 'item added successfully',
+  });
+};
+
+/*
+The function will increment by one if an item exists in the basket
+else it will insert a new record/item in the basket.
+At the end function commit basket to the local storage.
+If the maximum qty is reached the alert will be displayed
+*/
+function addToBasket(cupcake, basketItem, basket) {
+  const maxQty = 20;
+  let isInBasket = false;
+  basket = JSON.parse(basket);
+  addToBasketToast();
+  for (let item of basket) {
+    if (item.id === cupcake.id) {
+      isInBasket = true;
+      if (item.qty < maxQty) {
+        item.qty++;
+        break;
+      } else {
+        Swal.fire({
+          title: 'You can order up to 20 cupcakes of the same type',
+          text: '* for larger orders, please contact us by filling out the form in the section "contact us"',
+          icon: 'warning',
+          showCancelButton: true,
+          showConfirmButton: true,
+          confirmButtonColor: '#f4afd0',
+          cancelButtonColor: '#d33',
+        });
       }
     }
-    if (!isInBasket) {
-      basket.push(basketItem);
-    }
-    localStorage.Basket = JSON.stringify(basket);
   }
+  if (!isInBasket) {
+    basket.push(basketItem);
+  }
+  localStorage.Basket = JSON.stringify(basket);
 }
 
 // Calculate counter quantity
@@ -162,9 +184,8 @@ const productBasketBoxes = document.querySelectorAll('.product-basket-box');
 productBasketBoxes.forEach((box) => {
   box.addEventListener('click', () => {
     box.classList.remove('run-button');
-
     setTimeout(function () {
       box.classList.add('run-button');
-    }, 10);
+    }, 100);
   });
 });

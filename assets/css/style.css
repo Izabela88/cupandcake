@@ -114,20 +114,14 @@ li {
   border: none;
 }
 
-.swal2-title {
-  font-size: 25px;
-  color: #000;
-}
-
 #swal2-html-container {
-  border-radius: 20px;
-  font-size: 18px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
   color: #000 !important;
   letter-spacing: 1px;
   filter: drop-shadow(3px 1px 5px rgb(0 0 0 / 30%));
   outline: none;
+  border: none;
 }
 
 #swal2-validation-message {
