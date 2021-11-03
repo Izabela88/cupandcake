@@ -349,6 +349,11 @@ function submitPurchase(e) {
               inputPlaceholder: 'Enter your full name',
               confirmButtonText: 'NEXT',
               cancelButtonText: 'CANCEL',
+              inputValidator: (value) => {
+                if (!value) {
+                  return 'You need to write something!';
+                }
+              },
             }).then((result) => {
               if (result.isConfirmed) {
                 Swal.fire({
@@ -361,9 +366,15 @@ function submitPurchase(e) {
                   inputPlaceholder: 'Enter your full address',
                   confirmButtonText: 'ORDER',
                   cancelButtonText: 'CANCEL',
+                  inputValidator: (value) => {
+                    if (!value) {
+                      return 'You need to write something!';
+                    }
+                  },
                 }).then((result) => {
                   if (result.isConfirmed) {
                     localStorage.Basket = JSON.stringify([]);
+                    openBasket();
                     showAlertMsg();
                     updateTotalProductsQty();
                     updateTotalPrice();

@@ -1,6 +1,7 @@
 const form = document.querySelector('#contact-form');
 const username = document.querySelector('#fullname');
 const email = document.querySelector('#email');
+const newsletterEmail = document.querySelector('#newsletter-email');
 const textarea = document.querySelector('#textarea');
 const button = document.querySelector('.send-btn');
 const inputs = document.querySelectorAll('.text-input');
@@ -8,6 +9,8 @@ const modal = document.querySelector('#contact-modal');
 const closeButton = document.querySelector('.close-modal-btn');
 const openNewsletterButton = document.querySelector('#open-newsletter');
 const closeNewsletter = document.querySelector('.close-newsletter');
+const newsletterButton = document.querySelector('#newsletter-button');
+const formNewsletter = document.querySelector('#newsletter-form');
 
 // This function checks if imput field is empty
 const required = (value) => (value === '' ? false : true);
@@ -71,6 +74,27 @@ const checkUserEmail = () => {
     );
   } else {
     removeErrorMessage(email);
+    isValid = true;
+  }
+  return isValid;
+};
+
+const checkNewsletterEmail = () => {
+  const min = 2,
+    max = 150;
+  let isValid = false;
+  const userNewsletterEmail = newsletterEmail.value.trim();
+  if (!required(userNewsletterEmail)) {
+    showErrorMessage(newsletterEmail, 'this field can not be empty!');
+  } else if (!isEmailValid(userNewsletterEmail)) {
+    showErrorMessage(newsletterEmail, 'email address is not valid');
+  } else if (!between(userNewsletterEmail.length, min, max)) {
+    showErrorMessage(
+      newsletterEmail,
+      `your email must contain between ${min} and ${max} characters`
+    );
+  } else {
+    removeErrorMessage(newsletterEmail);
     isValid = true;
   }
   return isValid;
@@ -193,6 +217,24 @@ function openNewsletter() {
 
 openNewsletterButton.addEventListener('click', openNewsletter);
 closeNewsletter.addEventListener('click', openNewsletter);
+
+// Submit and check newsletter form
+formNewsletter.addEventListener('submit', function (e) {
+  // prevent the form from submitting
+  e.preventDefault();
+  let validEmail = checkNewsletterEmail();
+  let isFormValid = validEmail;
+  if (isFormValid) {
+    Swal.fire({
+      icon: 'success',
+      title: 'Thank you for subscribe our newsletter!',
+      showConfirmButton: false,
+      timer: 2000,
+    });
+    formNewsletter.reset();
+    openNewsletter();
+  }
+});
 
 // Function opens the modal window after submit contact form
 function openModal() {

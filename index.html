@@ -54,10 +54,11 @@
       </div>
       <h1>Want more?</h1>
       <p>Subscribe to our newsletter and stay updated!</p>
-      <form class="form-input">
-        <label for="email"></label>
-        <input class="newsletter-input" type="email" placeholder="Your Email" required>
-        <button class="subscribe-button">Subscribe</button>
+      <form id="newsletter-form" class="form-input">
+        <div class="input-box"><input id="newsletter-email" class="newsletter-input" placeholder="Your Email">
+          <span class="error-msg newsletter-error-msg"></span>
+        </div>
+        <input type="submit" id="newsletter-button" class="subscribe-button"></input>
       </form>
     </div>
 
