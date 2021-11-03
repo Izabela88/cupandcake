@@ -6,6 +6,8 @@ const button = document.querySelector('.send-btn');
 const inputs = document.querySelectorAll('.text-input');
 const modal = document.querySelector('#contact-modal');
 const closeButton = document.querySelector('.close-modal-btn');
+const openNewsletterButton = document.querySelector('#open-newsletter');
+const closeNewsletter = document.querySelector('.close-newsletter');
 
 // This function checks if imput field is empty
 const required = (value) => (value === '' ? false : true);
@@ -183,7 +185,16 @@ form.addEventListener('input', function (e) {
   }
 });
 
-// Function which open the modal
+// Function opens newsletter
+function openNewsletter() {
+  let showNewsletterWindow = document.querySelector('.newsletter-wrapper');
+  showNewsletterWindow.classList.toggle('show-newsletter');
+}
+
+openNewsletterButton.addEventListener('click', openNewsletter);
+closeNewsletter.addEventListener('click', openNewsletter);
+
+// Function opens the modal window after submit contact form
 function openModal() {
   modal.classList.toggle('show-modal');
 }
