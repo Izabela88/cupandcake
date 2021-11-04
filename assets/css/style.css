@@ -813,7 +813,7 @@ span.newsletter-error-msg {
   align-items: center;
   height: 80px;
   width: 90%;
-  box-shadow: rgb(131 222 239 / 18%) 0px -5px 10px;
+  box-shadow: rgb(0 0 0 / 20%) 0px 0px 3px;
   margin: 50px auto;
   padding: 40px;
   text-align: center;
@@ -824,7 +824,7 @@ span.newsletter-error-msg {
   font-size: 25px;
   font-family: 'Coiny', cursive;
   transition-duration: 0.3s;
-  color: var(--blue-color);
+  color: var(--black-color);
   letter-spacing: 2px;
   animation: fade 1s;
 }
@@ -946,6 +946,7 @@ span.newsletter-error-msg {
   box-shadow: rgb(254 165 187 / 35%) 0px 5px 15px;
   transition-duration: 0.3s;
   text-align: center;
+  color: var(--red-color);
 }
 
 .tab-card:hover {
