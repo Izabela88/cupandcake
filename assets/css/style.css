@@ -830,13 +830,13 @@ span.newsletter-error-msg {
 }
 
 .product-tab.active {
-  box-shadow: rgb(254 165 187 / 35%) 0px -10px 20px;
+  box-shadow: rgb(93 7 28 / 21%) 0px -9px 20px;
   color: var(--brown-color);
   opacity: 1;
 }
 
 .product-tab:hover {
-  box-shadow: rgb(254 165 187 / 35%) 0px -10px 20px;
+  box-shadow: rgb(93 7 28 / 21%) 0px -9px 20px;
   color: var(--brown-color);
 }
 
@@ -943,7 +943,7 @@ span.newsletter-error-msg {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  box-shadow: rgb(254 165 187 / 35%) 0px 5px 15px;
+  box-shadow: rgb(93 7 28 / 21%) 0px 5px 15px;
   transition-duration: 0.3s;
   text-align: center;
   color: var(--brown-color);
@@ -987,7 +987,7 @@ span.newsletter-error-msg {
   position: relative;
   right: -33%;
   top: -3%;
-  box-shadow: rgb(254 165 187 / 35%) 0px 5px 15px;
+  box-shadow: rgb(93 7 28 / 21%) 0px 5px 15px;
   display: flex;
   justify-content: center;
   align-items: center;
