@@ -136,7 +136,7 @@ Using the principles of UX design, this fully responsive and interactive website
 
   - When the basket is empty, a funny gif animation is displayed with a text informing that the basket is empty.
 
-  ![Empty basket](https://github.com/Izabela88/cupandcake/blob/feature-readme/media/empty-basket.png)
+  ![Empty basket](https://github.com/Izabela88/cupandcake/blob/development/media/empty-basket.png)
 
 - Products section
 
@@ -148,7 +148,7 @@ Using the principles of UX design, this fully responsive and interactive website
 
   - The section also describes the three types of cupcakes. When the user hovers the mouse over the image, the type description will appear.
 
-  ![Types description](https://github.com/Izabela88/cupandcake/blob/feature-readme/media/types-description.png)
+  ![Types description](https://github.com/Izabela88/cupandcake/blob/development/media/types-description.png)
 
 - Back to top button
 
