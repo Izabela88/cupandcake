@@ -813,7 +813,7 @@ span.newsletter-error-msg {
   align-items: center;
   height: 80px;
   width: 90%;
-  box-shadow: rgb(165 178 180 / 35%) 0px -15px 20px;
+  box-shadow: rgb(131 222 239 / 18%) 0px -5px 10px;
   margin: 50px auto;
   padding: 40px;
   text-align: center;
@@ -824,9 +824,8 @@ span.newsletter-error-msg {
   font-size: 25px;
   font-family: 'Coiny', cursive;
   transition-duration: 0.3s;
-  color: #c2baba;
+  color: var(--blue-color);
   letter-spacing: 2px;
-  opacity: 0.8;
   animation: fade 1s;
 }
 
