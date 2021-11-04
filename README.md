@@ -7,7 +7,7 @@ Customers can choose from three types of muffins: vegan, chocolate and fruity. E
 
 Using the principles of UX design, this fully responsive and interactive website was developed using HTML, CSS and JavaScript.
 
-<h2 align="center"><img src="https://github.com/Izabela88/cupandcake/blob/feature-readme/media/responsive.png"></h2>
+<h2 align="center"><img src="https://github.com/Izabela88/cupandcake/blob/development/media/responsive.png"></h2>
 
 ## **Table of content**
 
