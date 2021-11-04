@@ -203,7 +203,7 @@ Using the principles of UX design, this fully responsive and interactive website
   - It is located in the lower right corner of each product card.
   - It allows the user to add products to the shopping basket.
 
-  ![Add basket icon]()
+  ![Add basket icon](https://github.com/Izabela88/cupandcake/blob/development/media/add-to-basket-icon.png)
 
 ### Features Left To Implement
 
