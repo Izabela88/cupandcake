@@ -73,7 +73,7 @@ Using the principles of UX design, this fully responsive and interactive website
 
   - #### Colour Scheme
 
-    <h2 align="center"><img src="https://github.com/Izabela88/cupandcake/blob/feature-readme/media/color-palette.png"></h2>
+    <h2 align="center"><img src="https://github.com/Izabela88/cupandcake/blob/development/media/color-palette.png"></h2>
 
   - #### Typography
 
