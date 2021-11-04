@@ -783,6 +783,7 @@ span.newsletter-error-msg {
   left: 50%;
   transform: translate(-50%);
   margin-bottom: 80px;
+  color: var(--red-color);
 }
 
 .main-header h2 {
