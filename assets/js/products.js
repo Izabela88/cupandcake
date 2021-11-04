@@ -12,6 +12,7 @@ cupcakes.forEach(function (cupcake) {
   // Create cupcake image
   let image = document.createElement('img');
   image.classList = 'card-img';
+  image.setAttribute('alt', 'A cupcake');
   image.src = imgBasePath.concat(cupcake.image);
   tabCard.appendChild(image);
   // Create name heading
@@ -36,6 +37,7 @@ cupcakes.forEach(function (cupcake) {
   // Create basket icon
   let productsBasketIcon = document.createElement('img');
   productsBasketIcon.classList = 'basket-icon';
+  productsBasketIcon.setAttribute('alt', 'A basket icon');
   productsBasketIcon.src = 'assets/images/addbasket.png';
   productsBasketBox.appendChild(productsBasketIcon);
 

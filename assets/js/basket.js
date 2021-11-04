@@ -16,6 +16,7 @@ function buildBasketItem(item) {
   // Create product image
   let productImage = document.createElement('img');
   productImage.classList = 'product-image';
+  productImage.setAttribute('alt', 'A cupcake');
   productImage.src = imageBasePath.concat(item.image);
   productBox.appendChild(productImage);
   // Create div
