@@ -173,8 +173,8 @@ function updateQtyCounter() {
   if (itemsCounter.hasChildNodes()) {
     itemsCounter.childNodes[0].nodeValue = qty;
   } else {
-    let qty = document.createTextNode(qty);
-    itemsCounter.appendChild(qty);
+    let newQty = document.createTextNode(newQty);
+    itemsCounter.appendChild(newQty);
   }
 }
 

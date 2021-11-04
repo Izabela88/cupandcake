@@ -9,7 +9,6 @@ const modal = document.querySelector('#contact-modal');
 const closeButton = document.querySelector('.close-modal-btn');
 const openNewsletterButton = document.querySelector('#open-newsletter');
 const closeNewsletter = document.querySelector('.close-newsletter');
-const newsletterButton = document.querySelector('#newsletter-button');
 const formNewsletter = document.querySelector('#newsletter-form');
 
 // This function checks if imput field is empty
@@ -171,7 +170,7 @@ form.addEventListener('submit', function (e) {
   let isFormValid = isUsernameValid && isUserEmailValid && isMessageValid;
   if (isFormValid) {
     sendEmail();
-    openModal;
+    openModal();
     form.reset();
     button.disabled = true;
   } else {

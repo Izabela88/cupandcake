@@ -54,8 +54,8 @@ hamburgerIcon.addEventListener('click', function (e) {
 });
 
 for (const button of closeButtons) {
+  openSidebar = false;
   button.addEventListener('click', function (e) {
-    openSidebar = false;
     document.getElementById('my-sidebar').style.width = null;
   });
 }

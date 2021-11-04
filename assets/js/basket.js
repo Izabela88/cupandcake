@@ -2,7 +2,6 @@ const basketIcon = document.querySelector('.basket');
 const shoppingCartContainer = document.querySelector(
   '.shopping-cart-container'
 );
-const shoppingCartBox = document.querySelector('.shopping-cart-box');
 const closeBasket = document.querySelector('.close-shopping-cart');
 const imageBasePath = 'assets/images/cupcakes/';
 const basketContainer = document.querySelector('.basket-container');
@@ -11,7 +10,7 @@ const purchaseButton = document.querySelector('.purchase-button');
 // Dynamically create html basket items
 function buildBasketItem(item) {
   // Create div and add class name and dynamically create id
-  productBox = document.createElement('div');
+  let productBox = document.createElement('div');
   productBox.setAttribute('id', `basket-id-${item.id}`);
   productBox.className = 'product-box';
   // Create product image
