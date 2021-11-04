@@ -456,7 +456,7 @@ button[class*='btn'] {
   transition: visibility 0s linear 0s, opacity 0.5s 0s, transform 0.5s;
 }
 
-.card-content h1 {
+.card-content h2 {
   text-transform: uppercase;
   margin: 10px 0;
 }
@@ -698,7 +698,7 @@ span.newsletter-error-msg {
   position: relative;
 }
 
-.home-text h1 {
+.home-text h2 {
   font-size: 70px;
   line-height: 70px;
   margin-left: 80px;
@@ -786,7 +786,7 @@ span.newsletter-error-msg {
   margin-bottom: 80px;
 }
 
-.main-header h1 {
+.main-header h2 {
   font-size: 60px;
 }
 
@@ -1064,7 +1064,7 @@ span.newsletter-error-msg {
   z-index: 100;
 }
 
-.about-txt h1 {
+.about-txt h2 {
   font-size: 60px;
   line-height: 56px;
   filter: drop-shadow(0px 1px 1px var(--red-color));
@@ -1176,7 +1176,7 @@ span.newsletter-error-msg {
   z-index: 100;
 }
 
-.contact-txt h1 {
+.contact-txt h2 {
   font-size: 48px;
   text-align: center;
   line-height: 63px;
@@ -1342,7 +1342,7 @@ span.newsletter-error-msg {
   text-transform: lowercase;
 }
 
-.modal-box h1 {
+.modal-box h2 {
   text-transform: uppercase;
 }
 
@@ -1527,7 +1527,7 @@ span.newsletter-error-msg {
     right: 5%;
   }
 
-  .home-text h1 {
+  .home-text h2 {
     margin-left: 165px;
     margin-top: 50px;
     font-size: 61px;
@@ -1570,7 +1570,7 @@ span.newsletter-error-msg {
     font-size: 20px;
   }
 
-  .contact-txt h1 {
+  .contact-txt h2 {
     font-size: 43px;
   }
 }
@@ -1808,7 +1808,7 @@ span.newsletter-error-msg {
     text-align: center;
   }
 
-  .about-txt h1 {
+  .about-txt h2 {
     font-size: 40px;
   }
 
@@ -1949,7 +1949,7 @@ span.newsletter-error-msg {
     top: 0;
   }
 
-  .home-text h1 {
+  .home-text h2 {
     font-size: 62px;
     line-height: 65px;
     margin: 0 auto;
@@ -2004,7 +2004,7 @@ span.newsletter-error-msg {
     width: 600px;
   }
 
-  .main-header h1 {
+  .main-header h2 {
     font-size: 50px;
     margin-bottom: 20px;
   }
@@ -2013,7 +2013,7 @@ span.newsletter-error-msg {
     width: 600px;
   }
 
-  .about-txt h1 {
+  .about-txt h2 {
     font-size: 48px;
   }
 
@@ -2097,7 +2097,7 @@ span.newsletter-error-msg {
     width: 400px;
     height: 400px;
   }
-  .home-text h1 {
+  .home-text h2 {
     font-size: 40px;
     line-height: 50px;
   }
@@ -2117,7 +2117,7 @@ span.newsletter-error-msg {
     width: 350px;
   }
 
-  .main-header h1 {
+  .main-header h2 {
     font-size: 32px;
     line-height: 40px;
   }
@@ -2130,7 +2130,7 @@ span.newsletter-error-msg {
     width: 400px;
   }
 
-  .about-txt h1 {
+  .about-txt h2 {
     font-size: 32px;
   }
 
