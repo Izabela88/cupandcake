@@ -306,7 +306,7 @@ The W3C Markup Validator and W3C CSS Validator Services and JSHint were used to 
 
 - I confirmed that the colors and fonts chosen are easy to read and accessible by running it through lighthouse in chrome extension.
 
-  ![Accessibility]()
+  ![Accessibility](https://github.com/Izabela88/cupandcake/blob/development/media/lighthouse.png)
 
 ### Further Testing
 
