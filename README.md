@@ -93,7 +93,7 @@ Using the principles of UX design, this fully responsive and interactive website
 
 - Responsive on all device sizes
 
-  ![Responsive](https://github.com/Izabela88/cupandcake/blob/feature-readme/media/responsive.png)
+  ![Responsive](https://github.com/Izabela88/cupandcake/blob/development/media/responsive.png)
 
 - Collapsible and interactive navbar
 
@@ -102,7 +102,7 @@ Using the principles of UX design, this fully responsive and interactive website
   - The navbar closes automatically after scroll to a section.
 
   ![Navigation](https://github.com/Izabela88/cupandcake/blob/feature-readme/media/navbar.png)
-  ![Navigation](https://github.com/Izabela88/cupandcake/blob/feature-readme/media/mobile-menu.png)
+  ![Navigation](https://github.com/Izabela88/cupandcake/blob/development/media/mobile-menu.png)
 
 - Interactive design
 
@@ -236,11 +236,11 @@ As the code grew, the developer decided to split all JavaScript code for parts:
   - When adding cupcakes from the home page, an alert appears on the screen when the number exceeds 20 cupcakes of one type.
   - The same alert appears when the user adds cupcakes to an order in a shopping basket.
 
-  ![Alert](https://github.com/Izabela88/cupandcake/blob/feature-readme/media/info.png)
+  ![Alert](https://github.com/Izabela88/cupandcake/blob/development/media/info.png)
 
   - Another alert appears when an order does not reach a minimum of five cupcakes.
 
-  ![Alert](https://github.com/Izabela88/cupandcake/blob/feature-readme/media/qty-alert.png)
+  ![Alert](https://github.com/Izabela88/cupandcake/blob/development/media/qty-alert.png)
 
 - Purchase button is disabled by default.
 - The button becomes active when cupcakes are added to the shopping basket.
@@ -280,7 +280,7 @@ The W3C Markup Validator and W3C CSS Validator Services and JSHint were used to 
      - The Hero section contains images that are related to the activities of the company.
      - The hero section contains two buttons that can direct the user directly to the 'about us' section or the 'products section' where the user will find more information about the company and all products.
 
-     ![Hero](https://github.com/Izabela88/cupandcake/blob/feature-readme/media/hero.png)
+     ![Hero](https://github.com/Izabela88/cupandcake/blob/development/media/hero.png)
 
   2. I want to be able to easily navigate throughout the site to find content.
 
@@ -311,7 +311,7 @@ The W3C Markup Validator and W3C CSS Validator Services and JSHint were used to 
 
      - The 'About' section provides information about the company, when it was founded and what it does.
 
-     ![About](https://github.com/Izabela88/cupandcake/blob/feature-readme/media/about.png)
+     ![About](https://github.com/Izabela88/cupandcake/blob/development/media/about.png)
 
 - #### Returning Visitor Goals
 
@@ -350,7 +350,7 @@ The W3C Markup Validator and W3C CSS Validator Services and JSHint were used to 
 
      - The footer contains all the information the user needs to know, to contact the company.
 
-     ![Footer](https://github.com/Izabela88/cupandcake/blob/feature-readme/media/footer.png)
+     ![Footer](https://github.com/Izabela88/cupandcake/blob/development/media/footer.png)
 
 - #### Frequent User Goals
 
