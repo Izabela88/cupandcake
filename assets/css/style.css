@@ -38,6 +38,7 @@ li {
   list-style: none;
 }
 
+/* utility */
 .container {
   max-width: 1200px;
   height: 100%;
@@ -126,6 +127,10 @@ li {
 
 #swal2-validation-message {
   font-family: 'Montserrat', sans-serif;
+}
+
+.swal2-title {
+  color: #000 !important;
 }
 
 /* shopping cart */
@@ -219,7 +224,7 @@ li {
 
 #empty-basket p {
   position: absolute;
-  padding: 40px;
+  padding: 34px;
   font-size: 24px;
   top: 20%;
   left: -8%;
@@ -231,6 +236,7 @@ li {
   color: var(--white-color);
   font-family: 'Coiny', cursive;
   border: 10px solid var(--white-color);
+  letter-spacing: 1px;
 }
 
 #empty-basket img {
@@ -405,9 +411,8 @@ button[class*='btn'] {
   transition: visibility 0s linear 0.3s, opacity 0.3s 0s, transform 0.3s;
 }
 
-.newsletter-image {
-  width: 400px;
-  height: 300px;
+#open-newsletter {
+  margin: 0;
 }
 
 .close-newsletter {
@@ -416,6 +421,11 @@ button[class*='btn'] {
   top: 2%;
   right: 3%;
   cursor: pointer;
+}
+
+.newsletter-image {
+  width: 100%;
+  height: 300px;
 }
 
 .newsletter-image img {
@@ -456,6 +466,8 @@ button[class*='btn'] {
   margin-top: 0px;
   margin-bottom: 20px;
   text-transform: lowercase;
+  text-align: center;
+  letter-spacing: 1px;
 }
 
 #newsletter-form {
@@ -488,7 +500,6 @@ button[class*='btn'] {
   letter-spacing: 1px;
   text-transform: uppercase;
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
-  margin-left: 5px;
   width: 100%;
 }
 
@@ -728,7 +739,7 @@ span.newsletter-error-msg {
   line-height: 43px;
   transform: rotate(-22deg);
   color: var(--white-color);
-  top: 52%;
+  top: 54%;
   filter: drop-shadow(3px 1px 20px #d61443);
   right: -7%;
   z-index: 1;
@@ -1538,7 +1549,7 @@ span.newsletter-error-msg {
 
   .about-img {
     height: 560px;
-    width: 35vw;
+    width: 38vw;
   }
 
   .cupcakes-img {
@@ -1578,7 +1589,7 @@ span.newsletter-error-msg {
     right: 4%;
     font-size: 45px;
     line-height: 43px;
-    top: 49%;
+    top: 55%;
   }
 
   .cloud {
@@ -1978,6 +1989,7 @@ span.newsletter-error-msg {
 
   .girl-img {
     width: 100vw;
+    background: url(../images/girl-mobile.jpg) no-repeat center center/cover;
   }
 
   .bg-shape {
@@ -2072,6 +2084,11 @@ span.newsletter-error-msg {
 
   #empty-basket p {
     left: -4%;
+  }
+
+  .contact-img {
+    background: url(../images/contact-img-mobile.jpg) no-repeat center
+      center/cover;
   }
 }
 
@@ -2194,7 +2211,7 @@ span.newsletter-error-msg {
     width: 170px;
     height: 170px;
     font-size: 13px;
-    padding: 24px;
+    padding: 18px;
     line-height: 18px;
     top: 25%;
     border: 6px solid var(--white-color);
@@ -2204,6 +2221,14 @@ span.newsletter-error-msg {
 @media screen and (max-width: 550px) {
   .products-container {
     width: 65%;
+  }
+
+  .card-content {
+    max-width: 300px;
+  }
+
+  .newsletter-image {
+    height: 215px;
   }
 
   .basket {
@@ -2333,8 +2358,8 @@ span.newsletter-error-msg {
     width: 130px;
     height: 130px;
     font-size: 9px;
-    padding: 15px;
-    line-height: 15px;
+    padding: 14px;
+    line-height: 13px;
     left: 2%;
     top: 35%;
   }

@@ -310,9 +310,9 @@ function submitPurchase(e) {
       text: 'Your order must contain a min of five cupcakes!',
       icon: 'warning',
       showConfirmButton: true,
+      confirmButtonText: 'OK',
       confirmButtonColor: '#f4afd0',
       cancelButtonColor: '#d33',
-      confirmButtonText: 'OK',
     });
   } else {
     Swal.fire({

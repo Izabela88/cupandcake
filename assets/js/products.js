@@ -105,7 +105,7 @@ The code was copied from the website https://sweetalert2.github.io
 const addToBasketToast = () => {
   const Toast = Swal.mixin({
     toast: true,
-    position: 'top-end',
+    position: 'top',
     showConfirmButton: false,
     timer: 700,
     didOpen: (toast) => {
@@ -115,7 +115,7 @@ const addToBasketToast = () => {
   });
   Toast.fire({
     icon: 'success',
-    title: 'item added successfully',
+    title: 'item added to basket',
   });
 };
 
