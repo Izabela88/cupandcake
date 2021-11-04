@@ -193,7 +193,7 @@ Using the principles of UX design, this fully responsive and interactive website
 - Toast
 
   - During adding products to the basket, on the top of the website appears the information that the item has been added to the basket.
-    ![Toast]()
+    ![Toast](https://github.com/Izabela88/cupandcake/blob/development/media/toast.png)
 
 ### Features Left To Implement
 
