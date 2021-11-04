@@ -364,7 +364,16 @@ The W3C Markup Validator and W3C CSS Validator Services and JSHint were used to 
 
   3. I want to sign up to the Newsletter so that I am emailed any major updates and/or changes to the website or organisation.
 
+     - To the left hand side of the footer the user can see "Subscribe to our Newsletter" and the button Subscribe.
+
+     ![Newsletter button](https://github.com/Izabela88/cupandcake/blob/development/media/newsletter-btn.png)
+
+     - After pressing the button, the newsletter window opens and the users can join to subscribers list to get the latest news and special offers.
+
+     ![Newsletter window](https://github.com/Izabela88/cupandcake/blob/development/media/newsletter-window.png)
+
   4. I want to be able to contact the company easily.
+     - This is possible thanks to the contact form in the contact section.
 
 ## Deployment
 
