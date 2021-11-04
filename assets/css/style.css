@@ -183,7 +183,7 @@ li {
   height: 80px;
   width: 100%;
   padding: 20px 30px;
-  color: #f4afd0;
+  color: var(--red-color);
   font-size: 25px;
   letter-spacing: 2px;
   display: flex;
@@ -1939,7 +1939,7 @@ span.newsletter-error-msg {
     justify-content: center;
     align-items: center;
     color: var(--red-color);
-    background-color: rgb(255 255 255 / 53%);
+    background-color: rgb(255 255 255 / 85%);
     box-shadow: rgb(0 0 0 / 35%) 0px -10px 20px;
     border-radius: 50%;
     width: 600px;
@@ -2251,7 +2251,7 @@ span.newsletter-error-msg {
     top: 0;
   }
 
-  .home-text h1 {
+  .home-text h2 {
     font-size: 34px;
     line-height: 40px;
     margin-top: 20px;
