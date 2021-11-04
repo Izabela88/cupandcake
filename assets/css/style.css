@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Coiny&family=Montserrat&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
 :root {
-  --red-color: #d61443;
+  --red-color: #a70029;
   --blue-color: #83deef;
   --light-pink-color: #ffb8ca;
   --dark-pink-color: #fea5bb;
@@ -1060,7 +1060,7 @@ span.newsletter-error-msg {
 
 .about-txt {
   width: 35vw;
-  color: var(--white-color);
+  color: var(--black-color);
   z-index: 100;
 }
 
@@ -1377,7 +1377,7 @@ span.newsletter-error-msg {
 }
 
 #footer p {
-  color: var(--white-color);
+  color: var(--black-color);
   text-align: center;
   padding-bottom: 30px;
   letter-spacing: 1px;
@@ -1389,7 +1389,7 @@ span.newsletter-error-msg {
   align-items: baseline;
   height: 400px;
   background-color: var(--dark-pink-color);
-  color: var(--white-color);
+  color: var(--black-color);
   width: 1300px;
   margin: 0 auto;
 }
@@ -1399,6 +1399,7 @@ span.newsletter-error-msg {
   margin-left: 30px;
   margin-right: 30px;
   text-align: left;
+  font-weight: bold;
 }
 
 .footer-box h3 {
@@ -1421,12 +1422,12 @@ span.newsletter-error-msg {
 }
 
 .footer-box a {
-  color: #ffffff;
+  color: var(--black-color);
   transition-duration: 0.2s;
 }
 
 .footer-box a:hover {
-  color: var(--red-color);
+  color: var(--white-color);
 }
 
 .footer-box i {
