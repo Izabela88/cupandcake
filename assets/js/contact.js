@@ -229,7 +229,7 @@ formNewsletter.addEventListener('submit', function (e) {
       icon: 'success',
       title: 'Thank you for subscribe our newsletter!',
       showConfirmButton: false,
-      timer: 2000,
+      timer: 3000,
     });
     formNewsletter.reset();
     openNewsletter();
