@@ -168,6 +168,7 @@ Using the principles of UX design, this fully responsive and interactive website
 - Sign up page
 - Login page
 - My profile page
+- Newsletter
 
 ## Technologies Used
 
@@ -255,8 +256,8 @@ As the code grew, the developer decided to split all JavaScript code for parts:
 
 The W3C Markup Validator and W3C CSS Validator Services and JSHint were used to validate every page of the project to ensure there were no syntax errors in the project.
 
-- [W3C Markup Validator](https://validator.w3.org/) - [Results]()
-- [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) - [Results]()
+- [W3C Markup Validator](https://validator.w3.org/) - [Results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fizabela88.github.io%2Fcupandcake%2F)
+- [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) - [Results](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fizabela88.github.io%2Fcupandcake%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=pl-PL)
 - [JSHint](https://jshint.com/)
 
 - I confirmed that the colors and fonts chosen are easy to read and accessible by running it through lighthouse in devtools.
