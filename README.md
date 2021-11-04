@@ -252,6 +252,11 @@ As the code grew, the developer decided to split all JavaScript code for parts:
 
   ![Disabled minus button](https://github.com/Izabela88/cupandcake/blob/feature-readme/media/disabled-minus-button.png)
 
+### Validating The Newsletter Form
+
+- Warnings are displayed under input.
+- Email input: no empty input is allowed, valid data between 2 and 150 characters, the universal regex pattern was used to validate the e-mail, no spaces.
+
 ## Testing
 
 The W3C Markup Validator and W3C CSS Validator Services and JSHint were used to validate every page of the project to ensure there were no syntax errors in the project.
