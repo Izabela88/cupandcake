@@ -111,6 +111,7 @@ Using the principles of UX design, this fully responsive and interactive website
 
 - Basket icon
 
+  - Located in the upper right corner of the website.
   - The basket icon displays the current amount of products in the shopping basket.
   - When products are added or subtracted, the displayed number is updated.
   - After pressing, the shopping basket is open.
@@ -196,6 +197,13 @@ Using the principles of UX design, this fully responsive and interactive website
   - During adding products to the basket, on the top of the website appears the information that the item has been added to the basket.
 
     ![Toast](https://github.com/Izabela88/cupandcake/blob/development/media/toast.png)
+
+- Add to basket icon
+
+  - It is located in the lower right corner of each product card.
+  - It allows the user to add products to the shopping basket.
+
+  ![Add basket icon]()
 
 ### Features Left To Implement
 
@@ -488,7 +496,7 @@ While coding for some problems and inspirations with JavaScript code, I looked f
 
 ### Media
 
-- The images was taken from [Pixlr](https://pixlr.com/e/) and [Pixabay](https://pixabay.com/).
+- The images was taken from [Pixlr](https://pixlr.com/e/),[Unsplash](https://unsplash.com/), [Pixabay](https://pixabay.com/).
 - The icons was taken from: [Vecteezy](https://www.vecteezy.com/), [Flaticon](https://www.flaticon.com/),
   [Iconmonstr](https://iconmonstr.com/twitter-5-png/), [Giphy](https://giphy.com/gifs/buzzfeedanimation-cupcake-cuppy-the-good-advice-LwIRDtAxK0t2o4p2IS)
 
