@@ -102,7 +102,7 @@ Using the principles of UX design, this fully responsive and interactive website
   - The navigation is collapsible on mobile devices for better visibility.
   - The navbar closes automatically after scroll to a section.
 
-  ![Navigation](https://github.com/Izabela88/cupandcake/blob/feature-readme/media/navbar.png)
+  ![Navigation](https://github.com/Izabela88/cupandcake/blob/development/media/navbar.png)
   ![Navigation](https://github.com/Izabela88/cupandcake/blob/development/media/mobile-menu.png)
 
 - Interactive design
@@ -132,7 +132,7 @@ Using the principles of UX design, this fully responsive and interactive website
     - Total price of all products in the basket
     - Total quantity of all products in the basket
 
-  ![Full basket](https://github.com/Izabela88/cupandcake/blob/feature-readme/media/full-basket.png)
+  ![Full basket](https://github.com/Izabela88/cupandcake/blob/development/media/full-basket.png)
 
   - When the basket is empty, a funny gif animation is displayed with a text informing that the basket is empty.
 
@@ -144,7 +144,7 @@ Using the principles of UX design, this fully responsive and interactive website
   - Cupcakes are displayed when the button tab is clicked by the user.
   - Each product card contains a basket icon which, when pressed, adds the product to the basket.
 
-  ![Products](https://github.com/Izabela88/cupandcake/blob/feature-readme/media/products2.png)
+  ![Products](https://github.com/Izabela88/cupandcake/blob/development/media/products2.png)
 
   - The section also describes the three types of cupcakes. When the user hovers the mouse over the image, the type description will appear.
 
@@ -337,15 +337,15 @@ The W3C Markup Validator and W3C CSS Validator Services and JSHint were used to 
      - In the footer the user can find 'quick links' list which leads to a sections of the website, which also helps in the smooth navigation of the website.
      - When the user starts scrolling down, on the right side appears the 'back to top button' which, when pressed, leads to the home page
 
-     ![Navbar](https://github.com/Izabela88/cupandcake/blob/feature-readme/media/navbar.png)
+     ![Navbar](https://github.com/Izabela88/cupandcake/blob/development/media/navbar.png)
 
   3. I want to look for products section to understand what the company offers and products prices to find out if I can afford the products offered.
 
      - In the 'Products' section the users can find all informations about the products offered by the company.
      - The 'Products' section was create to inform the user about the prices and types of the offered products.
 
-     ![Products](https://github.com/Izabela88/cupandcake/blob/feature-readme/media/products1.png)
-     ![Products](https://github.com/Izabela88/cupandcake/blob/feature-readme/media/products2.png)
+     ![Products](https://github.com/Izabela88/cupandcake/blob/development/media/products1.png)
+     ![Products](https://github.com/Izabela88/cupandcake/blob/development/media/products2.png)
 
   4. I want to locate social media links to find opinions about the company and check how trusted and known they are.
 
@@ -377,7 +377,7 @@ The W3C Markup Validator and W3C CSS Validator Services and JSHint were used to 
 
      - In the contact section is a form that allows the user to send a message to the company.
 
-     ![Contact](https://github.com/Izabela88/cupandcake/blob/feature-readme/media/contact.png)
+     ![Contact](https://github.com/Izabela88/cupandcake/blob/development/media/contact.png)
 
   4. I want to know what size an order I can place.
 
@@ -392,7 +392,7 @@ The W3C Markup Validator and W3C CSS Validator Services and JSHint were used to 
 
      - Inside the shopping basket are: a subtraction icon and an add icon that allow the user to add and subtract products.
 
-  ![Basket](https://github.com/Izabela88/cupandcake/blob/feature-readme/media/full-basket.png)
+  ![Basket](https://github.com/Izabela88/cupandcake/blob/development/media/full-basket.png)
 
   7. I want to know the contact details of the company.
 
