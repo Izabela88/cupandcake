@@ -162,13 +162,50 @@ Using the principles of UX design, this fully responsive and interactive website
 
   ![Contact message](https://github.com/Izabela88/cupandcake/blob/feature-readme/media/contact-message.png)
 
+- Newsletter window
+
+  - The newsletter window appears after pressing the 'subscribe' button in the footer.
+
+  ![Newsletter window](https://github.com/Izabela88/cupandcake/blob/development/media/newsletter-window.png)
+
+  - After clicking the 'submit' button appears a window with thanks for subscribing to the newsletter which disappears by itself after 3 seconds.
+
+  ![Newsletter alert](https://github.com/Izabela88/cupandcake/blob/development/media/newsletter-info.png)
+
+- Checkout
+
+  - In this case, I present a checkout simulation without sending data because the site has no backend.
+  - After pressing the 'purchase' button in the shopping basket, the following appears:
+
+    - Asking if the user really wants to continue the purchase.
+      ![Warning alert](https://github.com/Izabela88/cupandcake/blob/development/media/warning-info.png)
+    - Then, if yes, the user must enter email address.
+      ![Email alert](https://github.com/Izabela88/cupandcake/blob/development/media/checkout-email.png)
+    - Then, if yes, the user must enter full name.
+      ![Full name alert](https://github.com/Izabela88/cupandcake/blob/development/media/checkout-name.png)
+    - Then, if yes, the user must enter full address.
+      ![Full address alert](https://github.com/Izabela88/cupandcake/blob/development/media/checkout-address.png)
+
+  - After pressing the 'order' button, the final information appears with thanks for the purchase.
+    ![Final alert](https://github.com/Izabela88/cupandcake/blob/development/media/checkout-last-msg.png)
+  - The user can cancel the process at any time.
+
+- Toast
+
+  - During adding products to the basket, on the top of the website appears the information that the item has been added to the basket.
+    ![Toast]()
+
 ### Features Left To Implement
 
-- The checkout form with payment
+- Fully working checkout form with payment:
+  - The website has no backend and is not connected to the server
 - Sign up page
 - Login page
 - My profile page
-- Newsletter
+- Fully working Newsletter:
+  - The website has no backend and is not connected to the server
+- Connecting the application to the database:
+  - Currently products data are being fetched from a local file 'products.txt'
 
 ## Technologies Used
 
@@ -200,10 +237,12 @@ Using the principles of UX design, this fully responsive and interactive website
    - Pixlr.com was used to process photos used in the whole website.
 1. [Haikei:](https://app.haikei.app/)
    - Haikei was used to create svg background shape in the hero section.
-1. [Sweetalert:](https://sweetalert.js.org/)
-   - Sweetalert was used for some warning alerts.
+1. [Sweetalert2:](https://sweetalert2.github.io/#download)
+   - Sweetalert was used for popup windows for checkout, newsletter finish message,'added to basket' toast and warning alerts which show up when the user tries to add too many products to the basket.
 1. [Animista:](https://animista.net/play/entrances/scale-in)
    - Animista was ued for shopping basket icons animation.
+1. [EmailJS:](https://www.emailjs.com/)
+   - EmailJS was ued for contact form to send emails directly from JavaScript, without server code.
 
 ## Code Organisation
 
@@ -211,7 +250,7 @@ As the code grew, the developer decided to split all JavaScript code for parts:
 
 - navbar.js: contains code which is responsible for the operation and animations of the navigation bar
 - products.js: handles rendering of the product cards, append items to local storage memory, and the process of adding products to the shopping basket
-- validation.js: handles validation functionalities of contact form
+- contact.js: handles validation functionalities of contact form
 - basket.js: handles functions of the operation in the shopping basket
 - products.txt: contains products data
 
