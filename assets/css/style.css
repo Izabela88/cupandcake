@@ -1851,6 +1851,7 @@ span.newsletter-error-msg {
   .about-txt {
     width: 60vw;
     text-align: center;
+    color: var(--white-color);
   }
 
   .about-txt h2 {
