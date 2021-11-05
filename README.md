@@ -487,7 +487,7 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 
 This error appears in the console when launching a website in the Chrome browser in the Incognito window:
 
-[Bug](https://github.com/Izabela88/cupandcake/blob/development/media/console-bug.jpg)
+![Bug](https://github.com/Izabela88/cupandcake/blob/development/media/console-bug.jpg)
 
 Additionally, a warning appears for the relevant content:
 
