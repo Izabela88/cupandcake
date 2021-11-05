@@ -157,19 +157,16 @@ const sendEmail = () => {
 // Function opens the modal window
 const sendButton = document.querySelector('#send-button');
 
-const openModal = () => {
-  let modal = document.querySelector('.modal-container');
+function openModal() {
+  let modal = document.querySelector('#contact-modal');
   modal.classList.toggle('show-modal');
-};
+}
 
-sendButton.addEventListener('click', openModal);
 closeButton.addEventListener('click', openModal);
 
 /* Add submit event listener to form
 Check all form validations
 */
-sendButton.disabled = true;
-
 form.addEventListener('submit', function (e) {
   // prevent the form from submitting
   e.preventDefault();
@@ -178,16 +175,13 @@ form.addEventListener('submit', function (e) {
   let isMessageValid = checkUserMessage();
   let isFormValid = isUsernameValid && isUserEmailValid && isMessageValid;
   if (isFormValid) {
-    sendEmail;
-    openModal;
+    openModal();
     form.reset();
     sendButton.disabled = true;
-  } else {
-    !openModal();
-    !sendEmail();
   }
 });
 
+sendButton.disabled = true;
 // Disabled button becomes active when the user starts filling the form
 function makeButtonActive() {
   let button = document.querySelector('.send-btn');
