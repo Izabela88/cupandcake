@@ -141,7 +141,9 @@ function addToBasket(cupcake, basketItem, basket) {
       } else {
         Swal.fire({
           title: 'You can order up to 20 cupcakes of the same type',
-          text: '* for larger orders, please contact us by filling out the form in the section "contact us"',
+          text:
+            '* for larger orders, please contact us by filling out the' +
+            'form in the section "contact us"',
           icon: 'warning',
           showCancelButton: true,
           showConfirmButton: true,
