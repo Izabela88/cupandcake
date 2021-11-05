@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Coiny&family=Montserrat&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+
 :root {
   --brown-color: #5d071c;
   --blue-color: #83deef;
@@ -1688,22 +1688,16 @@ span.newsletter-error-msg {
     font-size: 62px;
     line-height: 65px;
     margin: 0 auto;
-    font-family: 'Jua', sans-serif;
   }
 
   .home-text p {
     margin: 0 auto;
     font-size: 30px;
     padding: 20px;
-    font-family: 'Jua', sans-serif;
   }
 
   .strawberrys-bowl {
     display: none;
-  }
-
-  .main-header h2 {
-    font-family: 'Jua', sans-serif;
   }
 
   .star {
@@ -1812,15 +1806,14 @@ span.newsletter-error-msg {
     left: 50%;
     transform: translateX(-50%);
     position: relative;
-    margin-top: 50px;
   }
 
   .product-tab {
     margin: 20px auto;
   }
 
-  .tab-card h3 {
-    font-family: 'Jua', sans-serif;
+  .tab-card {
+    margin-top: 50px;
   }
 
   .product-circle {
@@ -1859,12 +1852,10 @@ span.newsletter-error-msg {
   .about-txt {
     width: 60vw;
     text-align: center;
-    color: var(--white-color);
   }
 
   .about-txt h2 {
     font-size: 40px;
-    font-family: 'Jua', sans-serif;
   }
 
   .circle-bg {
@@ -1896,10 +1887,6 @@ span.newsletter-error-msg {
     width: 70%;
     margin-bottom: 50px;
     margin-right: 5%;
-  }
-
-  .contact-txt h2 {
-    font-family: 'Jua', sans-serif;
   }
 
   .contact-bg {
