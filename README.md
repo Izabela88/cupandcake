@@ -25,6 +25,7 @@ Using the principles of UX design, this fully responsive and interactive website
   - [Further Testing](#further-testing)
   - [Testing User Stories from User Experience Section](#testing-user-stories-from-user-experience-section)
 - [Deployment](#deployment)
+- [Bugs](#bugs)
 - [Credits](#credits)
   - [Code](#code)
   - [Content](#content)
@@ -314,14 +315,18 @@ The W3C Markup Validator and W3C CSS Validator Services and JSHint were used to 
 - [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) - [Results](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fizabela88.github.io%2Fcupandcake%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=pl-PL)
 - [JSHint](https://jshint.com/)
 
-- I confirmed that the colors and fonts chosen are easy to read and accessible by running it through lighthouse in chrome extension.
+- I confirmed that the colors and fonts chosen are easy to read and accessible by running it through Lighthouse in Chrome extension.
 
-  ![Accessibility](https://github.com/Izabela88/cupandcake/blob/development/media/lighthouse.png)
+  - Accessibility for desktop
+    ![Accessibility](https://github.com/Izabela88/cupandcake/blob/development/media/lighthouse.png)
+
+  - Accessibility for mobiles
+    ![Accessibility](https://github.com/Izabela88/cupandcake/blob/development/media/accessibility-mobiles.jpg)
 
 ### Further Testing
 
 - The Website was tested on Google Chrome, Mozzilla Firefox, Opera and Safari browsers.
-- The website was viewed on a variety of devices such as Desktop, Laptop (Macbook Pro 16 inch), Mobiles( Huawei P20 Mate and Huawei P30).
+- The website was viewed on a variety of devices such as Desktop, Laptop (Macbook Pro 16 inch), Mobiles( Huawei P20 Mate , Huawei P30, Samsung S21 ultra).
 - A large amount of testing was done to ensure that all pages were linking correctly.
 - Friends and family members were asked to review the site and documentation to point out any bugs and/or user experience issues.
 
@@ -477,6 +482,16 @@ $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
 ```
 
 Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop) to retrieve pictures for some of the buttons and more detailed explanations of the above process.
+
+## Bugs
+
+This error appears in the console when launching a website in the Chrome browser in the Incognito window:
+
+[Bug](https://github.com/Izabela88/cupandcake/blob/development/media/console-bug.jpg)
+
+Additionally, a warning appears for the relevant content:
+
+- "Error with Permissions-Policy header: Unrecognized feature: 'interest-cohort'."
 
 ## Credits
 
