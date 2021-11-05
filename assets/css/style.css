@@ -1780,6 +1780,7 @@ span.newsletter-error-msg {
 
   .girl-img {
     width: 65vw;
+    opacity: 0.5;
   }
 
   .bg-shape {
@@ -1866,6 +1867,10 @@ span.newsletter-error-msg {
 
   #contact-section {
     height: auto;
+  }
+
+  .cupcakes-img {
+    display: none;
   }
 
   .contact-container {
@@ -2149,12 +2154,6 @@ span.newsletter-error-msg {
     height: 300px;
   }
 
-  .cupcakes-img {
-    width: 200px;
-    height: 200px;
-    bottom: 30%;
-  }
-
   .contact-txt {
     margin: 35px auto;
   }
@@ -2296,10 +2295,6 @@ span.newsletter-error-msg {
   .contact-txt h2 {
     line-height: 40px;
     margin-bottom: 20px;
-  }
-
-  .cupcakes-img {
-    display: none;
   }
 
   .tab-card {
