@@ -155,8 +155,6 @@ const sendEmail = () => {
 };
 
 // Function opens the modal window
-const sendButton = document.querySelector('#send-button');
-
 function openModal() {
   let modal = document.querySelector('#contact-modal');
   modal.classList.toggle('show-modal');
@@ -176,29 +174,30 @@ form.addEventListener('submit', function (e) {
   let isFormValid = isUsernameValid && isUserEmailValid && isMessageValid;
   if (isFormValid) {
     openModal();
+    sendEmail();
     form.reset();
-    sendButton.disabled = true;
+    button.disabled = true;
   }
 });
 
-sendButton.disabled = true;
-// Disabled button becomes active when the user starts filling the form
-function makeButtonActive() {
-  let button = document.querySelector('.send-btn');
-  let inputs = document.querySelectorAll('.text-input');
-  for (const input of inputs) {
-    input.addEventListener('input', (e) => {
-      e.preventDefault();
-      if (input.value === '') {
-        button.disabled = true;
-      } else {
-        button.disabled = false;
-      }
-    });
-  }
-}
+// 'Send' button is disabled by default
+const button = document.querySelector('.send-btn');
+button.disabled = true;
 
-makeButtonActive();
+/* Disabled button becomes active when the user starts filling the form
+Add input event listener to all contact form inputs
+*/
+document.querySelectorAll('.text-input').forEach((input) => {
+  input.addEventListener('input', (e) => {
+    e.preventDefault();
+    let sendButton = document.querySelector('.send-btn');
+    if (input.value === '') {
+      sendButton.disabled = true;
+    } else {
+      sendButton.disabled = false;
+    }
+  });
+});
 
 // Add input event listener for validate each field during complete the form
 form.addEventListener('input', function (e) {
