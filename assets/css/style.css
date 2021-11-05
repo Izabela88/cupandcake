@@ -1673,7 +1673,7 @@ span.newsletter-error-msg {
     justify-content: center;
     align-items: center;
     color: var(--brown-color);
-    background-color: var(--white-color);
+    background-color: rgb(255 255 255 / 85%);
     box-shadow: rgb(0 0 0 / 35%) 0px -10px 20px;
     border-radius: 50%;
     width: 600px;
@@ -1850,7 +1850,6 @@ span.newsletter-error-msg {
   .about-txt {
     width: 60vw;
     text-align: center;
-    background-color: var(--white-color);
   }
 
   .about-txt h2 {
