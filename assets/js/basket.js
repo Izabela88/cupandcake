@@ -84,7 +84,8 @@ function buildBasketItem(item) {
   basketContainer.appendChild(productBox);
 }
 
-// Open and close shopping cart and create new basket elements or refresh items quantity
+/* Open and close shopping cart and create new basket elements or refresh items 
+quantity*/
 function openBasket() {
   shoppingCartContainer.classList.toggle('show-shopping-cart');
   let basketCupcakes = JSON.parse(localStorage.Basket);
@@ -129,7 +130,9 @@ function incrementProduct(item, sumProductPrice) {
   } else {
     Swal.fire({
       title: 'You can order up to 20 cupcakes of the same type',
-      text: '* for larger orders, please contact us by filling out the form in the section "contact us"',
+      text:
+        '* for larger orders, please contact us by filling out the form in' +
+        'the section "contact us"',
       icon: 'warning',
       showCancelButton: true,
       showConfirmButton: true,
@@ -239,7 +242,7 @@ const updateTotalProductsQty = () => {
   if (itemsCounter.hasChildNodes()) {
     itemsCounter.childNodes[0].nodeValue = qty;
   } else {
-    let qty = document.createTextNode(qty);
+    qty = document.createTextNode(qty);
     itemsCounter.appendChild(qty);
   }
 
