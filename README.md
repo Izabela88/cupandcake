@@ -489,7 +489,7 @@ This error appears in the console when launching a website in the Chrome browser
 
 ![Bug](https://github.com/Izabela88/cupandcake/blob/development/media/console-bug.jpg)
 
-Additionally, a warning appears for the relevant content:
+Additionally,appears this warning :
 
 - "Error with Permissions-Policy header: Unrecognized feature: 'interest-cohort'."
 
