@@ -102,24 +102,28 @@ function openBasket() {
   updateTotalProductsQty();
 }
 
+// Add items
+function addQty(i, item) {
+  if (i.id === item.id) {
+    let productQty = document.querySelector(`#input-id-${item.id}`);
+    i.qty++;
+    productQty.setAttribute('value', i.qty);
+    item.qty = i.qty;
+
+    return totalProductPrice(item);
+  }
+}
+
 // Add products inside the basket
 function incrementProduct(item, sumProductPrice) {
   const maxQty = 20;
   if (item.qty < maxQty) {
     let basketCupcakes = JSON.parse(localStorage.Basket);
-    basketCupcakes.filter(addQty);
-    // Add items
-    function addQty(basketItem) {
-      if (basketItem.id === item.id) {
-        let productQty = document.querySelector(`#input-id-${item.id}`);
-        basketItem.qty++;
-        productQty.setAttribute('value', basketItem.qty);
-        item.qty = basketItem.qty;
-        sumProductPrice.textContent = totalProductPrice(item);
-        // Commit basket
-        localStorage.Basket = JSON.stringify(basketCupcakes);
-      }
-    }
+    basketCupcakes.forEach((i) => {
+      sumProductPrice.textContent = addQty(i, item);
+    });
+    // Commit basket
+    localStorage.Basket = JSON.stringify(basketCupcakes);
     // Update total price and qty on each increament operation
     updateTotalPrice();
     updateTotalProductsQty();
