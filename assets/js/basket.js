@@ -109,9 +109,8 @@ function addQty(i, item) {
     i.qty++;
     productQty.setAttribute('value', i.qty);
     item.qty = i.qty;
-
-    return totalProductPrice(item);
   }
+  return totalProductPrice(item);
 }
 
 // Add products inside the basket
@@ -140,26 +139,28 @@ function incrementProduct(item, sumProductPrice) {
   }
 }
 
+// Subtract items
+function subtractQty(i, item) {
+  if (i.id === item.id) {
+    let productQty = document.querySelector(`#input-id-${item.id}`);
+    i.qty--;
+    productQty.setAttribute('value', i.qty);
+    item.qty = i.qty;
+  }
+  return totalProductPrice(item);
+}
+
 // Subtract products inside the basket
 function decrementProduct(item, sumProductPrice) {
   const minQty = 1;
 
   if (item.qty > minQty) {
     let basketCupcakes = JSON.parse(localStorage.Basket);
-    basketCupcakes.filter(subtractQty);
-    // Subtract items
-    function subtractQty(basketItem) {
-      if (basketItem.id === item.id) {
-        let productQty = document.querySelector(`#input-id-${item.id}`);
-        basketItem.qty--;
-        productQty.setAttribute('value', basketItem.qty);
-        item.qty = basketItem.qty;
-        sumProductPrice.textContent = totalProductPrice(item);
-        // Commit basket
-        localStorage.Basket = JSON.stringify(basketCupcakes);
-      }
-    }
-
+    basketCupcakes.forEach((i) => {
+      sumProductPrice.textContent = subtractQty(i, item);
+    });
+    // Commit basket
+    localStorage.Basket = JSON.stringify(basketCupcakes);
     // Update total price and qty on each decrement operation
     updateTotalPrice();
     updateTotalProductsQty();
