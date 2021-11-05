@@ -3,9 +3,6 @@ const username = document.querySelector('#fullname');
 const email = document.querySelector('#email');
 const newsletterEmail = document.querySelector('#newsletter-email');
 const textarea = document.querySelector('#textarea');
-const button = document.querySelector('.send-btn');
-const inputs = document.querySelectorAll('.text-input');
-const modal = document.querySelector('#contact-modal');
 const closeButton = document.querySelector('.close-modal-btn');
 const openNewsletterButton = document.querySelector('#open-newsletter');
 const closeNewsletter = document.querySelector('.close-newsletter');
@@ -107,7 +104,6 @@ const checkUserMessage = () => {
   const userMessage = textarea.value.trim();
   if (!required(userMessage)) {
     showErrorMessage(textarea, 'this field can not be empty!');
-    console.log('working');
   } else if (!between(userMessage.length, min, max)) {
     showErrorMessage(
       textarea,
@@ -136,7 +132,7 @@ const removeErrorMessage = (input) => {
 
 /* Function that sends the email when a user submits the form
 with using EmailJs service */
-function sendEmail() {
+const sendEmail = () => {
   let fullName = document.querySelector('#fullname').value;
   let email = document.querySelector('#email').value;
   let message = document.querySelector('#textarea').value;
@@ -156,11 +152,24 @@ function sendEmail() {
       console.log('FAILED...', error);
     }
   );
-}
+};
+
+// Function opens the modal window
+const sendButton = document.querySelector('#send-button');
+
+const openModal = () => {
+  let modal = document.querySelector('.modal-container');
+  modal.classList.toggle('show-modal');
+};
+
+sendButton.addEventListener('click', openModal);
+closeButton.addEventListener('click', openModal);
 
 /* Add submit event listener to form
 Check all form validations
 */
+sendButton.disabled = true;
+
 form.addEventListener('submit', function (e) {
   // prevent the form from submitting
   e.preventDefault();
@@ -169,10 +178,10 @@ form.addEventListener('submit', function (e) {
   let isMessageValid = checkUserMessage();
   let isFormValid = isUsernameValid && isUserEmailValid && isMessageValid;
   if (isFormValid) {
-    sendEmail();
-    openModal();
+    sendEmail;
+    openModal;
     form.reset();
-    button.disabled = true;
+    sendButton.disabled = true;
   } else {
     !openModal();
     !sendEmail();
@@ -180,18 +189,22 @@ form.addEventListener('submit', function (e) {
 });
 
 // Disabled button becomes active when the user starts filling the form
-button.disabled = true;
-
-for (const field of inputs) {
-  field.addEventListener('input', (e) => {
-    e.preventDefault();
-    if (field.value === '') {
-      button.disabled = true;
-    } else {
-      button.disabled = false;
-    }
-  });
+function makeButtonActive() {
+  let button = document.querySelector('.send-btn');
+  let inputs = document.querySelectorAll('.text-input');
+  for (const input of inputs) {
+    input.addEventListener('input', (e) => {
+      e.preventDefault();
+      if (input.value === '') {
+        button.disabled = true;
+      } else {
+        button.disabled = false;
+      }
+    });
+  }
 }
+
+makeButtonActive();
 
 // Add input event listener for validate each field during complete the form
 form.addEventListener('input', function (e) {
@@ -231,14 +244,5 @@ formNewsletter.addEventListener('submit', function (e) {
       timer: 3000,
     });
     formNewsletter.reset();
-    openNewsletter();
   }
 });
-
-// Function opens the modal window after submit contact form
-function openModal() {
-  modal.classList.toggle('show-modal');
-}
-
-button.addEventListener('click', openModal);
-closeButton.addEventListener('click', openModal);
