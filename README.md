@@ -318,10 +318,10 @@ The W3C Markup Validator and W3C CSS Validator Services and JSHint were used to 
 - I confirmed that the colors and fonts chosen are easy to read and accessible by running it through Lighthouse in Chrome extension.
 
   - Accessibility for desktop
-    ![Accessibility](https://github.com/Izabela88/cupandcake/blob/development/media/lighthouse.png)
+    ![Accessibility](https://github.com/Izabela88/cupandcake/blob/development/media/lighthouse-desktop.png)
 
   - Accessibility for mobiles
-    ![Accessibility](https://github.com/Izabela88/cupandcake/blob/development/media/accessibility-mobiles.jpg)
+    ![Accessibility](https://github.com/Izabela88/cupandcake/blob/development/media/lighthouse-mobile.png)
 
 ### Further Testing
 
@@ -485,13 +485,26 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 
 ## Bugs
 
-This error appears in the console when launching a website in the Chrome browser in the Incognito window:
+This error appears in the console when launching a website in the Chrome browser in the Incognito window, it does not appear otherwise:
 
 ![Bug](https://github.com/Izabela88/cupandcake/blob/development/media/console-bug.jpg)
 
-Additionally, appears this warning :
+Additionally, in console appears this warning :
 
 - "Error with Permissions-Policy header: Unrecognized feature: 'interest-cohort'."
+
+- I got this error while creating the Lighthouse report for mobile devices:
+
+![Lighthouse bug](https://github.com/Izabela88/cupandcake/blob/development/media/lighthouse-error.jpg)
+
+- There was no way I could locate this error because the report did not indicate the location of the error.
+- The solution to the problem included:
+  - Searching for information about the error.
+  - Installing an additional Chrome extension : Axe Accessibility.
+  - Doing a re-report in Incognito mode.
+  - Several attempts to change the style in the css file.
+- Solution:
+  - After removing links to social media located in the navbar, the problem was solved.
 
 ## Credits
 
