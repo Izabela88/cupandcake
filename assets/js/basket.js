@@ -128,11 +128,13 @@ function incrementProduct(item, sumProductPrice) {
     updateTotalPrice();
     updateTotalProductsQty();
   } else {
+    // Pop up window from Sweet Alert 2 library
     Swal.fire({
       title: 'You can order up to 20 cupcakes of the same type',
       text:
-        '* for larger orders, please contact us by filling out the form in' +
-        'the section "contact us"',
+        '* for larger orders, please contact us by filling out the form ' +
+        ' ' +
+        'in the section "contact us"',
       icon: 'warning',
       showCancelButton: true,
       showConfirmButton: true,
@@ -313,6 +315,7 @@ function submitPurchase(e) {
   e.preventDefault();
   let qty = totalProductsQty();
   if (qty < 5) {
+    // Pop up window from Sweet Alert 2 library
     Swal.fire({
       title: 'Ouch!',
       text: 'Your order must contain a min of five cupcakes!',
@@ -323,6 +326,7 @@ function submitPurchase(e) {
       cancelButtonColor: '#d33',
     });
   } else {
+    // Pop up window from Sweet Alert 2 library
     Swal.fire({
       title: 'Wait!',
       text: 'Are you sure you want to complete the purchase?',
@@ -335,6 +339,7 @@ function submitPurchase(e) {
       cancelButtonText: 'NOPE',
     }).then((result) => {
       if (result.isConfirmed) {
+        // Pop up window from Sweet Alert 2 library
         Swal.fire({
           title: 'Please enter your email address',
           input: 'email',
@@ -346,6 +351,7 @@ function submitPurchase(e) {
           confirmButtonText: 'NEXT',
           cancelButtonText: 'CANCEL',
         }).then((result) => {
+          // Pop up window from Sweet Alert 2 library
           if (result.isConfirmed) {
             Swal.fire({
               title: 'Please enter your full name',
@@ -363,6 +369,7 @@ function submitPurchase(e) {
                 }
               },
             }).then((result) => {
+              // Pop up window from Sweet Alert 2 library
               if (result.isConfirmed) {
                 Swal.fire({
                   title: 'Please enter your full address',
@@ -380,6 +387,7 @@ function submitPurchase(e) {
                     }
                   },
                 }).then((result) => {
+                  // Pop up window from Sweet Alert 2 library
                   if (result.isConfirmed) {
                     localStorage.Basket = JSON.stringify([]);
                     openBasket();

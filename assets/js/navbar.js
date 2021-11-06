@@ -1,4 +1,4 @@
-// Smooth scrolling
+// Smooth scrolling between website sections
 document.querySelectorAll('.scroll').forEach((cliked) => {
   cliked.onclick = function (e) {
     e.preventDefault();
@@ -27,14 +27,14 @@ window.addEventListener('scroll', () => {
 });
 
 // Hide and show navbar on scrolling
-// variable which stores position of page
+// Variable which stores position of page
 let previousPosition;
 window.addEventListener('scroll', () => {
   let header = document.querySelector('header');
-  //  get the scroll position
+  // Get the scroll position
   let currentPosition =
     window.pageYOffset || document.documentElement.currentPosition;
-  //  check weather the page is scrolled up or down
+  // Check weather the page is scrolled up or down
   if (currentPosition > previousPosition && window.innerWidth > 1050) {
     header.style.top = '-200px';
   } else {
@@ -52,7 +52,8 @@ hamburgerIcon.addEventListener('click', function (e) {
   openSidebar = true;
   document.getElementById('my-sidebar').style.width = '50%';
 });
-
+/* After pressing sidebar links and scrolling to a given section, 
+the sidebar closes automatically*/
 for (const button of closeButtons) {
   openSidebar = false;
   button.addEventListener('click', function (e) {
@@ -74,7 +75,7 @@ window.addEventListener('scroll', (e) => {
   }
 });
 
-// Scroll to top after click back to top button
+// Scroll to top after click 'back to top button'
 const backToTopButton = document.querySelector('#back-to-top-button');
 
 window.addEventListener('scroll', (e) => {
@@ -88,18 +89,20 @@ window.addEventListener('scroll', (e) => {
   }
 });
 
+/* The function moves the page up with animate that scroll
+ with using window.requestAnimationFrame() */
 const backToTop = () => {
   // Set a variable for the number of pixels we are from the top of the document
   const pxNumber =
     document.documentElement.scrollTop || document.body.scrollTop;
-  // Animate that scroll with requestAnimationFrame:
+
   if (pxNumber > 0) {
     window.requestAnimationFrame(backToTop);
     window.scrollTo(0, pxNumber - pxNumber / 20);
   }
 };
 
-// When the button is clicked, run backtoTop function
+// Add onclick event listener to 'back to top button'
 backToTopButton.onclick = function (e) {
   e.preventDefault();
   backToTop();

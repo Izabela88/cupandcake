@@ -28,7 +28,9 @@ const isEmailValid = (emailAddress) => {
   return userEmail.test(emailAddress);
 };
 
-// Function checks if full name field is complete correct
+/* Function checks if full name field is complete correct
+
+*/
 const checkUsernameField = () => {
   let isValid = false;
   const min = 2,
@@ -75,6 +77,7 @@ const checkUserEmail = () => {
   return isValid;
 };
 
+// Functions checks if email field in newsletter form is complete correct
 const checkNewsletterEmail = () => {
   const min = 2,
     max = 150;
@@ -116,21 +119,21 @@ const checkUserMessage = () => {
   return isValid;
 };
 
-// Show the error message function
+// Function shows the error message
 const showErrorMessage = (input, message) => {
   const parentElement = input.parentElement;
   const errorMsg = parentElement.querySelector('.error-msg');
   errorMsg.textContent = message;
 };
 
-// Remove the error message function
+// Function removes the error message
 const removeErrorMessage = (input) => {
   const parentElement = input.parentElement;
   const errorMsg = parentElement.querySelector('.error-msg');
   errorMsg.textContent = '';
 };
 
-/* Function that sends the email when a user submits the form
+/* Function that sends the email when the user submits the form
 with using EmailJs service */
 const sendEmail = () => {
   let fullName = document.querySelector('#fullname').value;
@@ -154,7 +157,7 @@ const sendEmail = () => {
   );
 };
 
-// Function opens the modal window
+// Function opens the contact modal window
 function openModal() {
   let modal = document.querySelector('#contact-modal');
   modal.classList.toggle('show-modal');
@@ -162,9 +165,9 @@ function openModal() {
 
 closeButton.addEventListener('click', openModal);
 
-/* Add submit event listener to form
-Check all form validations
-*/
+/* Function submit contact form only if all inputs are complete correct
+Then open modal, send email, reset form and makes contact form button disabled
+ */
 form.addEventListener('submit', function (e) {
   // prevent the form from submitting
   e.preventDefault();
@@ -223,13 +226,14 @@ function openNewsletter() {
 openNewsletterButton.addEventListener('click', openNewsletter);
 closeNewsletter.addEventListener('click', openNewsletter);
 
-// Submit and check newsletter form
+// Submit the newsletter form if email is valid
 formNewsletter.addEventListener('submit', function (e) {
   // prevent the form from submitting
   e.preventDefault();
   let validEmail = checkNewsletterEmail();
   let isFormValid = validEmail;
   if (isFormValid) {
+    // Pop up window from Sweet Alert 2 library
     Swal.fire({
       icon: 'success',
       title: 'Thank you for subscribe our newsletter!',

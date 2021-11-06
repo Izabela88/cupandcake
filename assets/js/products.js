@@ -78,7 +78,7 @@ document.getElementById('fruity-tab').onclick = function (event) {
   openTabContent(event, 'fruity');
 };
 
-// Set the open tab by default
+// Set the one of the tab still open by default
 function defaultOpenTab() {
   document.getElementById('vegan-tab').click();
 }
@@ -102,7 +102,7 @@ function appendToBasket(cupcake) {
 }
 
 /*The function shows a toast informing that the item has been added to the cart
-The code was copied from the website https://sweetalert2.github.io
+The used code was taken from  https://sweetalert2.github.io
 */
 const addToBasketToast = () => {
   const Toast = Swal.mixin({
@@ -139,10 +139,12 @@ function addToBasket(cupcake, basketItem, basket) {
         item.qty++;
         break;
       } else {
+        // Pop up window from Sweet Alert 2 library
         Swal.fire({
           title: 'You can order up to 20 cupcakes of the same type',
           text:
             '* for larger orders, please contact us by filling out the' +
+            ' ' +
             'form in the section "contact us"',
           icon: 'warning',
           showCancelButton: true,
@@ -182,7 +184,7 @@ function updateQtyCounter() {
   }
 }
 
-// Add onclick animation to basket icon in the product card
+// Add animation to basket icons which are in the product cards
 const productBasketBoxes = document.querySelectorAll('.product-basket-box');
 
 productBasketBoxes.forEach((box) => {
