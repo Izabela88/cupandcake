@@ -217,6 +217,7 @@ Using the principles of UX design, this fully responsive and interactive website
   - The website has no backend and is not connected to the server
 - Connecting the application to the database:
   - Currently products data are being fetched from a local file 'products.txt'
+  - Currently basket data is stored in Local Storage
 
 ## Technologies Used
 
@@ -485,11 +486,19 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 
 ## Bugs
 
-This error appears in the console when launching a website in the Chrome browser in the Incognito window, it does not appear otherwise:
+- This error appears in the console when launching a website in the Chrome browser in the Incognito window, it does not appear otherwise:
 
 ![Bug](https://github.com/Izabela88/cupandcake/blob/development/media/console-bug.jpg)
 
-Additionally, in console appears this warning :
+- Debuging proccess:
+
+  - Basket in Local Storage was initiated only when first item was added to the basket.
+  - This was causing issues with the JSON parsing statements because Basket when aplication start was underfind.
+
+- Solution:
+  - Initiate Basket in Local Storage as empty array only if Basket doesn't exists.
+
+Additionally, in console appears this warning (only in the Incognito mode) :
 
 - "Error with Permissions-Policy header: Unrecognized feature: 'interest-cohort'."
 
