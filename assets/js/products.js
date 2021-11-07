@@ -3,6 +3,8 @@ const currency = '£';
 
 //Load cupcakes data from products.txt file
 let cupcakes = JSON.parse(cupcakesData);
+// Initiate basket in local memory
+localStorage.Basket = JSON.stringify([]);
 
 // Dynamically create tab cards
 cupcakes.forEach(function (cupcake) {
