@@ -99,11 +99,7 @@ function appendToBasket(cupcake) {
     price: cupcake.price,
     image: cupcake.image,
   };
-  if (!basket) {
-    localStorage.Basket = JSON.stringify([basketItem]);
-  } else {
-    addToBasket(cupcake, basketItem, basket);
-  }
+  addToBasket(cupcake, basketItem, basket);
 }
 
 /*The function shows a toast informing that the item has been added to the cart
