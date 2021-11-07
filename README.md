@@ -486,7 +486,7 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 
 ## Bugs
 
-- This error appears in the console when launching a website in the Chrome browser in the Incognito window, it does not appear otherwise:
+This error appears in the console when launching a website in the Chrome browser in the Incognito window, it does not appear otherwise:
 
 ![Bug](https://github.com/Izabela88/cupandcake/blob/development/media/console-bug.jpg)
 
@@ -502,7 +502,7 @@ Additionally, in console appears this warning (only in the Incognito mode) :
 
 - "Error with Permissions-Policy header: Unrecognized feature: 'interest-cohort'."
 
-- I got this error while creating the Lighthouse report for mobile devices:
+I got this error while creating the Lighthouse report for mobile devices:
 
 ![Lighthouse bug](https://github.com/Izabela88/cupandcake/blob/development/media/lighthouse-error.jpg)
 
