@@ -5,13 +5,281 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Cupandcake is a pastry shop that bakes cupcakes and sends them by courier straight to the customers' home">
+  <meta name="keywords" content="cup and cake, cupcakes, united kingtom, wolverhampton">
+  <meta name="theme-color" content="#FFB8CA">
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon_package_v0.16/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon_package_v0.16/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon_package_v0.16/favicon-16x16.png">
   <title>CUP&CAKE</title>
 </head>
 
 <body>
+  <!-- shopping cart -->
+  <div class="shopping-cart-container">
+    <div class="shopping-cart-box">
+      <div class="cart-title">
+        <h2>shopping basket</h2>
+        <div class="close-shopping-cart">
+          <i class="fas fa-times"></i>
+        </div>
+      </div>
+      <div class="basket-container">
+        <div id="empty-basket">
+          <img src="assets/images/giphy.gif" alt="Cupcake animation">
+          <p>we have noticed your basket is empty soooo ... it's time to order something delicious!</p>
+        </div>
+      </div>
+      <!-- purchase box-->
+      <div class="purchase-box">
+        <div class="summary-box">
+          <div class="summary-div">
+            <div class="summary-amount">total price</div>
+            <div class="summary-items">0 cupcakes</div>
+          </div>
+          <div id="total-price" class="summary-amount">£0.00</div>
+        </div>
+        <button class="purchase-button">PURCHASE</button>
+      </div>
+    </div>
+  </div>
+  <!-- newsletter -->
+  <div class="newsletter-wrapper">
+    <div class="card-content">
+      <div class="close-newsletter">
+        <i class="far fa-times-circle"></i>
+      </div>
+      <div class="newsletter-image">
+        <img src="assets/images/newsletter-img.jpg" alt="">
+      </div>
+      <h2>Want more?</h2>
+      <p>Subscribe to our newsletter and stay updated!</p>
+      <form id="newsletter-form" class="form-input">
+        <div class="input-box"><input id="newsletter-email" class="newsletter-input" placeholder="Your Email">
+          <span class="error-msg newsletter-error-msg"></span>
+        </div>
+        <input type="submit" id="newsletter-button" class="subscribe-button" />
+      </form>
+    </div>
 
-  <script src="assets/js/script.js"></script>
+  </div>
+  <!-- header -->
+  <header id="header">
+    <div id="hamburger-icon">
+      <i class="fas fa-bars"></i>
+    </div>
+    <div class="logo"><a class="scroll close-sidebar " href="#home-section"><img src="assets/images/logo.png"
+          alt="Logo"></a>
+    </div>
+    <nav id="nav">
+      <div id="my-sidebar" class="sidebar">
+        <div class="close-sidebar close-btn">
+          <i class="fas fa-times"></i>
+        </div>
+        <ul class="nav-list">
+          <li><a class="scroll close-sidebar nav-link active" href="#home-section">Home</a></li>
+          <li><a class="scroll close-sidebar nav-link" href="#products-section">Products</a></li>
+          <li><a class="scroll close-sidebar nav-link" href="#about-section">About</a></li>
+          <li><a class="scroll close-sidebar nav-link" href="#contact-section">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <!-- hero section -->
+  <main id="home-section" class="section">
+    <div class="basket"><i class="fas fa-shopping-basket"></i><span class='counter-icon' id='items-counter'>0</span>
+    </div>
+    <div class="logo-home"><img src="assets/images/logo.png" alt="Logo">
+    </div>
+    <div class="bg-shape"></div>
+    <div class="girl-img"></div>
+    <div class="container">
+      <div class="drops-one"></div>
+      <div class="red-circle-big">
+        <div class="cupcake-img"></div>
+      </div>
+      <div class="home-text">
+        <h1>cupcakes made with love!</h1>
+        <div class="btns">
+          <div class="brown-btn"><a class="scroll" href="#products-section">Products</a> </div>
+          <div class="brown-btn"><a class="scroll" href="#about-section"> About Us</a></div>
+        </div>
+        <p>for the preparation we use only organic products!</p>
+        <div class="strawberrys-bowl">
+          <div class="drops-two"></div>
+          <img src="assets/images/strawberry.png" alt="Strawberry in the bowl">
+        </div>
+        <div class="star"></div>
+      </div>
+      <div class="cloud"></div>
+      <div class="happy-girl"></div>
+    </div>
+  </main>
+  <!-- products section -->
+  <section id="products-section" class="section">
+    <div class="products-heading">
+      <h2>100% organic products</h2>
+      <p>Build your own box full of heavenly pleasure!
+        Compose the set you like best! Full freedom! We will send the order directly to your home! The only one thing
+        you
+        need to remember is that the order must contain at least five cupcakes and max twenty cupcakes of one type!</p>
+    </div>
+    <div class="container">
+      <div class="products-container">
+        <div class="product-circle">
+          <div class="vegan-img"></div>
+          <div class="hide-txt">
+            <p>we also care about vegans! discover the wide range of our vegan cupcakes! soooo yummy!</p>
+          </div>
+        </div>
+        <div class="product-circle">
+          <div class="chocolate-img"></div>
+          <div class="hide-txt">
+            <p>do you love chocolate? we too! discover our heavenly delicious collection! you will
+              melt with delight!</p>
+          </div>
+        </div>
+        <div class="product-circle">
+          <div class="fruity-img"></div>
+          <div class="hide-txt">
+            <p>mmmm... the refreshing taste of our fruit cupcakes will surprise you! You have to try them!</p>
+          </div>
+        </div>
+        <button id="vegan-tab" class="product-tab">VEGAN</button>
+        <button id="chocolate-tab" class="product-tab">CHOCOLATE</button>
+        <button id="fruity-tab" class="product-tab">FRUITY</button>
+      </div>
+    </div>
+    <!-- tab content -->
+    <div class="container">
+      <div id="vegan" class="tab-content content"></div>
+      <div id="chocolate" class="tab-content content"></div>
+      <div id="fruity" class="tab-content content">
+      </div>
+    </div>
+  </section>
+  <!-- about section -->
+  <section id="about-section" class="section">
+    <div class="drops-about-one"></div>
+    <div class="drops-about-two"></div>
+    <div class="about-bg"></div>
+    <div class="container-about">
+      <div class="about-txt">
+        <h2>a few words about us</h2>
+        <p>Our bakery bakes cupcakes to order and delivers them to customers' homes. We started in 2009 with
+          a team of two. Currently we are hiring over 100 employees and we send our cupcakes all over the Great Britain.
+          We only use organic products to prepare our muffins and select products from local suppliers. Our secret is
+          passion and love for sweets. We are happy that you want to become part of our sweet family and try our
+          delicious products! Enjoy!</p>
+      </div>
+      <div class="cupcakes-img"></div>
+      <div class="about-img"></div>
+    </div>
+  </section>
+  <!-- contact section -->
+  <section id="contact-section" class="section">
+    <div class="contact-bg"></div>
+    <div class="contact-container">
+      <div class="contact-img"></div>
+      <div class="contact-txt">
+        <h2>questions? <br>
+          feel free to contact us!</h2>
+        <form id="contact-form">
+          <div class="input-box"><input id="fullname" class="text-input" name="full_name" type="text"
+              placeholder="Your Full Name" autocomplete="off">
+            <span class="error-msg"></span>
+          </div>
+          <div class="input-box"><input type="text" class="text-input" id="email" name="email_address"
+              placeholder="Your Email" autocomplete="off">
+            <span class="error-msg"></span>
+          </div>
+          <div class="input-box"><textarea class="text-input" placeholder="Your message" name="message" id="textarea"
+              cols="30" rows="10" autocomplete="off"></textarea>
+            <span class="error-msg"></span>
+          </div>
+          <input id="send-button" class="send-btn" type="submit" value="Send">
+        </form>
+      </div>
+    </div>
+    <div id="back-to-top-button" class="go-up-btn"><i class="fas fa-chevron-circle-up"></i></div>
+    <div class="modal-container" id="contact-modal">
+      <div class="modal-box">
+        <div class="close-modal-btn"><i class="fas fa-times-circle"></i></div>
+        <h2>Well done !</h2>
+        <p>Your message has been sent! <br> we will contact you within the next 24 hours *<br>
+          <span>*... and for now, please accept a little bit of love...a cupcake love <i
+              class="far fa-heart"></i></span>
+        </p>
+        <img src="assets/images/cupcake.gif" alt="Cupcake animation">
+      </div>
+    </div>
+  </section>
+  <!-- footer -->
+  <footer id="footer">
+    <div class="box-logo">
+      <a class="scroll" href="#home-section">
+        <img src="assets/images/logo.png" alt="Logo">
+      </a>
+    </div>
+    <div id="footer-container">
+      <div class="footer-box , social-icons">
+        <h3>Stay in touch</h3>
+        <ul>
+          <li><a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Visit our Facebook page"><i
+                class="fab fa-facebook-f"></i></a></li>
+          <li><a href="https://www.twitter.com/" target="_blank" rel="noopener" aria-label="Visit our Twitter page"><i
+                class="fab fa-twitter"></i></a></li>
+          <li><a href="https://www.instagram.com/" target="_blank" rel="noopener"
+              aria-label="Visit our Instagram page"><i class="fab fa-instagram"></i></a></li>
+        </ul>
+        <h3>Subscribe to our newsletter</h3>
+        <button id="open-newsletter" class="subscribe-button">Subscribe</button>
+      </div>
+      <div class="footer-box">
+        <h3>Quick links</h3>
+        <ul>
+          <li><a class="scroll" href="#home-section">Home</a></li>
+          <li><a class="scroll" href="#about-section">About</a></li>
+          <li><a class="scroll" href="#products-section">Products</a></li>
+          <li><a class="scroll" href="#contact-section">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-box">
+        <h3> Office working hours</h3>
+        <ul>
+          <li>Monday: 9:00 - 18:00</li>
+          <li>Tuesday: 9:00 - 18:00</li>
+          <li>Wednesday: 9:00 - 18:00</li>
+          <li>Thursday: 9:00 - 18:00</li>
+          <li>Friday: 9:00 - 18:00</li>
+        </ul>
+      </div>
+      <div class="footer-box">
+        <h3>Contact Us</h3>
+        <ul>
+          <li><i class="fas fa-phone-alt"></i> 0333 333 333</li>
+          <li><i class="fas fa-envelope"></i> info@cupandcake.com</li>
+          <li><i class="fas fa-map-marker-alt"></i> Wolverhampton, UK</li>
+        </ul>
+      </div>
+    </div>
+    <p>Cupandcake &copy; 2021, All Rights Reserved</p>
+  </footer>
+  <script src="assets/js/navbar.js"></script>
+  <script src="assets/js/contact.js"></script>
+  <script src="assets/js/products.txt"></script>
+  <script src="assets/js/products.js"></script>
+  <script src="assets/js/basket.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://kit.fontawesome.com/111b3a0b11.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
+    (function () {
+      emailjs.init("user_NruxnRyaraMAv9qR2SZ6I");
+    })();
+  </script>
 </body>
 
 </html>
