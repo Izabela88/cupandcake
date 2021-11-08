@@ -598,12 +598,14 @@ span.newsletter-error-msg {
   border-radius: 50%;
   z-index: 1000;
   cursor: pointer;
+  border: 2px solid var(--brown-color);
 }
 
 .counter-icon {
-  position: absolute;
+  position: relative;
   background: var(--light-pink-color);
-  margin-left: 50px;
+  margin-left: -9px;
+  margin-right: -21px;
   margin-bottom: 35px;
   width: 30px;
   height: 30px;

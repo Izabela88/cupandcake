@@ -8,7 +8,7 @@ document.querySelectorAll('.scroll').forEach((cliked) => {
     let elementPosition = target.offsetTop;
     let offsetPosition = elementPosition;
 
-    window.scrollTo({
+    window.scroll({
       top: offsetPosition,
       behavior: 'smooth',
     });
