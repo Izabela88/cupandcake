@@ -93,11 +93,11 @@ Using UX design principles, this fully responsive and interactive website was de
 
 ## Features
 
-- #### Responsive on all device sizes
+- ### Responsive on all device sizes
 
   ![Responsive](https://github.com/Izabela88/cupandcake/blob/development/media/responsive.png)
 
-- #### Collapsible and interactive navbar
+- ### Collapsible and interactive navbar
 
   - The website features a navigation menu on top of the page to allow users to easily navigate throughout the website.
   - The navigation is collapsible on mobile devices for better visibility.
@@ -106,11 +106,11 @@ Using UX design principles, this fully responsive and interactive website was de
   ![Navigation](https://github.com/Izabela88/cupandcake/blob/development/media/navbar.png)
   ![Navigation](https://github.com/Izabela88/cupandcake/blob/development/media/mobile-menu.png)
 
-- #### Interactive design
+- ### Interactive design
 
   - All interactive elements - including icons, links and buttons - feature hovering effects and all modals.
 
-- #### Basket icon
+- ### Basket icon
 
   - Located in the upper right corner of the website.
   - The basket icon displays the current amount of products in the shopping basket.
@@ -119,7 +119,7 @@ Using UX design principles, this fully responsive and interactive website was de
 
   ![Basket icon](https://github.com/Izabela88/cupandcake/blob/feature-readme/media/basket.png)
 
-- #### Shopping Basket
+- ### Shopping Basket
 
   - Shopping basket is easy to read and has a simple structure, which includes:
 
@@ -140,7 +140,7 @@ Using UX design principles, this fully responsive and interactive website was de
 
   ![Empty basket](https://github.com/Izabela88/cupandcake/blob/development/media/empty-basket.png)
 
-- #### Products section
+- ### Products section
 
   - The products are sorted into three groups and presented in tabs.
   - Cupcakes are displayed when the button tab is clicked by the user.
@@ -152,20 +152,20 @@ Using UX design principles, this fully responsive and interactive website was de
 
   ![Types description](https://github.com/Izabela88/cupandcake/blob/development/media/types-description.png)
 
-- #### Back to top button
+- ### Back to top button
 
   - When the page is scrolled down, the button appears in the lower right corner.
   - After pressing the button, the page automatically scrolls to the home page, and the button disappears.
 
   ![Back to top button](https://github.com/Izabela88/cupandcake/blob/feature-readme/media/back-to-top-button.png)
 
-- #### Send message information in the contact section
+- ### Send message information in the contact section
 
   - After completing the contact form, on the screen appears a message confirming that the message has been sent.
 
   ![Contact message](https://github.com/Izabela88/cupandcake/blob/feature-readme/media/contact-message.png)
 
-- #### Newsletter window
+- ### Newsletter window
 
   - The newsletter window appears after pressing the 'subscribe' button in the footer.
 
@@ -175,7 +175,7 @@ Using UX design principles, this fully responsive and interactive website was de
 
   ![Newsletter alert](https://github.com/Izabela88/cupandcake/blob/development/media/newsletter-info.png)
 
-- #### Checkout
+- ### Checkout
 
   - In this case, I present a checkout simulation without sending data because the site has no backend.
   - After pressing the 'purchase' button in the shopping basket, the following appears:
@@ -193,13 +193,13 @@ Using UX design principles, this fully responsive and interactive website was de
     ![Final alert](https://github.com/Izabela88/cupandcake/blob/development/media/checkout-last-msg.png)
   - The user can cancel the process at any time.
 
-- #### Toast
+- ### Toast
 
   - During adding products to the basket, on the top of the website appears the information that the item has been added to the basket.
 
     ![Toast](https://github.com/Izabela88/cupandcake/blob/development/media/toast.png)
 
-- #### Add to basket icon
+- ### Add to basket icon
 
   - It is located in the lower right corner of each product card.
   - It allows the user to add products to the shopping basket.
@@ -328,6 +328,7 @@ The W3C Markup Validator and W3C CSS Validator Services, and JSHint were used to
 ### Further Testing
 
 - The Website was tested on Google Chrome, Mozilla Firefox, Opera and Safari browsers.
+- The Safari browser doesn't support 'smooth' behavior parameter in window.scroll() method.
 - The website was viewed on a variety of devices such as Desktop, Laptop (Macbook Pro 16 inch), Mobiles( Huawei P20 Mate, Huawei P30, Samsung S21 ultra).
 - A large amount of testing was done to ensure that all pages were linking correctly.
 - Friends and family members were asked to review the site and documentation to point out any bugs and/or user experience issues.
