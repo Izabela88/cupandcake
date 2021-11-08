@@ -103,7 +103,7 @@ function appendToBasket(cupcake) {
 }
 
 /*The function shows a toast informing that the item has been added to the cart
-The used code was taken from  https://sweetalert2.github.io
+The used code was taken from https://sweetalert2.github.io
 */
 const addToBasketToast = () => {
   const Toast = Swal.mixin({
@@ -148,10 +148,8 @@ function addToBasket(cupcake, basketItem, basket) {
             ' ' +
             'form in the section "contact us"',
           icon: 'warning',
-          showCancelButton: true,
           showConfirmButton: true,
           confirmButtonColor: '#f4afd0',
-          cancelButtonColor: '#d33',
         });
       }
     }
@@ -172,7 +170,7 @@ function qtyCounter() {
   return total;
 }
 
-// Update displayed counter quantity
+// Update displayed counter quantity(counter-icon)
 function updateQtyCounter() {
   let itemsCounter = document.querySelector('#items-counter');
   let qty = qtyCounter();
@@ -185,7 +183,7 @@ function updateQtyCounter() {
   }
 }
 
-// Add animation to basket icons which are in the product cards
+// Add animation to basket icons which are located in the product cards
 const productBasketBoxes = document.querySelectorAll('.product-basket-box');
 
 productBasketBoxes.forEach((box) => {

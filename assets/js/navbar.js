@@ -27,6 +27,7 @@ window.addEventListener('scroll', () => {
 });
 
 // Hide and show navbar on scrolling
+
 // Variable which stores position of page
 let previousPosition;
 window.addEventListener('scroll', () => {
@@ -89,7 +90,7 @@ window.addEventListener('scroll', (e) => {
   }
 });
 
-/* The function moves the page up with animate that scroll
+/* The function moves the page up with animate scrolling
  with using window.requestAnimationFrame() */
 const backToTop = () => {
   // Set a variable for the number of pixels we are from the top of the document

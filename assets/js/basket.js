@@ -136,10 +136,8 @@ function incrementProduct(item, sumProductPrice) {
         ' ' +
         'in the section "contact us"',
       icon: 'warning',
-      showCancelButton: true,
       showConfirmButton: true,
       confirmButtonColor: '#f4afd0',
-      cancelButtonColor: '#d33',
     });
   }
 }

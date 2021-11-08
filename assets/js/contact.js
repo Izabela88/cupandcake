@@ -8,6 +8,10 @@ const openNewsletterButton = document.querySelector('#open-newsletter');
 const closeNewsletter = document.querySelector('.close-newsletter');
 const formNewsletter = document.querySelector('#newsletter-form');
 
+// 'Send' button is disabled by default
+const button = document.querySelector('.send-btn');
+button.disabled = true;
+
 // This function checks if imput field is empty
 const required = (value) => (value === '' ? false : true);
 
@@ -165,8 +169,8 @@ function openModal() {
 
 closeButton.addEventListener('click', openModal);
 
-/* Function submit contact form only if all inputs are complete correct
-Then open modal, send email, reset form and makes contact form button disabled
+/* Function submit contact form only if all inputs are complete correct,
+then open modal, send email, reset form and makes contact form button disabled
  */
 form.addEventListener('submit', function (e) {
   // prevent the form from submitting
@@ -183,12 +187,8 @@ form.addEventListener('submit', function (e) {
   }
 });
 
-// 'Send' button is disabled by default
-const button = document.querySelector('.send-btn');
-button.disabled = true;
-
-/* Disabled button becomes active when the user starts filling the form
-Add input event listener to all contact form inputs
+/* Disabled button becomes active when the user starts complete the form.
+Add input event listener to all contact form inputs.
 */
 document.querySelectorAll('.text-input').forEach((input) => {
   input.addEventListener('input', (e) => {
@@ -226,7 +226,7 @@ function openNewsletter() {
 openNewsletterButton.addEventListener('click', openNewsletter);
 closeNewsletter.addEventListener('click', openNewsletter);
 
-// Submit the newsletter form if email is valid
+// Submit the newsletter form only if email is valid
 formNewsletter.addEventListener('submit', function (e) {
   // prevent the form from submitting
   e.preventDefault();
