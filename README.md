@@ -487,8 +487,8 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 
 ## Bugs
 
-This error appears in the console when launching a website in the Chrome browser in the Incognito window, and it does not appear otherwise:
-![Bug](https://github.com/Izabela88/cupandcake/blob/development/media/console-bug.jpg)
+1. This error appears in the console when launching a website in the Chrome browser in the Incognito window, and it does not appear otherwise:
+   ![Bug](https://github.com/Izabela88/cupandcake/blob/development/media/console-bug.jpg)
 
 - Debugging process:
   - Basket in Local Storage was initiated only when the first item was added to the basket.
@@ -496,12 +496,12 @@ This error appears in the console when launching a website in the Chrome browser
 - Solution:
   - Initiate Basket in Local Storage as an empty array only if Basket doesn't exist.
 
-In console appears this warning (only in the Incognito mode) :
+2. In console appears this warning (only in the Incognito mode) :
 
 - "Error with Permissions-Policy header: Unrecognized feature: 'interest-cohort'."
 
-I got error while creating the Lighthouse report for mobile devices:
-![Lighthouse bug](https://github.com/Izabela88/cupandcake/blob/development/media/lighthouse-error.jpg)
+3. I got error while creating the Lighthouse report for mobile devices:
+   ![Lighthouse bug](https://github.com/Izabela88/cupandcake/blob/development/media/lighthouse-error.jpg)
 
 - Debugging process:
   - Searching for information about the error.
